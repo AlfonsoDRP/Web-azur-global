@@ -1,0 +1,109 @@
+.contenedor-principal {
+  height: 2000px;
+  background-color: var(--nube-azur);
+  .cabecera {
+    width: 100%;
+    padding: 0 1rem;
+    background-color: var(--azul-opacity-azur);
+    height: 50px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: large;
+    z-index: 10;
+    .menu {
+      height: 100%;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    > div {
+      cursor: pointer;
+    }
+    .logo {
+      width: 180px;
+    }
+  }
+  .contenedor-cuerpo {
+    height: 100%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    color: white;
+    .catalogo {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-transform: uppercase;
+      .titulo-catalogo{
+        font-size: 40px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--logoAzulOscuro-azur);
+        hr{
+          width: 80%;
+          color: var(--logoRosa-azur);
+        }
+      }
+      .seccion {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        .elemento {
+          height: 400px;
+          width: 400px;
+          display: flex;
+          > div {
+            display: flex;
+            flex-direction: column;
+          }
+          .apartado {
+            height: 60px;
+            width: 400px;
+            background-color: var(--logoAzulOscuro-azur);
+            align-self: flex-end;
+            opacity: 0.8;
+            position: absolute;
+            &:hover{
+              height: 400px;
+            }
+
+            &:hover > .descripcion {
+              height: 100%;
+              display: flex;
+              font-size: 20px;
+              padding: 0 0.5rem;
+              padding-top: 2rem;
+            }
+
+            .titulo-producto {
+              justify-content: center;
+              height: 60px;
+              display: flex;
+              align-items: center;
+              opacity: 1;
+              font-size: 30px;
+              text-transform: capitalize;
+            }
+  
+            .descripcion {
+              display: none;
+            }
+          }
+
+          .imagen {
+            margin: auto;
+            max-height: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
