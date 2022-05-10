@@ -1,8 +1,7 @@
 * {
   font-family: monospace;
-  font-size: 30px;
 }
-.maestro {
+.contenedor-principal {
   height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr;
@@ -35,6 +34,7 @@
     .aa {
       background-color: var(--logoAzulOscuro-azur);
       height: 100%;
+      padding-left: 0.5rem;
       border-bottom-right-radius: 100%;
     }
   }
