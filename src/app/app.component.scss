@@ -1,41 +1,29 @@
-* {
-  font-family: monospace;
-  font-size: 30px;
-}
-.maestro {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  background-color: white;
-  .cabecera {
-    height: 100%;
-    width: 15%;
-  }
-  .cuerpo {
-    height: 100%;
-    background-color: darkkhaki;
+.maestro{
+  height: 2000vh;
+  background-color: var(--nube-azur);
+  .cabecera{
+    width: 100%;
+    padding: 0 1rem;
+    background-color: var(--azul-azur);
+    height: 50px;
     display: flex;
-    flex-direction: column;
+    position: fixed;
     align-items: center;
-    padding: 1rem;
-    .b {
-      height: 200px;
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      background-color: lightcoral;
-      border-radius: 50%;
-      align-items: center;
-    }
-  }
-  .a {
-    height: 100%;
-    color: whitesmoke;
-    background-color: var(--logoRosa-azur);
-    .aa {
-      background-color: var(--logoAzulOscuro-azur);
+    gap: 2rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: large;
+    .menu{
       height: 100%;
-      border-bottom-right-radius: 100%;
+      display: flex;
+      gap: 0.5rem;
+
+    }
+    >div{
+      cursor: pointer;
+    }
+    .logo{
+      width: 180px;
     }
   }
 }
