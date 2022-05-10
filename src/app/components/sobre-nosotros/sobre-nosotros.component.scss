@@ -1,0 +1,21 @@
+.contenedor-principal{
+    height: 100%;
+    background-color: red;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    .contenedor-arriba{
+        background-color: yellowgreen;
+        display: flex;
+        flex-direction: row;
+        .info-historia{
+            background-color: antiquewhite;
+            width: 50%;
+        }
+    }
+    .imagen{
+        background-color: aqua;
+    }
+    .contenedor-abajo{
+        background-color: cornflowerblue;
+    }
+}
