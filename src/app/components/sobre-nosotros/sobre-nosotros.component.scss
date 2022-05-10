@@ -1,7 +1,11 @@
 .contenedor-principal {
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 1fr 1fr;
+  .cabecera{
+    text-align: center;
+    text-decoration: underline;
+  }
   .contenedor-arriba {
     background-color: white;
     display: flex;
@@ -46,6 +50,8 @@
   }
   .imagen {
     background-color: white;
+    opacity: 0.3;
+    padding: 0.5rem;
   }
   .contenedor-abajo {
     background-color: white;
@@ -88,4 +94,15 @@
       padding: 0.5rem;
     }
   }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #cccccc;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--azul-azur);
+  border-radius: 5px;
 }
