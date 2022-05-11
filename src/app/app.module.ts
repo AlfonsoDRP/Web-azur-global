@@ -15,12 +15,13 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     ContactoComponent,
     CatalogoComponent,
     SobreNosotrosComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AccordionModule
+    AccordionModule.forRoot()
     
   ],
   providers: [],
