@@ -1,17 +1,4 @@
 * {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.contenedor-principal {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  background-color: white;
-  .cabecera {
-    height: 100%;
-    background-color: var(--cieloClaro-azur);
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    padding: 0.5rem;
-  }
-}
+
