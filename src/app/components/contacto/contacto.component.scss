@@ -13,13 +13,13 @@
         justify-content: center;
     }
     .separador{
-        margin-top: 50px;
+        margin-top: 75px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         .texto{
-            padding-top: 50px;
-            height: 300px;
+            padding-top: 75px;
+            height: 350px;
             width: 300px;
             font-size: 20px;
             .btn{
@@ -28,6 +28,9 @@
             .logo-contacto{
                 height: 35px;
                 width: 35px;
+            }
+            span{
+                margin-left: 5px;
             }
         }
         img{
