@@ -27,9 +27,6 @@ scroll(){
     
   ];
  
-  onSlideRangeChange(indexes: number[]|void): void {
-    this.slidesChangeMessage = `Slides have been switched: ${indexes}`;
-  }
   ngOnInit(): void {
   }
 
