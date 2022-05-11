@@ -1,42 +1,81 @@
-.contenedor-principal{
-    height: 100vh;
-    h2{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 10px;
-        text-decoration: underline;
-    }
-    .letrero{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .separador{
-        margin-top: 75px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        .texto{
-            padding-top: 75px;
-            height: 350px;
-            width: 300px;
-            font-size: 20px;
-            .btn{
-                width: 100%;
-            }
-            .logo-contacto{
-                height: 35px;
-                width: 35px;
-            }
-            span{
-                margin-left: 5px;
-            }
-        }
-        img{
-            width: 500px;
-            height: 300px;
-        }
-    }
+.contenedor-principal {
+  height: 100vh;
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    text-decoration: underline;
+  }
+  .letrero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .separador {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .texto {
+      padding-top: 75px;
+      height: 350px;
+      width: 300px;
+      font-size: 20px;
+      .btn {
+        width: 100%;
+      }
+      .logo-contacto {
+        height: 35px;
+        width: 35px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .formulario {
+        display:block;
+        margin:0 auto;
+        width:510px;
+        color: #666666;
+        font-family:Arial;
     
+     
+      form {
+        margin: 0 auto;
+        width: 400px;
+        label {
+            display:block;
+            margin-top:20px;
+            letter-spacing:1px;
+        }
+        input, textarea {
+            width:380px;
+            height:27px;
+            background:#666666;
+            border:2px solid #f6f6f6;
+            padding:10px;
+            margin-top:5px;
+            font-size:10px;
+            color:#ffffff;
+        }
+         
+        textarea {
+            height:150px;
+        }
+         
+        #submit {
+            width:85px;
+            height:35px;
+            border:none;
+            margin-top:20px;
+            cursor:pointer;
+        }
+      }
+    }
+    }
+    img {
+      width: 500px;
+      height: 300px;
+    }
+  }
 }
