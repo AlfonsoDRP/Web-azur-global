@@ -6,22 +6,22 @@ import { AppComponent } from './app.component';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactoComponent,
     CatalogoComponent,
+    ContactoComponent,
     SobreNosotrosComponent,
-    
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    AccordionModule.forRoot()
+    
     
   ],
   providers: [],
