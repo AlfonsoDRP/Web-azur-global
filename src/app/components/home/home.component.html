@@ -1,63 +1,103 @@
 <div class="contenedor-principal">
   <app-navbar id="arriba"></app-navbar>
+  
   <div class="contenido-principal">
-    <div class="separador">
-      <div class="texto">
-        <h3>Todo tipo de recambios</h3>
-        <p>
-          En nuestro catálogo podra encontrar todo tipo de recambios para su
-          coche y distintas marcas con las que comparar.
-        </p>
-        <button class="btn btn-outline-primary" routerLink="/sobrenosotros" (click)="scroll()">Catálogo</button>
-      </div>
-      <img src="../../../assets/frenobrembo.jpg" alt="">
-    </div>
-    <div class="separador">
-        <img src="../../../assets/frenobrembo.jpg" alt="">
-      <div class="texto">
-        <h3>Todo tipo de recambios</h3>
-        <p>
-          En nuestro catálogo podra encontrar todo tipo de recambios para su
-          coche y distintas marcas con las que comparar.
-        </p>
-        <button class="btn btn-outline-primary" routerLink="/sobrenosotros" (click)="scroll()">Catálogo</button>
-      </div>
+    <h1 style="width:100%;text-align: center;">Nuestros productos</h1>
+    <carousel
+        [isAnimated]="true"
+      [itemsPerSlide]="itemsPerSlide"
+      [singleSlideOffset]="singleSlideOffset"
+      [noWrap]="!noWrap"
+      [interval]="0"
+      [startFromIndex]="2"
+      (slideRangeChange)="onSlideRangeChange($event)"
+      class="carrusel"
+    >
+      <slide *ngFor="let slide of slides; let index = index">
+          <div class="contenedor-img">
+            <img
+            [src]="slide.image"
+            alt="image slide"
+            class="img-slide"
+          />
+          </div>
+        
+        <div class="carousel-caption">
+          <h4>{{slide.familia}}</h4>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+  <h1 style="width:100%;text-align: center;">Ventajas</h1>
+  <div class="ventajas">
       
+    <div class="tarjeta">
+      <h4>Rapidez</h4>
+      <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="" />
+      <p>
+        Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+        óptima gracias a nuestra gestión del almacen y gran personal
+      </p>
+      <div class="boton">
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
+      </div>
     </div>
-    <div class="ventajas">
-        <div class="tarjeta">
-            <h4>Rapidez</h4>
-            <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="">
-            <p>Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es óptima gracias a nuestra gestión del almacen y gran personal</p>
-            <div class="boton">
-                <button class="btn btn-primary" routerLink="/sobrenosotros" (click)="scroll()">Ver más</button>
-            </div>
-        </div>
-        <div class="tarjeta">
-            <h4>Compromiso</h4>
-            <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="">
-            <p>Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es óptima gracias a nuestra gestión del almacen y gran personal</p>
-            <div class="boton">
-                <button class="btn btn-primary" routerLink="/sobrenosotros" (click)="scroll()">Ver más</button>
-            </div>
-        </div>
-        <div class="tarjeta">
-            <h4>Calidad</h4>
-            <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="">
-            <p>Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es óptima gracias a nuestra gestión del almacen y gran personal</p>
-            <div class="boton">
-                <button class="btn btn-primary" routerLink="/sobrenosotros" (click)="scroll()">Ver más</button>
-            </div>
-        </div>
-        <div class="tarjeta">
-            <h4>Futuro</h4>
-            <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="">
-            <p>Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es óptima gracias a nuestra gestión del almacen y gran personal</p>
-            <div class="boton">
-                <button class="btn btn-primary" routerLink="/sobrenosotros" (click)="scroll()">Ver más</button>
-            </div>
-            
-        </div>
+    <div class="tarjeta">
+      <h4>Compromiso</h4>
+      <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="" />
+      <p>
+        Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+        óptima gracias a nuestra gestión del almacen y gran personal
+      </p>
+      <div class="boton">
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <h4>Calidad</h4>
+      <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="" />
+      <p>
+        Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+        óptima gracias a nuestra gestión del almacen y gran personal
+      </p>
+      <div class="boton">
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <h4>Futuro</h4>
+      <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="" />
+      <p>
+        Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+        óptima gracias a nuestra gestión del almacen y gran personal
+      </p>
+      <div class="boton">
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
+      </div>
     </div>
   </div>
 </div>
