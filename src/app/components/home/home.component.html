@@ -1,28 +1,39 @@
-<app-navbar></app-navbar>
 <div class="contenedor-principal">
+  <app-navbar></app-navbar>
   <div class="contenido-principal">
-    <h1 class="display-1 letrero">Bienvenido</h1>
     <div class="separador">
-      <div class="cartel">
-        <img class="img_cartel" src="../../../assets/frenobrembo.jpg" alt="" />
-        <div class="info">
-          <h5>Novedad</h5>
-          <p>
-            Los nuevos frenos brembo ya disponibles en catálogo para clientes
-            minoristas y mayoristas
-          </p>
-        </div>
+      <div class="texto">
+        <h3>Todo tipo de recambios</h3>
+        <p>
+          En nuestro catálogo podra encontrar todo tipo de recambios para su
+          coche y distintas marcas con las que comparar.
+        </p>
+        <button class="btn btn-outline-primary" routerLink="/sobrenosotros">Catálogo</button>
       </div>
-      <div class="cartel">
-        <img class="img_cartel" src="../../../assets/frenobrembo.jpg" alt="" />
-        <div class="info">
-          <h5>Novedad</h5>
-          <p>
-            Los nuevos frenos brembo ya disponibles en catálogo para clientes
-            minoristas y mayoristas
-          </p>
-        </div>
+      <img src="../../../assets/frenobrembo.jpg" alt="">
+    </div>
+    <div class="separador">
+        <img src="../../../assets/frenobrembo.jpg" alt="">
+      <div class="texto">
+        <h3>Todo tipo de recambios</h3>
+        <p>
+          En nuestro catálogo podra encontrar todo tipo de recambios para su
+          coche y distintas marcas con las que comparar.
+        </p>
+        <button class="btn btn-outline-primary" routerLink="/sobrenosotros">Catálogo</button>
       </div>
+      
+    </div>
+    <div class="separador">
+      <div class="texto">
+        <h3>Todo tipo de recambios</h3>
+        <p>
+          En nuestro catálogo podra encontrar todo tipo de recambios para su
+          coche y distintas marcas con las que comparar.
+        </p>
+        <button class="btn btn-outline-primary" routerLink="/sobrenosotros" (click)="scroll()">Catálogo</button>
+      </div>
+      <img src="../../../assets/frenobrembo.jpg" alt="">
     </div>
   </div>
 </div>
