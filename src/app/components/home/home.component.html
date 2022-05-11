@@ -1,5 +1,5 @@
 <div class="contenedor-principal">
-  <app-navbar></app-navbar>
+  <app-navbar id="arriba"></app-navbar>
   <div class="contenido-principal">
     <div class="separador">
       <div class="texto">
@@ -8,7 +8,7 @@
           En nuestro catálogo podra encontrar todo tipo de recambios para su
           coche y distintas marcas con las que comparar.
         </p>
-        <button class="btn btn-outline-primary" routerLink="/sobrenosotros">Catálogo</button>
+        <button class="btn btn-outline-primary" routerLink="/sobrenosotros" (click)="scroll()">Catálogo</button>
       </div>
       <img src="../../../assets/frenobrembo.jpg" alt="">
     </div>
@@ -20,7 +20,7 @@
           En nuestro catálogo podra encontrar todo tipo de recambios para su
           coche y distintas marcas con las que comparar.
         </p>
-        <button class="btn btn-outline-primary" routerLink="/sobrenosotros">Catálogo</button>
+        <button class="btn btn-outline-primary" routerLink="/sobrenosotros" (click)="scroll()">Catálogo</button>
       </div>
       
     </div>
@@ -29,6 +29,34 @@
             <h4>Rapidez</h4>
             <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="">
             <p>Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es óptima gracias a nuestra gestión del almacen y gran personal</p>
+            <div class="boton">
+                <button class="btn btn-primary" routerLink="/sobrenosotros" (click)="scroll()">Ver más</button>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <h4>Compromiso</h4>
+            <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="">
+            <p>Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es óptima gracias a nuestra gestión del almacen y gran personal</p>
+            <div class="boton">
+                <button class="btn btn-primary" routerLink="/sobrenosotros" (click)="scroll()">Ver más</button>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <h4>Calidad</h4>
+            <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="">
+            <p>Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es óptima gracias a nuestra gestión del almacen y gran personal</p>
+            <div class="boton">
+                <button class="btn btn-primary" routerLink="/sobrenosotros" (click)="scroll()">Ver más</button>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <h4>Futuro</h4>
+            <img class="img-tarjeta" src="../../../assets/rapidez.png" alt="">
+            <p>Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es óptima gracias a nuestra gestión del almacen y gran personal</p>
+            <div class="boton">
+                <button class="btn btn-primary" routerLink="/sobrenosotros" (click)="scroll()">Ver más</button>
+            </div>
+            
         </div>
     </div>
   </div>

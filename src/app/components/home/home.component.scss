@@ -25,19 +25,30 @@
         }
     }
     .ventajas{
-        background-color: red;
+        padding-bottom: 1rem;
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
         .tarjeta{
             display: flex;
             flex-direction: column;
             align-items: center;
             color: white;
-            background-color: var(--cielo-azur);
+            padding: 1rem;
+            background-color: var(--cieloClaro-azur);
             width: 300px;
             height: 500px;
             .img-tarjeta{
                 width: 200px;
                 height: 200px;
+            }
+            .boton{
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+                
             }
         }
     }
