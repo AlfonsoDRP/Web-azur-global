@@ -1,0 +1,108 @@
+.contenedor-principal {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 50px 1fr 1fr 1fr;
+  .cabecera{
+    text-align: center;
+    text-decoration: underline;
+  }
+  .contenedor-arriba {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem;
+    .info-historia {
+      h1 {
+          color: var(--logoAzulOscuro-azur);
+        border-right: 1px solid black;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+      }
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      font-size: 15px;
+      background-color: white;
+      width: 40%;
+      padding: 0.5rem;
+    }
+    .trabajo-equipo {
+      h1 {
+        color: var(--logoAzulOscuro-azur);
+        border-right: 1px solid black;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+      }
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+      font-size: 15px;
+      background-color: white;
+      width: 40%;
+      padding: 0.5rem;
+    }
+  }
+  .imagen {
+    background-color: white;
+    opacity: 0.3;
+    padding: 0.5rem;
+  }
+  .contenedor-abajo {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem;
+    .valores {
+      h1 {
+        color: var(--logoAzulOscuro-azur);
+        border-right: 1px solid black;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+      }
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      font-size: 15px;
+      background-color: white;
+      width: 40%;
+      padding: 0.5rem;
+    }
+    .vision {
+      h1 {
+        color: var(--logoAzulOscuro-azur);
+        border-right: 1px solid black;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+      }
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      font-size: 15px;
+      background-color: white;
+      width: 40%;
+      padding: 0.5rem;
+    }
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #cccccc;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--azul-azur);
+  border-radius: 5px;
+}
