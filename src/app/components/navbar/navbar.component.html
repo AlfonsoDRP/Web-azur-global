@@ -1,20 +1,23 @@
 <div class="contenedor">
-  <img class="logo" src="../../../assets/LOGO-AZURGLOBAL.SVG" alt="" />
+  <div class="logo">
+    <img src="../../../assets/LOGO-AZURGLOBAL.SVG" alt="" />
+  </div>
+  
   <div class="links">
     <div class="link" routerLink="">
       <label for="">Inicio</label>
     </div>
-    <div class="link" routerLink="/catalogo">
-      <label for="">Catálogo</label>
-    </div>
     <div class="link" routerLink="/sobrenosotros">
       <label for="">¿Quienes somos?</label>
     </div>
-    <div class="link" routerLink="/sobrenosotros">
-      <label for="">Área Cliente</label>
+    <div class="link" routerLink="/catalogo">
+      <label for="">Catálogo</label>
     </div>
     <div class="link" routerLink="/contacto">
       <label for="">Contactanos</label>
     </div>
+  </div>
+  <div class="icons">
+    <fa-icon class="icon" [icon]="faCoffee"></fa-icon>
   </div>
 </div>
