@@ -9,6 +9,7 @@ import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotr
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     ContactoComponent,
     SobreNosotrosComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    CarruselComponent
   ],
   imports: [
     BrowserModule,

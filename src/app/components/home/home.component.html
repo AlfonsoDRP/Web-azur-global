@@ -8,7 +8,6 @@
       [noWrap]="!noWrap"
       [interval]="0"
       [startFromIndex]="0"
-      class="carrusel"
     >
       <slide *ngFor="let slide of slides; let index = index">
           <div>
@@ -24,6 +23,7 @@
         </div>
       </slide>
     </carousel>
+    <app-carrusel></app-carrusel>
   </div>
   <h1>Ventajas</h1>
   <div class="ventajas">
