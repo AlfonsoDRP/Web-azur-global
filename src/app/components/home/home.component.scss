@@ -6,23 +6,28 @@
         text-align: center;
     }
     
-    .contenido-principal{
+    .carrusel{
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         slide{
-            background-color: var(--cyan-azur);
+            background-color: var(--cyanOp-azur);
             height: 500px;
             &.active{
                 display: flex;
                 align-items: center;
+                .img-slide{
+                    max-width: 100%;
+                }
             }
-           
-        
-            .img-slide{
-                max-width: 100%;
+            .carousel-caption{
+                h4{
+                    background-color: var(--cyanOp-azur);
+                }
+                
             }
+            
 
         }
     }
@@ -83,6 +88,7 @@
     }
     .ventajas{
         padding: 1rem;
+        height: 600px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -92,20 +98,17 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-around;
             color: white;
             padding: 1rem;
             background-color: var(--cieloClaro-azur);
             width: 15%;
-            height: 40%;
+            height: 100%;
             .img-tarjeta{
-                max-width: 100%;
-                max-height: 100%;
-            }
-            .boton{
-                height: 100%;
-                display: flex;
-                align-items: flex-end;
-                
+                height: 200px;
+                img{
+                    max-height: 100%;
+                }
             }
         }
     }
