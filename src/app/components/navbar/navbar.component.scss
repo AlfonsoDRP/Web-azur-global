@@ -35,9 +35,10 @@
         }
     }
     .icons{
-        .icon{
-
-            width: 50px;
+        padding: 0.25rem;
+        margin-right: 2rem;
+        &:hover{
+            cursor: pointer;
         }
     }
 }

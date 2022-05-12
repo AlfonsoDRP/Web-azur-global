@@ -8,7 +8,7 @@ import { faCoffee, faUser, faUserAstronaut } from '@fortawesome/free-solid-svg-i
 })
 export class NavbarComponent implements OnInit {
 
-  faCoffee = faUserAstronaut;
+  faUser = faUser;
   constructor() { }
 
   ngOnInit(): void {
