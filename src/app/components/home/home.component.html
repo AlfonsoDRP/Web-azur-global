@@ -1,6 +1,6 @@
 <div class="contenedor-principal">  
   <div class="contenido-principal">
-    <h1 style="width:100%;text-align: center;">Nuestros productos</h1>
+    <h1>Nuestros productos</h1>
     <carousel
         [isAnimated]="true"
       [itemsPerSlide]="itemsPerSlide"
@@ -11,7 +11,7 @@
       class="carrusel"
     >
       <slide *ngFor="let slide of slides; let index = index">
-          <div class="contenedor-img">
+          <div>
             <img
             [src]="slide.image"
             alt="image slide"
@@ -25,7 +25,7 @@
       </slide>
     </carousel>
   </div>
-  <h1 style="width:100%;text-align: center;">Ventajas</h1>
+  <h1>Ventajas</h1>
   <div class="ventajas">
       
     <div class="tarjeta">

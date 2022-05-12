@@ -1,33 +1,29 @@
 .contenedor-principal{
     height: 100%;
+
+    h1{
+        width:100%;
+        text-align: center;
+    }
     
     .contenido-principal{
-        
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
-        .carrusel{
-            height: 100%;
-            
-        
-        }
-        .contenedor-img{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 634.33px;
-            height: 424.34px;
+        slide{
             background-color: var(--cyan-azur);
-        }
-        .img-slide{
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 424.34px;
-            width: 300px;
+
+            &.active{
+                display: flex;
+                align-items: center;
+            }
+           
+        
+            .img-slide{
+                max-width: 100%;
+            }
+
         }
     }
     .letrero{
