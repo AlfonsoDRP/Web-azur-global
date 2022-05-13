@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faBitcoinSign, faCircleCheck, faClock, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { faBitcoinSign, faCircleCheck, faClock, faHandshake, faHourglass, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -15,10 +15,10 @@ scroll(){
   itemsPerSlide = 3;
   singleSlideOffset = true;
   noWrap = true;
- faReloj = faClock;
+ faReloj = faHourglass;
  faCompromiso = faHandshake;
  faCalidad = faCircleCheck;
- faFuturo = faBitcoinSign;
+ faFuturo = faPlaneDeparture;
   slidesChangeMessage = '';
  
   slides = [
