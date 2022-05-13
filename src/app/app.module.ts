@@ -23,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     SobreNosotrosComponent,
     NavbarComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
