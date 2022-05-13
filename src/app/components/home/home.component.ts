@@ -12,8 +12,8 @@ scroll(){
   window.scroll(0,0);
 }
   itemsPerSlide = 3;
-  singleSlideOffset = false;
-  noWrap = false;
+  singleSlideOffset = true;
+  noWrap = true;
  
   slidesChangeMessage = '';
  

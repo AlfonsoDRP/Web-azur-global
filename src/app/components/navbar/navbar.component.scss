@@ -1,15 +1,19 @@
 .contenedor{
-    background-color: var(--cyan-azur);
+    background-color: var(--azul-opacity-azur);
     height: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: space-around;
     gap: 2rem;
     
     .logo{
-        width: 200px;
+        width: 300px;
         display: flex;
         align-items: center;
+        justify-content: flex-end;
+        img{
+            width: 200px;
+        }
     }
     .links{
         width: 100%;
@@ -28,6 +32,12 @@
             display: flex;
             align-items: center;
             background-color: var(--cielo-azur);
+        }
+    }
+    .icons{
+        .icon{
+
+            width: 50px;
         }
     }
 }
