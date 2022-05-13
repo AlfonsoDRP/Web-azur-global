@@ -1,9 +1,7 @@
 .contenedor-principal{
-    height: 100%;
-    padding: 0.5rem;
+    height: 100vh;
     background-image: url(../../../assets/empresa/Almacen3.png);
     background-size:cover;
-    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -26,6 +24,7 @@
         input {
             border: 0;
             border-bottom: 2px solid grey;
+            color: white;
             
             background-color:rgba(255, 255, 255, 0);
             &:focus{
@@ -39,7 +38,6 @@
         }
         .boton{
             width: 80%;
-            
             border-color: var(--logoAzulOscuro-azur);
             background-color: var(--logoAzulOscuro-azur);
         }
