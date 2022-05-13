@@ -12,7 +12,7 @@
         flex-direction: column;
         justify-content: center;
         slide{
-            background-color: var(--cyanOp-azur);
+            background-color: var(--cieloClaro-azur);
             height: 500px;
             &.active{
                 display: flex;
@@ -23,7 +23,7 @@
             }
             .carousel-caption{
                 h4{
-                    background-color: var(--cyanOp-azur);
+                    background-color: var(--cieloClaro-azur);
                 }
                 
             }
