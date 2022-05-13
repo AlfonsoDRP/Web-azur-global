@@ -38,17 +38,21 @@
         .tarjetas{
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 0.5rem;
+            
         }
         .tarjeta-sobrenos{
             display: flex;
+            color: white;
                 flex-direction: column;
                 align-items: center;
                 gap: 1rem;
                 padding: 1rem;
-                background-color: var(--niebla-azur);
+                background-color: var(--cieloClaro-azur);
                 width: 15%;
                 height: 40%;
+                
                 .img-tarjeta{
                     max-width: 50%;
                     max-height: 50%;
@@ -57,7 +61,6 @@
                     height: 100%;
                     display: flex;
                     align-items: flex-end;
-                    
                 }
         }
     }
