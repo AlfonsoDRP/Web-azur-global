@@ -1,8 +1,15 @@
 <div class="contenedor-principal">
+    
     <div class="login">
-        <label for="">Usuario:</label>
-        <input type="text" class="form-control sm">
-        <label for="">Contraseña:</label>
-        <input type="text" class="form-control sm">
+        <img src="../../../assets/LOGO-AZURGLOBAL.SVG" class="logo-login" alt="">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control form-control-sm" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput"><fa-icon class="icon" [icon]="faUser"></fa-icon> Usuario</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control form-control-sm" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput"><fa-icon class="icon" [icon]="faCandado"></fa-icon> Contraseña</label>
+          </div>
+        <button class="btn btn-primary boton">Entrar</button>
     </div>
 </div>
