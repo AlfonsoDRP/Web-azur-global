@@ -25,6 +25,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     CarouselModule.forRoot(),
     FontAwesomeModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
