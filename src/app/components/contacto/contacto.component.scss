@@ -1,5 +1,5 @@
 .contenedor-principal {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -26,6 +26,33 @@
       border-left: 49.5vw solid transparent;
       border-right: 49.5vw solid transparent;
       border-top: 200px solid var(--azul-azur);
+    }
+  }
+  .contenedor-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .rotulo{
+      text-align: center;
+    }
+    .formulario{
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .arriba{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        .nombre{
+          width: 100%;
+        }
+        .telefono{
+          width:100%;
+        }
+      }
     }
   }
 }
