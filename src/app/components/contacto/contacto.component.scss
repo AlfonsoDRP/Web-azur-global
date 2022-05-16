@@ -27,40 +27,86 @@
       border-right: 49.5vw solid transparent;
       border-top: 200px solid var(--azul-azur);
     }
-  }
-  .contenedor-formulario{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .rotulo{
-      text-align: center;
-    }
-    .formulario{
-      width: 70%;
+    .aux{
+      padding-top: 3rem;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      .arriba{
-        width: 100%;
+      align-items: center;
+      .telmail{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    
+  }
+  .abajo{
+    position: relative;
+    animation-name: abajo-arriba;
+    animation-duration: 1.5s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0.5rem;
+    .contenedor-formulario{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      .rotulo{
+        text-align: center;
+        width: 70%;
+      }
+      .formulario{
+        padding: 0.5rem;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
         gap: 0.5rem;
-        .nombre{
+        .arriba{
           width: 100%;
+          display: flex;
+          flex-direction: row;
+          gap: 0.5rem;
+          .nombre{
+            width: 100%;
+          }
+          .telefono{
+            width:100%;
+          }
         }
-        .telefono{
-          width:100%;
+        .btn{
+          background-color: var(--azul-azur);
         }
       }
     }
+    .contenedor-mapa{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
   }
+  
 }
 @keyframes comienzo {
   from {
     top: -500px;
   }
   to {
+    top: 0;
+  }
+}
+@keyframes abajo-arriba{
+  from {
+    opacity: 0;
+    top: 1000px;
+  }
+  to{
+    opacity: 1;
     top: 0;
   }
 }
