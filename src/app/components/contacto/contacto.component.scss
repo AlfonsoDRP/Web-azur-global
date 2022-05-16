@@ -1,48 +1,39 @@
 .contenedor-principal {
-  height: 100%;
-  h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: underline;
-  }
-  .letrero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .separador {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    .texto {
-      padding-top: 100px;
-      height: 350px;
-      width: 300px;
-      font-size: 20px;
-      .btn {
-        width: 100%;
-      }
-      .logo-contacto {
-        height: 35px;
-        width: 35px;
-      }
-      span {
-        margin-left: 5px;
-      }
-    }
-    .formulario {
-      height: 350px;
-      width: 500px;
-      font-size: 20px;
-      margin-bottom: 150px;
-     button{
-         margin-top: 10px;
-     }
-    }
-    img {
-      width: 500px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  .contenedor-triangulo {
+    color: white;
+    position: relative;
+    top: -500px;
+    animation-name: comienzo;
+    animation-duration: 1.5s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       height: 300px;
+      width: 100%;
+      background-color: var(--azul-azur);
     }
+    .triangulo {
+      width: 0;
+      height: 0;
+      border-left: 49.5vw solid transparent;
+      border-right: 49.5vw solid transparent;
+      border-top: 200px solid var(--azul-azur);
+    }
+  }
+}
+@keyframes comienzo {
+  from {
+    top: -500px;
+  }
+  to {
+    top: 0;
   }
 }
