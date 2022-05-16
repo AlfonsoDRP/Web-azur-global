@@ -62,7 +62,7 @@
       }
       .formulario{
         padding: 0.5rem;
-        width: 70%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -92,7 +92,7 @@
   }
   
 }
-@keyframes comienzo {
+@keyframes comienzo{
   from {
     top: -500px;
   }
