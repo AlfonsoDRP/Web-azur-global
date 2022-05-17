@@ -41,6 +41,30 @@
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
+    .izquierda{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: right;
+      gap: 2rem;
+      animation-name: izquierda-derecha;
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+    .derecha{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: left;
+      gap: 2rem;
+      animation-name: derecha-izquierda;
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
     .btn {
       background-color: white;
       color: var(--logoAzulClaro-azur);
@@ -54,7 +78,7 @@
       color: white;
       padding: 1rem;
       background-color: var(--cieloClaro-azur);
-      width: 15%;
+      width: 25%;
       height: 100%;
       .img-tarjeta {
         height: 200px;
@@ -70,4 +94,10 @@ from{position: relative;top: -500px;opacity: 0;}to{position: relative;top: 0;opa
 }
 @keyframes aparecer{
 from{opacity: 0.3;}to{opacity: 1;}
+}
+@keyframes izquierda-derecha{
+  from{position: relative;left: -1000px;opacity: 0;}to{position: relative;left: 0;opacity: 1;}
+}
+@keyframes derecha-izquierda{
+  from{position: relative;right: -1000px;opacity: 0;}to{position: relative;right: 0;opacity: 1;}
 }
