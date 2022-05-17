@@ -1,108 +1,119 @@
 .contenedor-principal {
-  height: 100%;
-  display: grid;
-  grid-template-rows: 50px 1fr 1fr 1fr;
-  .cabecera{
-    text-align: center;
-    text-decoration: underline;
+  overflow-x: hidden;
+  height: 100vh;
+  .entrada {
+    position: relative;
+    animation-name: aparecer;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    .sobre-triangulo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 250px;
+      width: 100%;
+      background-color: var(--azul-azur);
+      color: white;
+    }
+    .triangulo {
+      width: 0;
+      height: 0;
+      border-right: 100vw solid var(--azul-azur);
+      border-top: 0 solid transparent;
+      border-bottom: 200px solid transparent;
+    }
   }
-  .contenedor-arriba {
-    background-color: white;
+  .tarjetas_info {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 0.5rem;
-    .info-historia {
-      h1 {
-          color: var(--logoAzulOscuro-azur);
-        border-right: 1px solid black;
-        height: 50%;
-        display: flex;
-        align-items: center;
-        padding: 2rem;
-      }
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-      font-size: 15px;
-      background-color: white;
-      width: 40%;
-      padding: 0.5rem;
-    }
-    .trabajo-equipo {
-      h1 {
-        color: var(--logoAzulOscuro-azur);
-        border-right: 1px solid black;
-        height: 50%;
-        display: flex;
-        align-items: center;
-        padding: 2rem;
-      }
+    justify-content: center;
+    .historia {
       display: flex;
       flex-direction: row;
-      gap: 2rem;
       align-items: center;
-      font-size: 15px;
-      background-color: white;
-      width: 40%;
-      padding: 0.5rem;
-    }
-  }
-  .imagen {
-    background-color: white;
-    opacity: 0.3;
-    padding: 0.5rem;
-  }
-  .contenedor-abajo {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0.5rem;
-    .valores {
-      h1 {
-        color: var(--logoAzulOscuro-azur);
-        border-right: 1px solid black;
-        height: 50%;
-        display: flex;
-        align-items: center;
-        padding: 2rem;
+      justify-content: space-between;
+      .imagen {
+        left: 50px;
+        width: 300px;
+        height: 300px;
+        background-color: var(--azul-azur);
+        animation-name: contenedor_izquierda;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-duration: 1.5s;
+        img {
+          width: 100%;
+          animation-name: imagen_izquierda;
+          animation-duration: 2s;
+          animation-delay: 0.2s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          left: 20px;
+          top: 50px;
+        }
       }
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-      font-size: 15px;
-      background-color: white;
-      width: 40%;
-      padding: 0.5rem;
-    }
-    .vision {
-      h1 {
-        color: var(--logoAzulOscuro-azur);
-        border-right: 1px solid black;
-        height: 50%;
+      .texto {
+        padding: 0.5rem;
         display: flex;
+        flex-direction: row;
+        width: 50%;
         align-items: center;
-        padding: 2rem;
+        animation-name: tarjeta_derecha;
+          animation-duration: 2s;
+          animation-delay: 0.2s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+        .rotulo {
+          padding: 0.5rem;
+          display: flex;
+          align-items: center;
+          height: 300px;
+          border-right: 2px solid black;
+        }
+        .info {
+          padding: 0.5rem;
+        }
       }
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-      font-size: 15px;
-      background-color: white;
-      width: 40%;
-      padding: 0.5rem;
     }
   }
 }
-::-webkit-scrollbar {
-  width: 10px;
+@keyframes aparecer {
+  from {
+    top: -500px;
+  }
+  to {
+    top: 0;
+  }
 }
-::-webkit-scrollbar-track {
-  background: #cccccc;
-  border-radius: 5px;
+@keyframes contenedor_izquierda {
+  from {
+    position: relative;
+    left: -500px;
+  }
+  to {
+    position: relative;
+    left: 50px;
+  }
 }
-::-webkit-scrollbar-thumb {
-  background: var(--azul-azur);
-  border-radius: 5px;
+@keyframes imagen_izquierda {
+  from {
+    position: relative;
+    left: -500px;
+  }
+  to {
+    position: relative;
+    left: 20px;
+  }
+}
+@keyframes tarjeta_derecha {
+  from {
+    position: relative;
+    right: -1200px;
+  }
+  to{
+    position: relative;
+    right: 0;
+  }
 }
