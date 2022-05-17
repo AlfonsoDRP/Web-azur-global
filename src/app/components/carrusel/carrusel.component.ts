@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {faArrowLeftLong,faArrowRightLong  } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,39 +6,47 @@ import {faArrowLeftLong,faArrowRightLong  } from '@fortawesome/free-solid-svg-ic
   templateUrl: './carrusel.component.html',
   styleUrls: ['./carrusel.component.scss']
 })
-export class CarruselComponent {
+export class CarruselComponent implements OnInit{
+
   tiempoAnimacion = 0.5;
   animancionActiva:boolean = false;
   posicion:number= 0;
 
-  listaProductos =  [
-    {image: '../../../assets/piezas/AMORTIGUADORES.PNG',familia:"Amortiguadores"},
-    {image: '../../../assets/piezas/COMPRESOR.PNG',familia:"Compresores"},
-    {image: '../../../assets/piezas/FILTROS.PNG',familia:"Filtros"},
-    {image: '../../../assets/piezas/RODAMIENTOS.PNG',familia:"Rodamientos"},
-    {image: '../../../assets/piezas/espejo.png',familia:"Espejos"},
-    {image: '../../../assets/piezas/BATERIA.PNG',familia:"Baterias"}
-  ]
+  @Input() listaProductos =  [{image: '',familia:''}];
   
-  productosMostrar = [
-    {image: '../../../assets/piezas/AMORTIGUADORES.PNG',familia:"Amortiguadores"},
-    {image: '../../../assets/piezas/COMPRESOR.PNG',familia:"Compresores"},
-    {image: '../../../assets/piezas/FILTROS.PNG',familia:"Filtros"},
-    {image: '../../../assets/piezas/RODAMIENTOS.PNG',familia:"Rodamientos"},
-    {image: '../../../assets/piezas/espejo.png',familia:"Espejos"}
-  ];
+  
+  productosMostrar = [{image: '',familia:''}];
+
+
 
   numeroProductos:number=this.listaProductos.length;
   
   faArrowLeftLong=faArrowLeftLong;
   faArrowRightLong=faArrowRightLong;
 
+  ngOnInit(): void {
+    this.productosMostrar[0] = Object.assign({}, this.listaProductos[0]);
+    for (let index = 1; index < 5; index++) {
+      this.productosMostrar.push(Object.assign({}, this.listaProductos[index]))
+    }
+  }
+
   clikedLeft(){
-    if(!this.animancionActiva) this.animacionIzquierda();
+    
+    if(!this.animancionActiva) {
+      this.animancionActiva = true;
+      this.animacionIzquierda();
+      setTimeout(() => { this.animancionActiva = false; }, 1100);
+    };
   
   }
   clikedRight(){
-    if(!this.animancionActiva) this.animacionDerecha();
+    
+    if(!this.animancionActiva) {
+      this.animancionActiva = true;
+      this.animacionDerecha();
+      setTimeout(() => { this.animancionActiva = false; }, 1100);
+    };
   }
 
   animacionIzquierda(){
@@ -50,13 +58,13 @@ export class CarruselComponent {
     let centroImagen = document.getElementById('centroImagen');
     
     if(derecha !== null && derechaImagen !== null && izquierda !== null && centro !== null && centroImagen !== null && derechaOculto !== null){
-      this.animancionActiva = true;
-      derechaOculto.style.animation ='animacion-derecha-entrada 0.3s 0.3s ';
-      derecha.style.animation ='animacion-derecha-centro 0.6s ';
-      derechaImagen.style.animation ='agrandar-imagen 0.3s 0.3s ';
-      izquierda.style.animation ='animacion-izquierda-salida 0.3s 0.3s ';
-      centro.style.animation ='animacion-centro-izquierda 0.6s ';
-      centroImagen.style.animation ='encoger-imagen  0.6s ';
+      derechaOculto.style.animation ='animacion-derecha-entrada 0.5s 0.5s forwards';
+      derecha.style.animation ='animacion-derecha-centro 1s forwards';
+      derechaImagen.style.animation ='agrandar-imagen 0.5s 0.5s forwards';
+      izquierda.style.animation ='animacion-izquierda-salida 0.5s 0.5s forwards';
+      centro.style.animation ='animacion-centro-izquierda 1s forwards';
+      centroImagen.style.animation ='encoger-imagen  1s forwards';
+
 
       setTimeout(() => {
         if(derecha !== null && derechaImagen !== null && izquierda !== null && centro !== null && centroImagen !== null && derechaOculto !== null){
@@ -66,9 +74,9 @@ export class CarruselComponent {
           izquierda.style.animation ='';
           centro.style.animation ='';
           centroImagen.style.animation ='';
-          this.animancionActiva = false;
           this.cambiarProductos(false);
-      } }, 600);
+        } 
+      }, 1000);
     }
   }
 
@@ -80,13 +88,12 @@ export class CarruselComponent {
     let centro = document.getElementById('centro');
     let centroImagen = document.getElementById('centroImagen');
     if(derecha !== null && izquierdaImagen !== null && izquierda !== null && centro !== null && centroImagen !== null && izquierdaOculto !== null){
-      this.animancionActiva = true;
-      izquierdaOculto.style.animation ='animacion-izquierda-entrada 0.3s 0.3s ';
-      derecha.style.animation ='animacion-derecha-salida 0.3s 0.3s ';
-      izquierda.style.animation ='animacion-izquierda-centro 0.6s ';
-      izquierdaImagen.style.animation ='agrandar-imagen 0.3s 0.3s ';
-      centro.style.animation ='animacion-centro-derecha 0.6s ';
-      centroImagen.style.animation ='encoger-imagen  0.6s ';
+      izquierdaOculto.style.animation ='animacion-izquierda-entrada 0.5s 0.5s ';
+      derecha.style.animation ='animacion-derecha-salida 0.5s 0.5s ';
+      izquierda.style.animation ='animacion-izquierda-centro 1s ';
+      izquierdaImagen.style.animation ='agrandar-imagen 0.5s 0.5s ';
+      centro.style.animation ='animacion-centro-derecha 1s ';
+      centroImagen.style.animation ='encoger-imagen  1s ';
       setTimeout(() => {
         if(derecha !== null && izquierdaImagen !== null && izquierda !== null && centro !== null && centroImagen !== null && izquierdaOculto !== null){
           izquierdaOculto.style.animation ='';
@@ -95,9 +102,11 @@ export class CarruselComponent {
           izquierdaImagen.style.animation ='';
           centro.style.animation ='';
           centroImagen.style.animation ='';
-          this.animancionActiva = false;
-          this.cambiarProductos(true);
-      } }, 601);
+        } 
+      }, 1000);
+      setTimeout(() => {
+        this.cambiarProductos(true);
+      }, 999);
     }
   }
   
