@@ -26,20 +26,25 @@
     }
   }
   .tarjetas_info {
-    .prueba {
-      position: relative;
-      left: 50px;
-      width: 300px;
-      height: 350px;
-      background-color: var(--azul-azur);
-      animation-name: contenedor_izquierda;
-      animation-timing-function: ease-in-out;
-      animation-fill-mode: forwards;
-      animation-duration: 1.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .historia {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
       .imagen {
+        left: 50px;
+        width: 300px;
+        height: 300px;
+        background-color: var(--azul-azur);
+        animation-name: contenedor_izquierda;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-duration: 1.5s;
         img {
-          width: 350px;
-          position: relative;
+          width: 100%;
           animation-name: imagen_izquierda;
           animation-duration: 2s;
           animation-delay: 0.2s;
@@ -47,6 +52,28 @@
           animation-fill-mode: forwards;
           left: 20px;
           top: 50px;
+        }
+      }
+      .texto {
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        align-items: center;
+        animation-name: tarjeta_derecha;
+          animation-duration: 2s;
+          animation-delay: 0.2s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+        .rotulo {
+          padding: 0.5rem;
+          display: flex;
+          align-items: center;
+          height: 300px;
+          border-right: 2px solid black;
+        }
+        .info {
+          padding: 0.5rem;
         }
       }
     }
@@ -62,19 +89,31 @@
 }
 @keyframes contenedor_izquierda {
   from {
+    position: relative;
     left: -500px;
   }
   to {
+    position: relative;
     left: 50px;
   }
 }
 @keyframes imagen_izquierda {
   from {
+    position: relative;
     left: -500px;
   }
   to {
+    position: relative;
     left: 20px;
   }
 }
 @keyframes tarjeta_derecha {
+  from {
+    position: relative;
+    right: -1200px;
+  }
+  to{
+    position: relative;
+    right: 0;
+  }
 }
