@@ -3,7 +3,7 @@
   height: 100vh;
   .entrada {
     position: relative;
-    animation-name: aparecer;
+    animation-name: aparecer-sobre;
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
@@ -79,7 +79,7 @@
     }
   }
 }
-@keyframes aparecer {
+@keyframes aparecer-sobre {
   from {
     top: -500px;
   }
