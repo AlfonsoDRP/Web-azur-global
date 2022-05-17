@@ -1,7 +1,18 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
+    &::-webkit-scrollbar {
+        width: 15px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #cccccc;
+        border-radius: 5px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #858585;
+        border-radius: 5px;
+      }
 }
 :root{
     --logoAzulOscuro-azur: #002b81;

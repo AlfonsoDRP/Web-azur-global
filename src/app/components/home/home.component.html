@@ -1,168 +1,88 @@
 <div class="contenedor-principal">
-  <div class="carrusel">
-    <h1>Nuestros productos</h1>
-    <carousel
-      [isAnimated]="true"
-      [itemsPerSlide]="itemsPerSlide"
-      [singleSlideOffset]="singleSlideOffset"
-      [noWrap]="!noWrap"
-      [interval]="0"
-      [startFromIndex]="0"
-      class="carrusel"
-    >
-      <slide *ngFor="let slide of slides; let index = index">
-        <div>
-          <img [src]="slide.image" alt="image slide" class="img-slide" />
-        </div>
-        <div class="carousel-caption">
-          <h4>{{ slide.familia }}</h4>
-        </div>
-      </slide>
-    </carousel>
-  </div>
-
-  <div class="sobrenos">
-    <h1>Sobre nosotros</h1>
-    <div class="tarjetas">
-      <div class="tarjeta-sobrenos">
-        <h4>Tecnología</h4>
-        <img
-          class="img-tarjeta"
-          src="../../../assets/empresa/Pistola1(mod).png"
-          alt=""
-        />
-        <p>
-          Azur Global es una empresa que apoya el uso de nuevas tecnologías y
-          que posee una de las gestiones de almacen mas punteras del mercado.
-        </p>
-        <div class="boton">
-          <button
-            class="btn btn-primary"
-            routerLink="/sobrenosotros"
-            (click)="scroll()"
-          >
-            Ver más
-          </button>
-        </div>
-      </div>
-      <div class="tarjeta-sobrenos">
-        <h4>Tecnología</h4>
-        <img
-          class="img-tarjeta"
-          src="../../../assets/empresa/Pistola1(mod).png"
-          alt=""
-        />
-        <p>
-          Azur Global es una empresa que apoya el uso de nuevas tecnologías y
-          que posee una de las gestiones de almacen mas punteras del mercado.
-        </p>
-        <div class="boton">
-          <button
-            class="btn btn-primary"
-            routerLink="/sobrenosotros"
-            (click)="scroll()"
-          >
-            Ver más
-          </button>
-        </div>
-      </div>
-      <div class="tarjeta-sobrenos">
-        <h4>Tecnología</h4>
-        <img
-          class="img-tarjeta"
-          src="../../../assets/empresa/Pistola1(mod).png"
-          alt=""
-        />
-        <p>
-          Azur Global es una empresa que apoya el uso de nuevas tecnologías y
-          que posee una de las gestiones de almacen mas punteras del mercado.
-        </p>
-        <div class="boton">
-          <button
-            class="btn btn-primary"
-            routerLink="/sobrenosotros"
-            (click)="scroll()"
-          >
-            Ver más
-          </button>
-        </div>
-      </div>
+  <div class="contenedor-primero">
+    <div class="texto">
+      <h1 class="display-1">Azur Global</h1>
+      <h4>Tu vehiculo por piezas</h4>
     </div>
   </div>
 
   <h1>Ventajas</h1>
   <div class="ventajas">
-    <div class="tarjeta">
-      <h4>Rapidez</h4>
-      <div class="img-tarjeta">
-        <fa-icon class="icon fa-8x" [icon]="faReloj"></fa-icon>
-      </div>
-      <p>
-        Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
-        óptima gracias a nuestra gestión del almacen y gran personal
-      </p>
+    <div class="izquierda">
+      <div class="tarjeta">
+        <h4>Rapidez</h4>
+        <div class="img-tarjeta">
+          <fa-icon class="icon fa-8x" [icon]="faReloj"></fa-icon>
+        </div>
+        <p>
+          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+          óptima gracias a nuestra gestión del almacen y gran personal
+        </p>
 
-      <button
-        class="btn btn-primary"
-        routerLink="/sobrenosotros"
-        (click)="scroll()"
-      >
-        Ver más
-      </button>
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
+      </div>
+      <div class="tarjeta">
+        <h4>Compromiso</h4>
+        <div class="img-tarjeta">
+          <fa-icon class="icon fa-8x" [icon]="faCompromiso"></fa-icon>
+        </div>
+        <p>
+          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+          óptima gracias a nuestra gestión del almacen y gran personal
+        </p>
+
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
+      </div>
     </div>
-    <div class="tarjeta">
-      <h4>Compromiso</h4>
-      <div class="img-tarjeta">
-        <fa-icon class="icon fa-8x" [icon]="faCompromiso"></fa-icon>
-      </div>
-      <p>
-        Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
-        óptima gracias a nuestra gestión del almacen y gran personal
-      </p>
+    <div class="derecha">
+      <div class="tarjeta">
+        <h4>Calidad</h4>
+        <div class="img-tarjeta">
+          <fa-icon class="icon fa-8x" [icon]="faCalidad"></fa-icon>
+        </div>
+        <p>
+          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+          óptima gracias a nuestra gestión del almacen y gran personal
+        </p>
 
-      <button
-        class="btn btn-primary"
-        routerLink="/sobrenosotros"
-        (click)="scroll()"
-      >
-        Ver más
-      </button>
-    </div>
-    <div class="tarjeta">
-      <h4>Calidad</h4>
-      <div class="img-tarjeta">
-        <fa-icon class="icon fa-8x" [icon]="faCalidad"></fa-icon>
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
       </div>
-      <p>
-        Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
-        óptima gracias a nuestra gestión del almacen y gran personal
-      </p>
+      <div class="tarjeta">
+        <h4>Futuro</h4>
+        <div class="img-tarjeta">
+          <fa-icon class="icon fa-8x" [icon]="faFuturo"></fa-icon>
+        </div>
+        <p>
+          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+          óptima gracias a nuestra gestión del almacen y gran personal
+        </p>
 
-      <button
-        class="btn btn-primary"
-        routerLink="/sobrenosotros"
-        (click)="scroll()"
-      >
-        Ver más
-      </button>
-    </div>
-    <div class="tarjeta">
-      <h4>Futuro</h4>
-      <div class="img-tarjeta">
-        <fa-icon class="icon fa-8x" [icon]="faFuturo"></fa-icon>
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
       </div>
-      <p>
-        Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
-        óptima gracias a nuestra gestión del almacen y gran personal
-      </p>
-
-      <button
-        class="btn btn-primary"
-        routerLink="/sobrenosotros"
-        (click)="scroll()"
-      >
-        Ver más
-      </button>
     </div>
   </div>
 </div>
