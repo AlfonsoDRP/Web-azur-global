@@ -8,7 +8,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ContactoComponent,
     SobreNosotrosComponent,
     NavbarComponent,
+    CarruselComponent,
     HomeComponent,
     LoginComponent,
     FooterComponent
@@ -29,7 +30,6 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule.forRoot(),
     FontAwesomeModule,
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule

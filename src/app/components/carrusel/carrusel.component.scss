@@ -1,0 +1,212 @@
+.contenedor-principal {
+  width: 1400px;
+  height: 550px;
+  display: block;
+
+  .contenido {
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    .contenedor-lateral {
+      height: 500px;
+      width: 100%;
+      background-color: var(--cieloClaro-azur);
+      display: grid;
+      grid-template-rows: 1fr 50px;
+      .imagen-producto {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          filter: drop-shadow(0 10px 2px black);
+          max-width: 90%;
+          max-height: 460px;
+          height: auto;
+        }
+        &:hover img {
+          animation: agrandar-hover 1s forwards;
+        }
+      }
+      .titulo-producto {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        color: white;
+      }
+    }
+    .contenedor-centro {
+      height: 100%;
+      width: 100%;
+      background-color: var(--cieloClaro-azur);
+      display: grid;
+      grid-template-rows: 1fr 50px;
+      .imagen-producto {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          filter: drop-shadow(0 10px 2px black);
+          max-width: 150%;
+          max-height: 500px;
+          height: auto;
+        }
+      }
+      .titulo-producto {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        color: white;
+      }
+      &:hover img {
+        animation: agrandar-hover 1s forwards;
+      }
+    }
+    img {
+      max-width: 100px;
+    }
+  }
+  .contenedor-boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 267.2px;
+    background-color: var(--cieloClaro-azur);
+    position: relative;
+    height: 50px;
+
+    .boton {
+      width: 100px;
+      background-color: transparent;
+      border-radius: 10px;
+      border: 1px solid white;
+      color: white;
+      font-weight: bold;
+    }
+  }
+  .contenedor-boton-derecha{
+    left: calc(60% + 9.8px);
+    top:-100px
+  }
+  .contenedor-boton-izquierda{
+    left: calc(20% + 3.2px);
+    top: -50px;
+  }
+
+}
+
+.oculto {
+  visibility: hidden;
+}
+
+@keyframes animacion-centro-izquierda {
+  49% {
+    height: 500px;
+    transform: translateX(0);
+  }
+  100% {
+    background-color: var(--cieloClaro-azur);
+    height: 500px;
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+
+@keyframes animacion-centro-derecha {
+  50% {
+    height: 500px;
+    transform: translateX(0);
+  }
+  100% {
+    height: 500px;
+    transform: translateX(calc(100% + 1rem));
+  }
+}
+
+@keyframes animacion-derecha-centro {
+  50% {
+    height: 500px;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1rem));
+    height: 550px;
+  }
+}
+
+@keyframes animacion-izquierda-centro {
+  50% {
+    height: 500px;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100% + 1rem));
+    height: 550px;
+  }
+}
+
+@keyframes animacion-izquierda-salida {
+  0% {
+    clip-path: inset(0);
+  }
+  100% {
+    clip-path: inset(0 0 0 100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animacion-derecha-salida {
+  0% {
+    clip-path: inset(0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animacion-izquierda-entrada {
+  0% {
+    visibility: visible;
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    visibility: visible;
+    clip-path: inset(0);
+    transform: translateX(calc(100% + 1rem));
+  }
+}
+@keyframes animacion-derecha-entrada {
+  0% {
+    visibility: visible;
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    visibility: visible;
+    clip-path: inset(0);
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+
+@keyframes agrandar-imagen {
+  100% {
+    max-width: 150%;
+    max-height: 500px;
+    height: auto;
+  }
+}
+@keyframes agrandar-hover {
+  100% {
+    transform:  scale(1.2);
+  }
+}
+@keyframes encoger-imagen {
+  
+  100% {
+    max-width: 90%;
+    max-height: 460px;
+    height: auto;
+  }
+}

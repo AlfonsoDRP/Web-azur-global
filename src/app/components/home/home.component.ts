@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { faBitcoinSign, faCircleCheck, faClock, faHandshake, faHourglass, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
+import { Component } from '@angular/core';
+import {  faCircleCheck,  faHandshake, faHourglass, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { faBitcoinSign, faCircleCheck, faClock, faHandshake, faHourglass, faPlan
 })
 
 
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   
 constructor(){
@@ -37,12 +37,12 @@ scroll(){
   itemsPerSlide = 3;
   singleSlideOffset = true;
   noWrap = true;
- faReloj = faHourglass;
- faCompromiso = faHandshake;
- faCalidad = faCircleCheck;
- faFuturo = faPlaneDeparture;
+  faReloj = faHourglass;
+  faCompromiso = faHandshake;
+  faCalidad = faCircleCheck;
+  faFuturo = faPlaneDeparture;
   slidesChangeMessage = '';
- 
+  
   slides = [
     {image: '../../../assets/piezas/AMORTIGUADORES.PNG',familia:"Amortiguadores"},
     {image: '../../../assets/piezas/COMPRESOR.PNG',familia:"Compresores"},
@@ -50,10 +50,7 @@ scroll(){
     {image: '../../../assets/piezas/RODAMIENTOS.PNG',familia:"Rodamientos"},
     {image: '../../../assets/piezas/espejo.png',familia:"Espejos"},
     {image: '../../../assets/piezas/BATERIA.PNG',familia:"Baterias"},
-    
   ];
- 
-  ngOnInit(): void {
-  }
+
 
 }
