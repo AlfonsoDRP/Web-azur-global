@@ -7,84 +7,90 @@
   </div>
   <div class="carrusel">
     <h1>Productos</h1>
-    <app-carrusel [listaProductos]="slides" ></app-carrusel>
+    <div class="linea"> </div>
+    <app-carrusel [listaProductos]="slides"></app-carrusel>
   </div>
-  <h1>Ventajas</h1>
-  <div class="ventajas">
-    <div class="izquierda" >
-      <div class="tarjeta" id="izquierda">
-        <h4>Rapidez</h4>
-        <div class="img-tarjeta">
-          <fa-icon class="icon fa-8x" [icon]="faReloj"></fa-icon>
-        </div>
-        <p>
-          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
-          óptima gracias a nuestra gestión del almacen y gran personal
-        </p>
-
-        <button
-          class="btn btn-primary"
-          routerLink="/sobrenosotros"
-          (click)="scroll()"
-        >
-          Ver más
-        </button>
-      </div>
-      <div class="tarjeta" id="izquierda">
-        <h4>Compromiso</h4>
-        <div class="img-tarjeta">
-          <fa-icon class="icon fa-8x" [icon]="faCompromiso"></fa-icon>
-        </div>
-        <p>
-          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
-          óptima gracias a nuestra gestión del almacen y gran personal
-        </p>
-
-        <button
-          class="btn btn-primary"
-          routerLink="/sobrenosotros"
-          (click)="scroll()"
-        >
-          Ver más
-        </button>
-      </div>
+  <div class="contenedor-ventajas">
+    <div class="rotulo">
+      <h1>Ventajas</h1>
+      <div class="linea"> </div>
     </div>
-    <div class="derecha" >
-      <div class="tarjeta">
-        <h4>Calidad</h4>
-        <div class="img-tarjeta">
-          <fa-icon class="icon fa-8x" [icon]="faCalidad"></fa-icon>
-        </div>
-        <p>
-          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
-          óptima gracias a nuestra gestión del almacen y gran personal
-        </p>
+    <div class="ventajas">
+      <div class="izquierda">
+        <div class="tarjeta" id="izquierda">
+          <h4>Rapidez</h4>
+          <div class="img-tarjeta">
+            <fa-icon class="icon fa-8x" [icon]="faReloj"></fa-icon>
+          </div>
+          <p>
+            Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
+            es óptima gracias a nuestra gestión del almacen y gran personal
+          </p>
 
-        <button
-          class="btn btn-primary"
-          routerLink="/sobrenosotros"
-          (click)="scroll()"
-        >
-          Ver más
-        </button>
+          <button
+            class="btn btn-primary"
+            routerLink="/sobrenosotros"
+            (click)="scroll()"
+          >
+            Ver más
+          </button>
+        </div>
+        <div class="tarjeta" id="izquierda">
+          <h4>Compromiso</h4>
+          <div class="img-tarjeta">
+            <fa-icon class="icon fa-8x" [icon]="faCompromiso"></fa-icon>
+          </div>
+          <p>
+            Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
+            es óptima gracias a nuestra gestión del almacen y gran personal
+          </p>
+
+          <button
+            class="btn btn-primary"
+            routerLink="/sobrenosotros"
+            (click)="scroll()"
+          >
+            Ver más
+          </button>
+        </div>
       </div>
-      <div class="tarjeta" id="derecha">
-        <h4>Futuro</h4>
-        <div class="img-tarjeta">
-          <fa-icon class="icon fa-8x" [icon]="faFuturo"></fa-icon>
-        </div>
-        <p>
-          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
-          óptima gracias a nuestra gestión del almacen y gran personal
-        </p>
+      <div class="derecha">
+        <div class="tarjeta">
+          <h4>Calidad</h4>
+          <div class="img-tarjeta">
+            <fa-icon class="icon fa-8x" [icon]="faCalidad"></fa-icon>
+          </div>
+          <p>
+            Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
+            es óptima gracias a nuestra gestión del almacen y gran personal
+          </p>
 
-        <button
-          class="btn btn-primary"
-          routerLink="/sobrenosotros"
-          (click)="scroll()"
-        >
-          Ver más
-        </button>
+          <button
+            class="btn btn-primary"
+            routerLink="/sobrenosotros"
+            (click)="scroll()"
+          >
+            Ver más
+          </button>
+        </div>
+        <div class="tarjeta" id="derecha">
+          <h4>Futuro</h4>
+          <div class="img-tarjeta">
+            <fa-icon class="icon fa-8x" [icon]="faFuturo"></fa-icon>
+          </div>
+          <p>
+            Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
+            es óptima gracias a nuestra gestión del almacen y gran personal
+          </p>
+
+          <button
+            class="btn btn-primary"
+            routerLink="/sobrenosotros"
+            (click)="scroll()"
+          >
+            Ver más
+          </button>
+        </div>
       </div>
     </div>
   </div>
