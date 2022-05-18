@@ -12,22 +12,25 @@ export class HomeComponent {
 
   
 constructor(){
-  const bloqueder = document.getElementById('#derecha')!;
-  const bloqueizq = document.getElementById('#izquierda')!;
+  $(function() {
+    // Escuchar el evento scroll
+    $(window).on("scroll", function(evt) {
+      var scrollTop:any = $(window).scrollTop();
+      if (scrollTop > 1000 && scrollTop < 1500) {
+        console.log(scrollTop)
+        $(".derecha").addClass(".animado-derecha");
+        $(".izquierda").addClass(".animado-izquierda");
+      }else{
+        console.log("fuera!!!!")
+        $(".derecha").removeClass(".animado-derecha");
+        $(".izquierda").removeClass(".animado-izquierda");
+      }
+    });
 
-  const animar = () => {
-    console.log('Ejecuta');
-  };
-
-const observador = new IntersectionObserver(animar, {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5,
-});
-
-observador.observe(bloqueder);
-observador.observe(bloqueizq);
+  });
 }
+  
+
 
 scroll(){
   window.scroll(0,0);

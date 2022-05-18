@@ -67,6 +67,15 @@
       align-items: center;
       justify-content: left;
       gap: 2rem;
+    }
+    .animado-derecha{
+      
+      animation-name: derecha-izquierda;
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+    .animado-izquierda{
       animation-name: derecha-izquierda;
       animation-duration: 1.5s;
       animation-fill-mode: forwards;
