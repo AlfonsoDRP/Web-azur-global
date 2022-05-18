@@ -1,1 +1,128 @@
-<p>catalogo</p>
+<div class="contenedor-principal">
+  <div class="contenedor-triangulo">
+    <div class="info">
+      <h3 class="display-6"></h3>
+      <div class="aux">
+        <div class="telmail">
+          <h1 class="display-1">Nuestros productos</h1>
+        </div>
+      </div>
+    </div>
+    <div class="triangulo"></div>
+  </div>
+  <div class="cuerpo">
+    <section>
+      <div class="izquierda primera-fila">
+        <img
+          class="logo"
+          src="../../../assets/LOGO-AZURGLOBAL-WP(MEDIANO).png"
+          alt=""
+        />
+      </div>
+      <div class="centro">
+        <div class="contenido">
+          <h4>Amortiguadores</h4>
+          <div class="linea"> </div>
+          <p>
+            En nuestra seccion de amortiguadores podras encontrar amortiguciones
+            para todo tipo de configuraciones, desde las mas sencillas y
+            economicas hasta las mas deportivas para tu vehiculo.
+          </p>
+          <img src="../../../assets/piezas/AMORTIGUADORES.PNG" alt="" />
+          <div class="boton">
+            <button type="button" class="btn btn-primary">Ver más</button>
+          </div>
+        </div>
+      </div>
+      <div class="derecha">
+        <div class="contenido">
+          <h4>Filtros</h4>
+          <div class="linea"> </div>
+          <p>
+            En el apartado de filtros encontraras los filtros necesarios para su
+            automovil, tanto filtros de aire, como filtro de habitaculo, filtro
+            de aceite y de gasolina.
+          </p>
+          <img src="../../../assets/piezas/FILTROS.PNG" alt="" />
+          <div class="boton">
+            <button type="button" class="btn btn-primary">Ver más</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="seccion-centro">
+      <div class="izquierda">
+        <div class="contenido">
+          <h4>Frenos</h4>
+          <div class="linea"> </div>
+          <p>
+            En la seccion de frenos podras elegir entre todas nuestras marcas y
+            modelos de pastillas de frenos
+          </p>
+          <img src="../../../assets/piezas/FRENOS.PNG" alt="" />
+          <div class="boton">
+            <button type="button" class="btn btn-primary">Ver más</button>
+          </div>
+        </div>
+      </div>
+      <div class="centro segunda-fila"></div>
+      <div class="derecha">
+        <div class="contenido">
+          <h4>Liquidos</h4>
+          <div class="linea"> </div>
+          <p>
+            Selecciona los mejores liquidos de freno, anticongelantes, liquido
+            de direccion y limpiaparabrisas.
+          </p>
+          <img src="../../../assets/piezas/QUIMICOSYADITIVOS.PNG" alt="" />
+          <div class="boton">
+            <button type="button" class="btn btn-primary">Ver más</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="izquierda">
+        <div class="contenido">
+          <h4>Baterias</h4>
+          <div class="linea"> </div>
+          <p>
+            Tenemos todos los formatos de baterias para vehiculos de multiples
+            grupos de motor
+          </p>
+          <img src="../../../assets/piezas/BATERIA.PNG" alt="" />
+          <div class="boton">
+            <button type="button" class="btn btn-primary">Ver más</button>
+          </div>
+        </div>
+      </div>
+      <div class="centro">
+        <div class="contenido">
+          <h4>Autorecambios</h4>
+          <div class="linea"> </div>
+          <p>
+            Encontraras todo tipo de piezas externas para sustitución y si no la
+            tenemos ¡Te la buscamos!
+          </p>
+          <img class="pieza" src="../../../assets/piezas/espejo.png" alt="" />
+          <div class="boton">
+            <button type="button" class="btn btn-primary">Ver más</button>
+          </div>
+        </div>
+      </div>
+      <div class="derecha tercera-fila"></div>
+    </section>
+
+    
+  </div>
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide" *ngFor="let foto of fotos">
+        <img src={{foto}} alt="" />
+      </div>
+      
+      
+      
+    </div>
+  </div>
+</div>

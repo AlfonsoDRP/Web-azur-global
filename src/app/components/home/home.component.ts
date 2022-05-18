@@ -6,14 +6,42 @@ import {  faCircleCheck,  faHandshake, faHourglass, faPlaneDeparture } from '@fo
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
+
 export class HomeComponent {
 
-  constructor() { }
-    scroll(){
-    window.scroll(0,0);
+  ngOnInit(): void {
+    $(document).ready(function(){
+      window.scroll(0,0)
+    })
   }
-   
+constructor(){
+  $(function() {
+    // Escuchar el evento scroll
+    $(window).on("scroll", function(evt) {
+      var scrollTop:any = $(window).scrollTop();
+      if (scrollTop > 1200 && scrollTop < 1300) {
+
+        $(".derecha").animate({
+          opacity: '1'}
+          )
+        $(".izquierda").animate({
+          opacity: '1'}
+          )
+      }
+    });
+
+  });
+}
   
+
+
+scroll(){
+  window.scroll(0,0);
+}
+  
+
+  itemsPerSlide = 3;
   singleSlideOffset = true;
   noWrap = true;
   faReloj = faHourglass;
