@@ -8,9 +8,12 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './components/login/login.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +22,18 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ContactoComponent,
     SobreNosotrosComponent,
     NavbarComponent,
+    CarruselComponent,
     HomeComponent,
-    CarruselComponent
+    LoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule.forRoot(),
-    FontAwesomeModule
+    FontAwesomeModule,
+    BsDropdownModule.forRoot(),
+    BrowserAnimationsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

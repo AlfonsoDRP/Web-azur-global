@@ -1,3 +1,91 @@
 <div class="contenedor-principal">
-  <app-carrusel class="carrusel2" [listaProductos]="slides" ></app-carrusel>
+  <div class="contenedor-primero">
+    <div class="texto">
+      <h1 class="display-1">Azur Global</h1>
+      <h4>Tu vehiculo por piezas</h4>
+    </div>
+  </div>
+  <div class="carrusel">
+    <h1>Productos</h1>
+    <app-carrusel [listaProductos]="slides" ></app-carrusel>
+  </div>
+  <h1>Ventajas</h1>
+  <div class="ventajas">
+    <div class="izquierda">
+      <div class="tarjeta">
+        <h4>Rapidez</h4>
+        <div class="img-tarjeta">
+          <fa-icon class="icon fa-8x" [icon]="faReloj"></fa-icon>
+        </div>
+        <p>
+          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+          óptima gracias a nuestra gestión del almacen y gran personal
+        </p>
+
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
+      </div>
+      <div class="tarjeta">
+        <h4>Compromiso</h4>
+        <div class="img-tarjeta">
+          <fa-icon class="icon fa-8x" [icon]="faCompromiso"></fa-icon>
+        </div>
+        <p>
+          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+          óptima gracias a nuestra gestión del almacen y gran personal
+        </p>
+
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
+      </div>
+    </div>
+    <div class="derecha">
+      <div class="tarjeta">
+        <h4>Calidad</h4>
+        <div class="img-tarjeta">
+          <fa-icon class="icon fa-8x" [icon]="faCalidad"></fa-icon>
+        </div>
+        <p>
+          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+          óptima gracias a nuestra gestión del almacen y gran personal
+        </p>
+
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
+      </div>
+      <div class="tarjeta">
+        <h4>Futuro</h4>
+        <div class="img-tarjeta">
+          <fa-icon class="icon fa-8x" [icon]="faFuturo"></fa-icon>
+        </div>
+        <p>
+          Nuestra rapidez a la hora de entregar un pedido a nuestros clientes es
+          óptima gracias a nuestra gestión del almacen y gran personal
+        </p>
+
+        <button
+          class="btn btn-primary"
+          routerLink="/sobrenosotros"
+          (click)="scroll()"
+        >
+          Ver más
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

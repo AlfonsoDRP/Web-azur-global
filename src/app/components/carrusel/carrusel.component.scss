@@ -26,7 +26,7 @@
           height: auto;
         }
         &:hover img {
-          animation: agrandar-imagen 1s forwards;
+          animation: agrandar-hover 1s forwards;
         }
       }
       .titulo-producto {
@@ -62,7 +62,7 @@
         color: white;
       }
       &:hover img {
-        animation: agrandar-imagen 1s forwards;
+        animation: agrandar-hover 1s forwards;
       }
     }
     img {
@@ -195,6 +195,11 @@
     max-width: 150%;
     max-height: 500px;
     height: auto;
+  }
+}
+@keyframes agrandar-hover {
+  100% {
+    transform:  scale(1.2);
   }
 }
 @keyframes encoger-imagen {

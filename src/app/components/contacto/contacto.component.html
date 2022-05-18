@@ -1,70 +1,93 @@
 <div class="contenedor-principal">
-  <div class="contenido-principal">
-    <h2>Contacta con nostros</h2>
-    <div class="separador">
-      <div class="texto">
-        <h3>En nuestra Tienda:</h3>
-        <p>C. Tesalónica, SN, Parcela C, 41007 Sevilla</p>
-        
-      </div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12679.326312876363!2d-5.9570343!3d37.3938151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x55dc01fb611e08a2!2sAzur%20Global%20Sevilla!5e0!3m2!1ses!2ses!4v1652265141860!5m2!1ses!2ses"
-        width="500"
-        height="350"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-    <div class="separador">
-      <img src="../../../assets/frenobrembo.jpg" alt="" />
-      <div class="texto">
-        <h3>A traves de:</h3>
-        <p>
-          <img class="logo-contacto" src="../../../assets/correo.png" alt="" />
-          hola@azurglobal.es
-        </p>
-        <p>
-          <img
-            class="logo-contacto"
-            src="../../../assets/telefono.png"
-            alt=""
-          />
-          955000555
-        </p>
-        <p>
-          <img class="logo-contacto" src="../../../assets/web.png" alt="" />
-          <a href="https://www.azurglobal.es"><span>azurglobal.es</span></a>
-        </p>
-        
+  <div class="contenedor-triangulo">
+    <div class="info">
+      <h3 class="display-6">Contacto</h3>
+      <div class="aux">
+        <div class="telmail">
+          <h1 class="display-1">Contacta con nosotros</h1>
+          <p>
+            <fa-icon class="icon fa-1x" [icon]="faPhone"></fa-icon> 955000555
+          </p>
+          <p>
+            <fa-icon class="icon fa-1x" [icon]="faEmail"></fa-icon>
+            infoGlobal@azurglobal.es
+          </p>
+        </div>
       </div>
     </div>
-    <div class="separador">
-      <div class="texto">
-        <h3>Mediante nuestro formulario:</h3>
-        <p>Escríbenos y en breve los pondremos en contacto contigo</p>
-        
-      </div>
-      <div class="formulario">
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Nombre</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-                <label for="exampleInputEmail1">Telefono</label>
-                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-                <label for="exampleInputEmail1"> Correo: </label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-                <label for="exampleInputEmail1">Asunto: </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-                <label for="exampleInputEmail1">Mensaje: </label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                <button class="btn btn-outline-primary" >
-                    Enviar
-                  </button>
+    <div class="triangulo"></div>
+  </div>
+  <div class="abajo">
+    <div class="contenedor">
+      <h2 class="rotulo">
+        Si desea algún tipo de información sobre nuestros catálogos, rellene
+        este formulario y nos pondremos en contacto con usted.
+      </h2>
+      <div class="contenedor-formulario">
+        <div class="formulario">
+          <div class="izquierda">
+            <div class="separacion">
+              <div class="form-floating nombre">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Nombre</label>
               </div>
-        </form>
+              <div class="form-floating telefono">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Telefono</label>
+              </div>
+            </div>
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Correo</label>
+            </div>
+          </div>
+
+          <div class="derecha">
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Asunto</label>
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control area-text" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Comments</label>
+            </div>
+          </div>
+
+          
+        </div>
+        <button class="btn btn-primary">Enviar</button>
       </div>
-    </div>
+  </div>
+  <div class="contenedor-mapa">
+    <h2>Nuestra ubicación</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12679.326312876363!2d-5.9570343!3d37.3938151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x55dc01fb611e08a2!2sAzur%20Global%20Sevilla!5e0!3m2!1ses!2ses!4v1652265141860!5m2!1ses!2ses"
+      width="70%"
+      height="350"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
   </div>
 </div>

@@ -1,5 +1,5 @@
 .contenedor{
-    background-color: var(--azul-opacity-azur);
+    background-color: var(--azul-azur);
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -11,6 +11,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        cursor: pointer;
         img{
             width: 200px;
         }
@@ -35,9 +36,11 @@
         }
     }
     .icons{
-        .icon{
-
-            width: 50px;
+        padding: 0.25rem;
+        color: white;
+        margin-right: 2rem;
+        &:hover{
+            cursor: pointer;
         }
     }
 }
