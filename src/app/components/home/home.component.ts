@@ -6,13 +6,33 @@ import { faBitcoinSign, faCircleCheck, faClock, faHandshake, faHourglass, faPlan
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
+
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  
+constructor(){
+  const bloqueder = document.getElementById('#derecha')!;
+  const bloqueizq = document.getElementById('#izquierda')!;
+
+  const animar = () => {
+    console.log('Ejecuta');
+  };
+
+const observador = new IntersectionObserver(animar, {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5,
+});
+
+observador.observe(bloqueder);
+observador.observe(bloqueizq);
+}
+
 scroll(){
   window.scroll(0,0);
 }
- 
+  
 
   itemsPerSlide = 3;
   singleSlideOffset = true;
