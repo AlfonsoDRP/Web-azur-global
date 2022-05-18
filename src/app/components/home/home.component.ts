@@ -10,24 +10,31 @@ import {  faCircleCheck,  faHandshake, faHourglass, faPlaneDeparture } from '@fo
 
 export class HomeComponent {
 
-  
+  ngOnInit(): void {
+    $(document).ready(function(){
+      window.scroll(0,0)
+    })
+  }
 constructor(){
-  const bloqueder = document.getElementById('#derecha')!;
-  const bloqueizq = document.getElementById('#izquierda')!;
+  $(function() {
+    // Escuchar el evento scroll
+    $(window).on("scroll", function(evt) {
+      var scrollTop:any = $(window).scrollTop();
+      if (scrollTop > 1200 && scrollTop < 1300) {
 
-  const animar = () => {
-    console.log('Ejecuta');
-  };
+        $(".derecha").animate({
+          opacity: '1'}
+          )
+        $(".izquierda").animate({
+          opacity: '1'}
+          )
+      }
+    });
 
-const observador = new IntersectionObserver(animar, {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5,
-});
-
-observador.observe(bloqueder);
-observador.observe(bloqueizq);
+  });
 }
+  
+
 
 scroll(){
   window.scroll(0,0);
