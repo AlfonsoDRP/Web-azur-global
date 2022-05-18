@@ -18,19 +18,20 @@ export class HomeComponent {
 constructor(){
   $(function() {
     // Escuchar el evento scroll
-    $(window).on("scroll", function(evt) {
+    $(window).on("scroll", function() {
       var scrollTop:any = $(window).scrollTop();
-      if (scrollTop > 1200 && scrollTop < 1300) {
-
-        $(".derecha").animate({
-          opacity: '1'}
-          )
-        $(".izquierda").animate({
-          opacity: '1'}
-          )
-      }
+      $(document).ready(function(){
+        if (scrollTop > 1000 && scrollTop < 1300) {
+          $(".derecha").animate({
+            opacity: '1'},"slow"
+            )
+          $(".izquierda").animate({
+            opacity: '1'},"slow"
+            )
+        }
+      })
+      
     });
-
   });
 }
   
