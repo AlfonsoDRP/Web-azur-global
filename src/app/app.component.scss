@@ -1,8 +1,10 @@
 .contenedor-principal {
   height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
+  justify-content: space-between;
 
   app-navbar {
     z-index: 10;
@@ -16,9 +18,5 @@
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    
-    app-footer {
-      overflow-y: hidden;
-    }
   }
 }

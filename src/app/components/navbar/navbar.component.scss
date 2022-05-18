@@ -18,12 +18,12 @@
     }
     .links{
         width: 100%;
-        gap: 2.5rem;
         color: white;
         display: flex;
         align-items: center;
         justify-content: baseline;
         .link{
+            padding: 0 1.25rem;
             display: flex;
             align-items: center;
             justify-content: center;
