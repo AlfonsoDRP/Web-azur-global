@@ -19,7 +19,7 @@ export class CarruselComponent implements OnInit{
 
 
 
-  numeroProductos:number=this.listaProductos.length;
+  numeroProductos:number=0;
   
   faArrowLeftLong=faArrowLeftLong;
   faArrowRightLong=faArrowRightLong;
@@ -29,6 +29,7 @@ export class CarruselComponent implements OnInit{
     for (let index = 1; index < 5; index++) {
       this.productosMostrar.push(Object.assign({}, this.listaProductos[index]))
     }
+    this.numeroProductos=this.listaProductos.length;
   }
 
   clikedLeft(){
@@ -36,7 +37,7 @@ export class CarruselComponent implements OnInit{
     if(!this.animancionActiva) {
       this.animancionActiva = true;
       this.animacionIzquierda();
-      setTimeout(() => { this.animancionActiva = false; }, 1100);
+      setTimeout(() => { this.animancionActiva = false; }, 1300);
     };
   
   }
@@ -45,7 +46,7 @@ export class CarruselComponent implements OnInit{
     if(!this.animancionActiva) {
       this.animancionActiva = true;
       this.animacionDerecha();
-      setTimeout(() => { this.animancionActiva = false; }, 1100);
+      setTimeout(() => { this.animancionActiva = false; }, 1300);
     };
   }
 
@@ -74,9 +75,11 @@ export class CarruselComponent implements OnInit{
           izquierda.style.animation ='';
           centro.style.animation ='';
           centroImagen.style.animation ='';
-          this.cambiarProductos(false);
         } 
-      }, 1000);
+      }, 1010);
+      setTimeout(() => {
+        this.cambiarProductos(false);
+      }, 990);
     }
   }
 
@@ -103,10 +106,10 @@ export class CarruselComponent implements OnInit{
           centro.style.animation ='';
           centroImagen.style.animation ='';
         } 
-      }, 1000);
+      }, 1010);
       setTimeout(() => {
         this.cambiarProductos(true);
-      }, 999);
+      }, 990);
     }
   }
   

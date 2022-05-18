@@ -1,21 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   constructor() { }
 scroll(){
   window.scroll(0,0);
 }
-  itemsPerSlide = 3;
-  singleSlideOffset = true;
-  noWrap = true;
- 
-  slidesChangeMessage = '';
+
  
   slides = [
     {image: '../../../assets/piezas/AMORTIGUADORES.PNG',familia:"Amortiguadores"},
@@ -26,8 +22,6 @@ scroll(){
     {image: '../../../assets/piezas/BATERIA.PNG',familia:"Baterias"},
     
   ];
- 
-  ngOnInit(): void {
-  }
+
 
 }
