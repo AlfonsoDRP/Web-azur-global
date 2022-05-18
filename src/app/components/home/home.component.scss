@@ -1,17 +1,28 @@
 .contenedor-principal {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  gap:3rem;
   h1 {
     width: 100%;
     text-align: center;
   }
-  
+  .rotulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .contenedor-primero{
-      height: 90vh;
+    width: 100%;
+      height: 85vh;
       background-image:url(../../../assets/empresa/almacen2.png);
       background-repeat: no-repeat;
       color: white;
       animation-name: aparecer;
       animation-duration: 1.3s;
+
       .texto{
           display: flex;
           flex-direction: column;
@@ -93,6 +104,12 @@
         }
       }
     }
+  }
+  .linea {
+    background-color: var(--azul-azur);
+    height: 2px;
+    width: 300px;
+    margin-bottom: 20px;
   }
 }
 @keyframes abajo{
