@@ -10,20 +10,24 @@ import {  faCircleCheck,  faHandshake, faHourglass, faPlaneDeparture } from '@fo
 
 export class HomeComponent {
 
-  
+  ngOnInit(): void {
+    $(document).ready(function(){
+      window.scroll(0,0)
+    })
+  }
 constructor(){
   $(function() {
     // Escuchar el evento scroll
     $(window).on("scroll", function(evt) {
       var scrollTop:any = $(window).scrollTop();
-      if (scrollTop > 1000 && scrollTop < 1500) {
-        console.log(scrollTop)
-        $(".derecha").addClass(".animado-derecha");
-        $(".izquierda").addClass(".animado-izquierda");
-      }else{
-        console.log("fuera!!!!")
-        $(".derecha").removeClass(".animado-derecha");
-        $(".izquierda").removeClass(".animado-izquierda");
+      if (scrollTop > 1200 && scrollTop < 1300) {
+
+        $(".derecha").animate({
+          opacity: '1'}
+          )
+        $(".izquierda").animate({
+          opacity: '1'}
+          )
       }
     });
 
