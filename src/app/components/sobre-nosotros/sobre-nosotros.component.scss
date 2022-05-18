@@ -1,6 +1,10 @@
 .contenedor-principal {
-  overflow-x: hidden;
-  height: 100vh;
+  overflow: hidden;
+  height: 100%;
+  display:  flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem ;
   .entrada {
     position: relative;
     animation-name: aparecer-sobre;
@@ -27,44 +31,35 @@
   }
   .tarjetas_info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    .historia {
+    gap: 10rem;
+    .secciones {
+      max-width: 1000px;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 5rem;
       .imagen {
-        left: 50px;
+        position: relative;
         width: 300px;
         height: 300px;
         background-color: var(--azul-azur);
-        animation-name: contenedor_izquierda;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-duration: 1.5s;
         img {
+          position: relative;
           width: 100%;
-          animation-name: imagen_izquierda;
-          animation-duration: 2s;
-          animation-delay: 0.2s;
-          animation-timing-function: ease-in-out;
-          animation-fill-mode: forwards;
-          left: 20px;
           top: 50px;
         }
       }
       .texto {
+        position: relative;
         padding: 0.5rem;
         display: flex;
         flex-direction: row;
-        width: 50%;
+        width: 60%;
         align-items: center;
-        animation-name: tarjeta_derecha;
-          animation-duration: 2s;
-          animation-delay: 0.2s;
-          animation-timing-function: ease-in-out;
-          animation-fill-mode: forwards;
+        
         .rotulo {
           padding: 0.5rem;
           display: flex;
@@ -75,6 +70,51 @@
         .info {
           padding: 0.5rem;
         }
+      }
+    }
+    .impar{
+      .imagen{
+        animation-name: contenedor_izquierda;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1.5s;
+        left: 0;
+        img{
+          animation-name: contenedor_izquierda;
+          animation-duration: 2s;
+          animation-delay: 0.2s;
+          animation-timing-function: ease-in-out;
+          left: 20px;
+        }
+      }
+      .texto{
+        animation-name: contenedor_derecha;
+        animation-duration: 2s;
+        animation-delay: 0.2s;
+        animation-timing-function: ease-in-out;
+        right: 0;
+      }
+    }
+    .par{
+      .imagen{
+        animation-name: contenedor_derecha;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1.5s;
+        right: 0;
+        img{
+          right: 20px;
+          animation-name: contenedor_derecha;
+          animation-duration: 2s;
+          animation-delay: 0.2s;
+          animation-timing-function: ease-in-out;
+        }
+      }
+      .texto{
+        animation-name: contenedor_izquierda;
+        animation-duration: 2s;
+        animation-delay: 0.2s;
+        animation-timing-function: ease-in-out;
+        left: 0;
+
       }
     }
   }
@@ -89,31 +129,19 @@
 }
 @keyframes contenedor_izquierda {
   from {
-    position: relative;
-    left: -500px;
+    left: -100vh;
   }
   to {
-    position: relative;
-    left: 50px;
   }
 }
-@keyframes imagen_izquierda {
+
+@keyframes contenedor_derecha {
   from {
-    position: relative;
-    left: -500px;
-  }
-  to {
-    position: relative;
-    left: 20px;
-  }
-}
-@keyframes tarjeta_derecha {
-  from {
-    position: relative;
-    right: -1200px;
+    right: -100vh;
   }
   to{
-    position: relative;
-    right: 0;
   }
 }
+
+
+
