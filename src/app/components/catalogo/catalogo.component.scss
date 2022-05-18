@@ -39,41 +39,53 @@
       }
     }
   }
+  .cuerpo{
+    border:1px solid var(--azul-azur); ;
+  }
   section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    // justify-content: space-between;
-    //background-color: red;
-    width: 100%;
 
-    .izquierda {
+    width: 100%;
+    
+    .izquierda,.centro,.derecha {
       height: 510px;
       width: 660px;
+      display: flex;
+      padding: 10px ;
+      flex-direction: column;
+      
+      align-items: center;
+     
     }
-    .centro {
-      height: 510px;
-      width: 660px;
+    .centro{
+      border-left:1px solid var(--azul-azur); 
+      border-right: 1px solid var(--azul-azur);
     }
-    .derecha {
-      height: 510px;
-      width: 660px;
-    }
-    button {
-      display: block;
-      margin: 0px auto;
-      position: absolute;
+
+    .boton {
+      
+      width: 100%;
+      text-align: center;
+      height: 38px;
+     
+      button {
+        margin: 0px auto;
+
+        background-color: var(--azul-azur);
+      }
     }
     .primera-fila {
       background-color: var(--azul-azur);
       display: flex;
       flex-direction: row;
-      
+
       justify-content: center;
       align-items: center;
-      .logo{
-        height:150px ;
-        width:525px ;
+      .logo {
+        height: 150px;
+        width: 525px;
       }
     }
     .segunda-fila {
@@ -85,9 +97,13 @@
       background-size: cover;
     }
     .contenido {
-      width: 400px;
-      margin: 50px;
-      text-align: left;
+      width: 500px;
+      height: 100%;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
 
       .linea {
         background-color: var(--azul-azur);
@@ -95,9 +111,13 @@
         width: 300px;
         margin-bottom: 20px;
       }
-      img {
-        height: 200px;
-        width: 250px;
+      img { 
+        max-width: 100%;
+        max-height:300px ;
+        height: auto;
+       // width: 250px;
+       
+
         display: block;
         margin: 0px auto;
       }
@@ -106,6 +126,11 @@
       height: 510px;
       width: 630px;
     }
+  }
+  .seccion-centro{
+     border-top: 1px solid var(--azul-azur);
+     border-bottom: 1px solid var(--azul-azur);
+
   }
 }
 @keyframes comienzo {
