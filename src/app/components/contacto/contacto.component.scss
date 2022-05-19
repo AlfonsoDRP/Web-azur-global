@@ -59,7 +59,7 @@
         text-align: center;
         width: 70%;
       }
-      
+
       .contenedor-formulario {
         display: flex;
         flex-direction: column;
@@ -92,12 +92,12 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            .area-text{
+            .area-text {
               max-height: 200px;
               min-height: 58px;
             }
           }
-           .btn {
+          .btn {
             background-color: var(--azul-azur);
           }
         }
@@ -107,11 +107,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      iframe {
+        margin:1.5rem 0 3rem 0;
+        width: 70%;
+        height: 350px;
+        border: 0;
+      }
     }
   }
+  .linea {
+    background-color: var(--azul-azur);
+    height: 2px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
 }
-@keyframes comienzo{
+@keyframes comienzo {
   from {
     top: -500px;
   }

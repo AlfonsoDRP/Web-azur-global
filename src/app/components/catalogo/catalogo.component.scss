@@ -4,10 +4,12 @@
   flex-direction: column;
   gap: 3rem;
   margin-bottom: 3rem;
+  //align-items: center;
   .contenedor-triangulo {
     color: white;
     position: relative;
     top: -500px;
+    width: 100%;
     animation-name: comienzo;
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
@@ -40,12 +42,10 @@
       }
     }
   }
-  .cuerpo {
-    border: 1px solid var(--azul-azur);
-  }
+  
   section {
     display: flex;
-    flex-direction: row;
+
     align-items: center;
 
     width: 100%;
@@ -61,10 +61,7 @@
 
       align-items: center;
     }
-    .centro {
-      border-left: 1px solid var(--azul-azur);
-      border-right: 1px solid var(--azul-azur);
-    }
+    
 
     .boton {
       width: 100%;
@@ -79,23 +76,23 @@
     }
     .primera-fila {
       background-color: var(--azul-azur);
-      display: flex;
-      flex-direction: row;
-
-      justify-content: center;
-      align-items: center;
-      .logo {
-        height: 150px;
-        width: 525px;
-      }
+      background-image: url(../../../assets/LOGO-AZURGLOBAL-WP.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 0;
+      
     }
     .segunda-fila {
       background-image: url(../../../assets/empresa/almacen2.png);
       background-size: cover;
+      padding: 0;
+      
     }
     .tercera-fila {
       background-image: url(../../../assets/empresa/Pistola1.png);
       background-size: cover;
+      padding: 0;
+      
     }
     .contenido {
       width: 500px;
@@ -116,7 +113,6 @@
         max-width: 100%;
         max-height: 300px;
         height: auto;
-      
 
         display: block;
         margin: 0px auto;
@@ -127,12 +123,8 @@
       width: 630px;
     }
   }
-  .seccion-centro {
-    border-top: 1px solid var(--azul-azur);
-    border-bottom: 1px solid var(--azul-azur);
-  }
+  
 }
-
 
 @mixin white-gradient {
   background: linear-gradient(
@@ -143,7 +135,6 @@
 }
 
 $animationSpeed: 20s;
-
 
 // Animation
 @keyframes scroll {
@@ -165,17 +156,16 @@ $animationSpeed: 20s;
   margin: auto;
   overflow: hidden;
   position: relative;
-  
-   img{
+
+  img {
     max-width: 250px;
     max-height: 100%;
-    
+
     width: auto;
-   }
+  }
 
   &::before,
   &::after {
-   
     content: "";
     height: 100px;
     position: absolute;
@@ -184,7 +174,6 @@ $animationSpeed: 20s;
   }
 
   &::after {
-   
     height: 100%;
     right: 0;
     top: 0;
@@ -198,7 +187,7 @@ $animationSpeed: 20s;
 
   .slide-track {
     height: 100%;
- 
+
     animation: scroll $animationSpeed linear infinite;
     display: flex;
     justify-content: center;
@@ -211,7 +200,6 @@ $animationSpeed: 20s;
     height: 100px;
     width: 250px;
     display: flex;
-
   }
 }
 @keyframes comienzo {
@@ -220,5 +208,70 @@ $animationSpeed: 20s;
   }
   to {
     top: 0;
+  }
+}
+@media only screen and (min-width:1045px){
+  .cuerpo {
+    border: 1px solid var(--azul-azur);
+    //max-width: 1920px;
+  }
+  .centro {
+    border-left: 1px solid var(--azul-azur);
+    border-right: 1px solid var(--azul-azur);
+  }
+  .primera-fila {
+    
+    border: none;
+  }
+  .segunda-fila {
+    
+    border: none;
+    border-left: 1px solid var(--azul-azur);
+  }
+  .tercera-fila {
+    
+    border: none;
+  }
+  .seccion-centro {
+    border-top: 1px solid var(--azul-azur);
+    border-bottom: 1px solid var(--azul-azur);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1044px) {
+  .cuerpo {
+    border-top:0;
+  }
+  .seccion-centro{
+    border-style: none;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  section {
+    flex-direction: column;
+    border:0;
+    & > div {
+      border-left: 1px  solid var(--azul-azur);
+      border-right: 1px  solid var(--azul-azur);
+     border-bottom: 1px  solid var(--azul-azur);
+    }
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .contenedor-principal {
+    align-items: center;
+    .cuerpo {
+      max-width: 1920px;
+    }
   }
 }
