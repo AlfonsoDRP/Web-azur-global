@@ -50,7 +50,7 @@
         align-items: center;
         img {
           filter: drop-shadow(0 10px 2px black);
-          max-width: 150%;
+          max-width: 120%;
           max-height: 500px;
           height: auto;
         }
@@ -192,7 +192,7 @@
 
 @keyframes agrandar-imagen {
   100% {
-    max-width: 150%;
+    max-width: 120%;
     max-height: 500px;
     height: auto;
   }
