@@ -19,6 +19,22 @@
   </div>
   <div class="icons">
     <fa-icon class="icon fa-2x" [icon]="faUser" routerLink="/login"></fa-icon>
-    <fa-icon class="icon-mini fa-2x" [icon]="faBarras"></fa-icon>
+    <fa-icon class="icon-mini fa-2x" [icon]="faBarras"><div class="menu-desplegable">
+      <div class="links-desplegable">
+        <div class="link-desplegable" routerLink="">
+          <label for="">Inicio</label>
+        </div>
+        <div class="link-desplegable" routerLink="/sobrenosotros">
+          <label for="">¿Quienes somos?</label>
+        </div>
+        <div class="link-desplegable" routerLink="/catalogo">
+          <label for="">Nuestros productos</label>
+        </div>
+        <div class="link-desplegable" routerLink="/contacto">
+          <label for="">Contactanos</label>
+        </div>
+      </div>
+    </div></fa-icon>
   </div>
 </div>
+
