@@ -12,7 +12,9 @@ export class ContactoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    window.scroll(0,0);
+    $(document).ready(function(){
+      window.scroll(0,0);
+    })
   }
 
 }
