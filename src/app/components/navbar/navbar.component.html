@@ -23,8 +23,9 @@
   </div>
 </div>
 <div [ngClass]="{
-  cerrado: bandera,
-  desplegable: !bandera
+  cerrado: bandera && !comienzo,
+  desplegable: !bandera && !comienzo,
+  primero: comienzo
 }">
   <div class="links-desplegable">
     <div class="link-desplegable" routerLink="">
@@ -38,6 +39,9 @@
     </div>
     <div class="link-desplegable" routerLink="/contacto">
       <label for="">Contactanos</label>
+    </div>
+    <div class="link-desplegable" routerLink="/login">
+      <label for="">Iniciar sesión <fa-icon class="icon" [icon]="falock"></fa-icon></label>
     </div>
   </div>
 </div>
