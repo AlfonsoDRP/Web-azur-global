@@ -38,11 +38,20 @@
         }
     }
     .icons{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
         padding: 0.25rem;
         color: white;
-        margin-right: 2rem;
+        margin-right: 1.5rem;
+        .icon-mini{
+            display: none;
+        }
         &:hover{
             cursor: pointer;
         }
     }
+}
+@media only screen and (max-width:1045px){
+    
 }
