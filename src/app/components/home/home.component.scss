@@ -55,10 +55,8 @@
   }
   .ventajas {
     padding: 1rem;
-
     width: 100%;
     display: flex;
-
     gap: 2rem;
     .izquierda {
       opacity: 0;
@@ -66,7 +64,6 @@
       left: 0;
       width: 100%;
       display: flex;
-
       align-items: center;
       justify-content: right;
       gap: 2rem;
@@ -77,7 +74,6 @@
       right: 0;
       width: 100%;
       display: flex;
-
       align-items: center;
       justify-content: left;
       gap: 2rem;
@@ -132,10 +128,10 @@
     opacity: 1;
   }
 }
-@media only screen and (min-width: 1267px) {
+@media only screen and (min-width: 1264px) {
   .ventajas {
     flex-direction: row;
-    height: 600px;
+    
     justify-content: center;
   }
   .izquierda {
@@ -148,9 +144,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .ventajas {
-    flex-direction: column;
-  }
   .izquierda {
     flex-direction: column;
   }
@@ -159,7 +152,7 @@
     flex-direction: column;
   }
 }
-@media only screen and (max-width: 1140px) {
+@media only screen and (max-width: 1263px) {
   .ventajas {
     flex-direction: column;
   }
