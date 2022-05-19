@@ -2,7 +2,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
   margin-bottom: 3rem;
   //align-items: center;
   .contenedor-triangulo {
@@ -19,7 +18,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 300px;
       width: 100%;
       background-color: var(--azul-azur);
     }
@@ -54,11 +52,9 @@
     .centro,
     .derecha {
       height: 510px;
-      width: 660px;
       display: flex;
       padding: 10px;
       flex-direction: column;
-
       align-items: center;
     }
     
@@ -74,7 +70,7 @@
         background-color: var(--azul-azur);
       }
     }
-    .primera-fila {
+    .izquierda-primera-fila {
       background-color: var(--azul-azur);
       background-image: url(../../../assets/LOGO-AZURGLOBAL-WP.png);
       background-repeat: no-repeat;
@@ -146,12 +142,10 @@ $animationSpeed: 20s;
   }
 }
 
-// Styling
 .slider {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 150px;
-  width: 70%;
   background-color: var(--azul-azur);
   margin: auto;
   overflow: hidden;
@@ -211,16 +205,20 @@ $animationSpeed: 20s;
   }
 }
 @media only screen and (min-width:1045px){
+  .contenedor-principal{
+    gap: 3rem;
+  }
+  .info{
+    height: 300px;
+  }
   .cuerpo {
     border: 1px solid var(--azul-azur);
-    //max-width: 1920px;
   }
   .centro {
     border-left: 1px solid var(--azul-azur);
     border-right: 1px solid var(--azul-azur);
   }
-  .primera-fila {
-    
+  .izquierda-primera-fila {
     border: none;
   }
   .segunda-fila {
@@ -236,19 +234,44 @@ $animationSpeed: 20s;
     border-top: 1px solid var(--azul-azur);
     border-bottom: 1px solid var(--azul-azur);
   }
+  section > div {
+      
+    width: 660px;
+  }
+
+  .slider{
+    min-width: 1044px;
+    width: 70%;
+  }
+
+  .izquierda-primera-fila{
+    height: 510px;
+  }
 
 }
 
 
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 1044px) {
+  .izquierda-primera-fila{
+    position: relative;
+    top: -500px;
+    height: 200px;
+    animation-name: comienzo;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .info{
+    height: 200px;
+  }
+  .triangulo{
+    display: none;
+  }
+  .slider {
+    width: 100%;
+    margin-top: 3rem;
+
+  }
   .cuerpo {
     border-top:0;
   }
@@ -261,6 +284,7 @@ $animationSpeed: 20s;
     flex-direction: column;
     border:0;
     & > div {
+      width: 100%;
       border-left: 1px  solid var(--azul-azur);
       border-right: 1px  solid var(--azul-azur);
      border-bottom: 1px  solid var(--azul-azur);

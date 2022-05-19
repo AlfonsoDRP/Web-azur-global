@@ -1,10 +1,10 @@
 .contenedor-principal {
   overflow: hidden;
   height: 100%;
-  display:  flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 3rem ;
+  padding-bottom: 3rem;
   .entrada {
     position: relative;
     animation-name: aparecer-sobre;
@@ -32,16 +32,15 @@
   .tarjetas_info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 10rem;
+    
     .secciones {
       max-width: 1000px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 5rem;
+      display: grid;
+      gap: 3rem;
+      
       .imagen {
+        grid-area: imagen;
         position: relative;
         width: 300px;
         height: 300px;
@@ -52,69 +51,80 @@
           top: 50px;
         }
       }
-      .texto {
-        position: relative;
+      .rotulo {
+        grid-area: rotulo;
         padding: 0.5rem;
         display: flex;
-        flex-direction: row;
-        width: 60%;
         align-items: center;
-        
-        .rotulo {
-          padding: 0.5rem;
-          display: flex;
-          align-items: center;
-          height: 300px;
-          border-right: 2px solid black;
-        }
-        .info {
-          padding: 0.5rem;
-        }
+        height: 100%;
+        border-right: 2px solid black;
+      }
+      .info {
+        grid-area: info;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
       }
     }
-    .impar{
+    .impar {
       .imagen{
+        position: relative;
+        left: -5px;
+        img{
+          position: relative;
+          left: 10px;
+        }
+      }
+  
+      .imagen,.imagen img{
         animation-name: contenedor_izquierda;
         animation-timing-function: ease-in-out;
         animation-duration: 1.5s;
-        left: 0;
         img{
           animation-name: contenedor_izquierda;
           animation-duration: 2s;
           animation-delay: 0.2s;
           animation-timing-function: ease-in-out;
-          left: 20px;
         }
       }
-      .texto{
+
+      .rotulo,.info{
+        position: relative;
         animation-name: contenedor_derecha;
         animation-duration: 2s;
         animation-delay: 0.2s;
         animation-timing-function: ease-in-out;
-        right: 0;
+        left: 0;
       }
     }
-    .par{
+    .par {
       .imagen{
+        position: relative;
+        left: 5px;
+        img{
+          position: relative;
+          left: -10px;
+        }
+      }
+      .imagen,.imagen img{
         animation-name: contenedor_derecha;
         animation-timing-function: ease-in-out;
         animation-duration: 1.5s;
-        right: 0;
         img{
-          right: 20px;
           animation-name: contenedor_derecha;
           animation-duration: 2s;
           animation-delay: 0.2s;
           animation-timing-function: ease-in-out;
         }
       }
-      .texto{
+
+      .rotulo,.info{
+        position: relative;
         animation-name: contenedor_izquierda;
         animation-duration: 2s;
         animation-delay: 0.2s;
         animation-timing-function: ease-in-out;
         left: 0;
-
       }
     }
   }
@@ -131,17 +141,32 @@
   from {
     left: -100vh;
   }
-  to {
-  }
 }
 
 @keyframes contenedor_derecha {
   from {
-    right: -100vh;
-  }
-  to{
+    left: 100vh;
   }
 }
 
 
-
+@media only screen and (min-width:1045px){
+  .impar{
+    grid-template-areas: "imagen rotulo info";
+  }
+  .par {
+    grid-template-areas: "rotulo info imagen";
+  }
+}
+@media only screen and (max-width:1044px){
+  .impar{
+    grid-template-areas: "rotulo rotulo" "imagen  info";
+    .rotulo{
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .par {
+    grid-template-areas: "rotulo rotulo" "info imagen";
+  }
+}
