@@ -65,7 +65,7 @@
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: right;
+      
       gap: 2rem;
     }
     .derecha {
@@ -75,7 +75,7 @@
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: left;
+     
       gap: 2rem;
     }
     .btn {
@@ -131,30 +131,51 @@
 }
 @media only screen and (min-width: 1264px) {
   .ventajas {
+   
     flex-direction: row;
     
-    justify-content: center;
+    
   }
   .izquierda {
     flex-direction: row;
+    justify-content: right;
+    
   }
 
   .derecha {
     flex-direction: row;
+    
   }
 }
 
 @media only screen and (max-width: 600px) {
+
   .izquierda {
     flex-direction: column;
+    justify-content: center;
+   
   }
 
   .derecha {
     flex-direction: column;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 1263px) {
   .ventajas {
+    
     flex-direction: column;
+    justify-content: center;
+   //align-items: center;
+  }
+  .izquierda {
+    
+    justify-content: center;
+   
+  }
+
+  .derecha {
+    
+    justify-content: center;
   }
 }
