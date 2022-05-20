@@ -10,13 +10,13 @@
     gap: 2rem;
 
     .logo {
-      width: 300px;
+      width: 200px;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       cursor: pointer;
       img {
-        width: 200px;
+        width: 150px;
       }
     }
     .links {
@@ -131,7 +131,6 @@
         padding: 1.25rem;
         display: flex;
         align-items: center;
-        justify-content: center;
       }
     }
   }
@@ -160,7 +159,6 @@
         padding: 1.25rem;
         display: flex;
         align-items: left;
-        justify-content: center;
       }
       .link-desplegable:hover {
         height: 100%;

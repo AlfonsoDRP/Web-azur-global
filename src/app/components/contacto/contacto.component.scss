@@ -8,7 +8,7 @@
     position: relative;
     top: -500px;
     animation-name: comienzo;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     .info {
@@ -42,7 +42,7 @@
   .abajo {
     position: relative;
     animation-name: abajo-arriba;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     display: flex;
