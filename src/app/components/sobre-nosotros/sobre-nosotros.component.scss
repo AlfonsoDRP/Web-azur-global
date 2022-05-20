@@ -8,7 +8,7 @@
   .entrada {
     position: relative;
     animation-name: aparecer-sobre;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     .sobre-triangulo {
@@ -35,7 +35,7 @@
     justify-content: center;
     gap: 10rem;
     .secciones {
-      max-width: 1000px;
+      max-width: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -46,10 +46,11 @@
         width: 300px;
         height: 300px;
         background-color: var(--azul-azur);
+        display: flex;
+        align-items: center;
         img {
           position: relative;
           width: 100%;
-          top: 50px;
         }
       }
       .texto {
@@ -76,44 +77,46 @@
       .imagen{
         animation-name: contenedor_izquierda;
         animation-timing-function: ease-in-out;
-        animation-duration: 1.5s;
-        left: 0;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
         img{
-          animation-name: contenedor_izquierda;
-          animation-duration: 2s;
-          animation-delay: 0.2s;
+          position: relative;
+          left: -500px;
+          animation-name: imagen_izquierda;
+          animation-duration: 1s;
+          animation-delay: 0.8s;
           animation-timing-function: ease-in-out;
-          left: 20px;
+          animation-fill-mode: forwards;
         }
       }
       .texto{
         animation-name: contenedor_derecha;
-        animation-duration: 2s;
-        animation-delay: 0.2s;
+        animation-duration: 1s;
         animation-timing-function: ease-in-out;
-        right: 0;
+        animation-fill-mode: forwards;
       }
     }
     .par{
       .imagen{
         animation-name: contenedor_derecha;
         animation-timing-function: ease-in-out;
-        animation-duration: 1.5s;
-        right: 0;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
         img{
-          right: 20px;
-          animation-name: contenedor_derecha;
-          animation-duration: 2s;
-          animation-delay: 0.2s;
+          position: relative;
+          right: -500px;
+          animation-name: imagen_derecha;
+          animation-duration: 1s;
+          animation-delay: 0.8s;
           animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
         }
       }
       .texto{
         animation-name: contenedor_izquierda;
-        animation-duration: 2s;
-        animation-delay: 0.2s;
+        animation-duration: 1s;
         animation-timing-function: ease-in-out;
-        left: 0;
+        animation-fill-mode: forwards;
 
       }
     }
@@ -129,13 +132,35 @@
 }
 @keyframes contenedor_izquierda {
   from {
-    left: -100vh;
+    left: -1100px;
+  }
+  to{
+    left: 0px;
+  }
+}
+@keyframes imagen_izquierda {
+  from {
+    left: -500px;
+  }
+  to{
+    left: 20px;
   }
 }
 
 @keyframes contenedor_derecha {
   from {
-    right: -100vh;
+    right: -1100px;
+  }
+  to{
+    right: 0px;
+  }
+}
+@keyframes imagen_derecha {
+  from {
+    right: -500px;
+  }
+  to{
+    right: 20px;
   }
 }
 
