@@ -41,10 +41,12 @@
     .icons {
       display: flex;
       flex-direction: row;
+      align-items: center;
       gap: 1rem;
       padding: 0.25rem;
       color: white;
       margin-right: 1.5rem;
+      
       &:hover {
         cursor: pointer;
       }
