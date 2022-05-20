@@ -14,6 +14,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BotonComponent } from './components/boton/boton.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './components/footer/footer.component';
     CarruselComponent,
     HomeComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    BotonComponent
   ],
   imports: [
     BrowserModule,
