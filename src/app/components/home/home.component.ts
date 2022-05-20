@@ -18,32 +18,33 @@ export class HomeComponent {
     });
   }
   constructor() {
-    $(document).ready(function () {
-      $(function () {
-        // guardar scroll de la pagina
-        $(window).on('scroll', function () {
-          var scrollTop: any = $(window).scrollTop();
-
-          // trigger de animacion en scroll
-          if (scrollTop > 1000 && scrollTop < 1300) {
-            $('.derecha').animate(
-              {
-                right: 0,
-                opacity: '1',
-              },
-              'slow'
-            );
-            $('.izquierda').animate(
-              {
-                left: 0,
-                opacity: '1',
-              },
-              'slow'
-            );
-          }
+    
+      $(document).ready(function () {
+        $(function () {
+          // guardar scroll de la pagina
+          $(window).on('scroll', function () {
+            var scrollTop: any = $(window).scrollTop();
+            // trigger de animacion en scroll
+            if (scrollTop > 1000 && scrollTop < 1300) {
+              $('.derecha').animate(
+                {
+                  right: 0,
+                  opacity: '1',
+                },
+                'slow'
+              );
+              $('.izquierda').animate(
+                {
+                  left: 0,
+                  opacity: '1',
+                },
+                'slow'
+              );
+            }
+          });
         });
       });
-    });
+    
   }
 
   scroll() {
