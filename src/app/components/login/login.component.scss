@@ -9,7 +9,7 @@
     justify-content: center;
     
     .logo-login{
-        height: 50px;
+        width: 50%;
     }
     .login{
         color: white;
@@ -19,11 +19,12 @@
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
-        height: 40%;
-        width: 20%;
+        height: 50%;
+        width: 25%;
         background-color: var(--azul-opacity-azur);
         input {
             border: 0;
+            width: 100%;
             border-bottom: 2px solid grey;
             color: white;
             

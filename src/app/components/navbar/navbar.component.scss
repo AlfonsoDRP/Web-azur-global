@@ -1,46 +1,195 @@
-.contenedor{
+@media only screen and (min-width: 1046px) {
+  .contenedor {
     background-color: var(--azul-azur);
     height: 50px;
+    overflow-x: hidden;
+    overflow-y: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 2rem;
-    
-    .logo{
-        width: 300px;
+
+    .logo {
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      cursor: pointer;
+      img {
+        width: 200px;
+      }
+    }
+    .links {
+      width: 100%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: baseline;
+      .link {
+        padding: 0 1.25rem;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
+      }
+      .link:hover {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background-color: var(--cielo-azur);
+      }
+    }
+    .icons {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 0.25rem;
+      color: white;
+      margin-right: 1.5rem;
+      &:hover {
         cursor: pointer;
-        img{
-            width: 200px;
-        }
+      }
     }
-    .links{
+  }
+  .icon-mini {
+    display: none;
+  }
+  .links-desplegable {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1045px) {
+  .contenedor {
+    background-color: var(--azul-azur);
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    gap: 0.5rem;
+
+    .logo {
+      width: 200px;
+      padding: 0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      cursor: pointer;
+      img {
+        width: 170px;
+      }
+    }
+    .links {
+      display: none;
+    }
+    .icons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.25rem;
+      margin-left: 0.5rem;
+      color: white;
+      margin-right: 1.5rem;
+      &:hover {
+        cursor: pointer;
+      }
+      .icon {
+        display: none;
+      }
+      .icon-mini {
+        display: block;
+      }
+    }
+  }
+  .primero{
+      position: relative;
+      top: -500px;
+  }
+  .cerrado {
+    animation-name: cerrado;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    background-color: var(--cielo-azur);
+    width: 25%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    .links-desplegable {
+      height: 100%;
+      width: 100%;
+      color: white;
+      align-items: left;
+      justify-content: baseline;
+      gap: 2.5rem;
+      .link-desplegable {
+        height: 100%;
         width: 100%;
-        color: white;
+        padding: 1.25rem;
         display: flex;
         align-items: center;
-        justify-content: baseline;
-        .link{
-            padding: 0 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .link:hover{
-            height: 100%;
-            display: flex;
-            align-items: center;
-            background-color: var(--cielo-azur);
-        }
+        justify-content: center;
+      }
     }
-    .icons{
-        padding: 0.25rem;
-        color: white;
-        margin-right: 2rem;
-        &:hover{
-            cursor: pointer;
-        }
+  }
+  .desplegable {
+    position: relative;
+    top: -500px;
+    animation-name: desplegable;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    background-color: var(--cielo-azur);
+    width: 25%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    .links-desplegable {
+      height: 100%;
+      width: 100%;
+      color: white;
+      align-items: left;
+      justify-content: baseline;
+      gap: 2.5rem;
+      .link-desplegable {
+        height: 100%;
+        width: 100%;
+        padding: 1.25rem;
+        display: flex;
+        align-items: left;
+        justify-content: center;
+      }
+      .link-desplegable:hover {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background-color: var(--azul-azur);
+      }
     }
+  }
+}
+@keyframes desplegable {
+  from {
+    position: relative;
+    top: -500px;
+    z-index: -10;
+  }
+  to {
+    position: relative;
+    top: 0;
+    z-index: -10;
+  }
+}
+@keyframes cerrado {
+  from {
+    position: relative;
+    left: 0px;
+    z-index: -10;
+  }
+  to {
+    position: relative;
+    left: -500px;
+    z-index: -10;
+  }
 }

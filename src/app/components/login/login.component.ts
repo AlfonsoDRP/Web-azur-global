@@ -12,6 +12,9 @@ export class LoginComponent implements OnInit {
   faUser = faUser;
   faCandado = faLock;
   ngOnInit(): void {
+    $(document).ready(function(){
+      window.scroll(0,0);
+    })
   }
 
 }

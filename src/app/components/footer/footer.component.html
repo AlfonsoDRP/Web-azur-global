@@ -1,33 +1,36 @@
 <div class="contenedor">
   <div class="superior">
-    <div class="link1">
-      <ul>
-        <li class="link" routerLink="/sobrenosotros">Sobre nosotros</li>
-        <li class="link" routerLink="/catalogo">Nuestros productos</li>
-        <li class="link" routerLink="/contacto">Contacto</li>
-      </ul>
-    </div>
+    <div class="link2">
+    <ul>
+      <li>
+        <fa-icon
+          class="icon fa-location-pin fa-1x"
+          [icon]="faLocation"
+        ></fa-icon>
+        C. Tesalónica, SN, Parcela C, 41007 Sevilla
+      </li>
+      <li>
+        <fa-icon class="icon fa-1x" [icon]="faEmail"></fa-icon>
+        hola@azurglobal.es
+      </li>
+      <li>
+        <fa-icon class="icon fa-1x" [icon]="faPhone"></fa-icon> 955000555
+      </li>
+    </ul>
+  </div>
     <div class="contenedor-logo">
       <img src="../../../assets/LOGO-AZURGLOBAL-WP(MEDIANO).png" class="logo" alt="" />
     </div>
-    <div class="link2">
-      <ul>
-        <li>
-          <fa-icon
-            class="icon fa-location-pin fa-1x"
-            [icon]="faLocation"
-          ></fa-icon>
-          C. Tesalónica, SN, Parcela C, 41007 Sevilla
-        </li>
-        <li>
-          <fa-icon class="icon fa-1x" [icon]="faEmail"></fa-icon>
-          hola@azurglobal.es
-        </li>
-        <li>
-          <fa-icon class="icon fa-1x" [icon]="faPhone"></fa-icon> 955000555
-        </li>
-      </ul>
-    </div>
+    
+      <div class="link1">
+        <ul>
+          <li class="link" routerLink="/sobrenosotros">Sobre nosotros</li>
+          <li class="link" routerLink="/catalogo">Nuestros productos</li>
+          <li class="link" routerLink="/contacto">Contacto</li>
+        </ul>
+      </div>
+     
+    
   </div>
   <div class="copy">
     <p>

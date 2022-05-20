@@ -61,7 +61,7 @@
     .izquierda {
       opacity: 0;
       position: relative;
-      left: 0;
+      left: -500px;
       width: 100%;
       display: flex;
       align-items: center;
@@ -71,7 +71,7 @@
     .derecha {
       opacity: 0;
       position: relative;
-      right: 0;
+      right: -500px;
       width: 100%;
       display: flex;
       align-items: center;
@@ -91,7 +91,8 @@
       color: white;
       padding: 1rem;
       background-color: var(--cieloClaro-azur);
-      width: 292px;
+      width: 30%;
+      min-width: 310px;
       height: 100%;
       .img-tarjeta {
         height: 200px;
