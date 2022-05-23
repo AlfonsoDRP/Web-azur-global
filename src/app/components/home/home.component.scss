@@ -15,7 +15,7 @@
     align-items: center;
   }
   .contenedor-primero {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: url(../../../assets/empresa/almacen2.png);
     background-size: cover;
@@ -31,6 +31,7 @@
       height: 100%;
       h1,
       h4 {
+        opacity: 0;
         position: relative;
         top: -600px;
         animation-name: abajo;
