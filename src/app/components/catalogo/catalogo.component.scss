@@ -24,9 +24,9 @@
     .triangulo {
       width: 0;
       height: 0;
-      border-left: 49.5vw solid transparent;
-      border-right: 49.5vw solid transparent;
-      border-top: 200px solid var(--azul-azur);
+      border-left: 100vw solid var(--azul-azur);
+      border-top: 0 solid transparent;
+      border-bottom: 200px solid transparent;
     }
     .aux {
       padding-top: 3rem;
