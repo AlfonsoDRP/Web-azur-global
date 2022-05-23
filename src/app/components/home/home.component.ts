@@ -18,35 +18,30 @@ export class HomeComponent {
     });
   }
   constructor() {
-    
-      
-        $(function () {
-          
-          // guardar scroll de la pagina
-          $(window).on('scroll', function () {
-            var scrollTop: any = $(window).scrollTop();
-            // trigger de animacion en scroll
-            if (scrollTop > 900 && scrollTop < 990) {
-              $('.derecha').css({display:'flex'}).animate(
-                {
-                  right: 0,
-                  opacity: '1',
-                },
-                'slow'
-              );
-              $('.izquierda').css({display:'flex'}).animate(
-                {
-                  display:'block',
-                  left: 0,
-                  opacity: '1',
-                },
-                'slow'
-              );
-            }
-          });
-        });
-      
-    
+    $(function () {
+      // guardar scroll de la pagina
+      $(window).on('scroll', function () {
+        var scrollTop: any = $(window).scrollTop();
+        // trigger de animacion en scroll
+        if (scrollTop > 900 && scrollTop < 990) {
+          $('.derecha').css({ display: 'flex' }).animate(
+            {
+              right: 0,
+              opacity: '1',
+            },
+            'slow'
+          );
+          $('.izquierda').css({ display: 'flex' }).animate(
+            {
+              display: 'block',
+              left: 0,
+              opacity: '1',
+            },
+            'slow'
+          );
+        }
+      });
+    });
   }
 
   scroll() {
@@ -63,10 +58,7 @@ export class HomeComponent {
   slidesChangeMessage = '';
 
   slides = [
-    {
-      image: '../../../assets/piezas/AMORTIGUADORES.PNG',
-      familia: 'Amortiguadores',
-    },
+    { image: '../../../assets/piezas/AMORTIGUADORES.PNG', familia: 'Amortiguadores' },
     { image: '../../../assets/piezas/COMPRESOR.PNG', familia: 'Compresores' },
     { image: '../../../assets/piezas/FILTROS.PNG', familia: 'Filtros' },
     { image: '../../../assets/piezas/RODAMIENTOS.PNG', familia: 'Rodamientos' },
