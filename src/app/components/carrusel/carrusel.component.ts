@@ -114,8 +114,8 @@ export class CarruselComponent implements OnInit{
   }
   
   cambiarProductos(movimiento:boolean){
-    console.log((this.posicion+3)%this.numeroProductos)
-    console.log(this.posicion)
+    // console.log((this.posicion+3)%this.numeroProductos)
+    // console.log(this.posicion)
     
     if(movimiento){
       this.posicion = (this.posicion - 1 == -1)? this.numeroProductos-1 : this.posicion - 1;

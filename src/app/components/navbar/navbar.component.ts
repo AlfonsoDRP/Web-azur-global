@@ -16,18 +16,21 @@ export class NavbarComponent implements OnInit {
   emojis = [faBars,faXmark];
 
   
-  comienzo1(){
-    this.comienzo = false;
-  }
 
+  
  cambioBandera(){
-   this.bandera= !this.bandera;
-   this.comienzo1();
+   this.bandera = !this.bandera;
+   this.comienzo = false;
    if (this.bandera === true){
      this.faBarras = this.emojis[0];
+     setTimeout(() => {
+      this.comienzo = true;
+    }, 1000);
    }else{
     this.faBarras = this.emojis[1];
+    
    }
+   
  }
   constructor() { }
 
