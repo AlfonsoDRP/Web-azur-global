@@ -19,22 +19,24 @@ export class HomeComponent {
   }
   constructor() {
     
-      $(document).ready(function () {
+      
         $(function () {
+          
           // guardar scroll de la pagina
           $(window).on('scroll', function () {
             var scrollTop: any = $(window).scrollTop();
             // trigger de animacion en scroll
-            if (scrollTop > 1000 && scrollTop < 1300) {
-              $('.derecha').animate(
+            if (scrollTop > 900 && scrollTop < 990) {
+              $('.derecha').css({display:'flex'}).animate(
                 {
                   right: 0,
                   opacity: '1',
                 },
                 'slow'
               );
-              $('.izquierda').animate(
+              $('.izquierda').css({display:'flex'}).animate(
                 {
+                  display:'block',
                   left: 0,
                   opacity: '1',
                 },
@@ -43,7 +45,7 @@ export class HomeComponent {
             }
           });
         });
-      });
+      
     
   }
 
