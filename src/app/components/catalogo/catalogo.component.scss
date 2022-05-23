@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 3rem;
   margin-bottom: 3rem;
-  //align-items: center;
+ // align-items: center;
   .contenedor-triangulo {
     color: white;
     position: relative;
@@ -47,7 +47,7 @@
 
     align-items: center;
 
-    width: 100%;
+    //width: 100%;
 
     .izquierda,
     .centro,
@@ -62,17 +62,7 @@
     }
     
 
-    .boton {
-      width: 100%;
-      text-align: center;
-      height: 38px;
-
-      button {
-        margin: 0px auto;
-
-        background-color: var(--azul-azur);
-      }
-    }
+    
     .primera-fila {
       background-color: var(--azul-azur);
       background-image: url(../../../assets/LOGO-AZURGLOBAL-WP.png);
@@ -212,7 +202,8 @@ $animationSpeed: 20s;
 @media only screen and (min-width:1045px){
   .cuerpo {
     border: 1px solid var(--azul-azur);
-    //max-width: 1920px;
+   
+    
   }
   .centro {
     border-left: 1px solid var(--azul-azur);
@@ -247,8 +238,9 @@ $animationSpeed: 20s;
 
 
 
-@media only screen and (max-width: 1044px) {
+@media only screen and (max-width: 1644px) {
   .cuerpo {
+    
     border-top:0;
   }
   .seccion-centro{
@@ -266,11 +258,12 @@ $animationSpeed: 20s;
     }
   }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1645px) {
   .contenedor-principal {
     align-items: center;
     .cuerpo {
-      max-width: 1920px;
+     
+      
     }
   }
 }
