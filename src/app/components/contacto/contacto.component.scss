@@ -16,6 +16,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
       height: 300px;
       width: 100%;
       background-color: var(--azul-azur);
@@ -63,7 +64,7 @@
       .contenedor-formulario {
         display: flex;
         flex-direction: column;
-        width: 60%;
+        width: 100%;
         .formulario {
           padding: 0.5rem;
           display: flex;
@@ -72,9 +73,6 @@
           justify-content: center;
           align-items: center;
           .arribaform {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
             gap: 0.5rem;
             .nombre {
               width: 100%;
@@ -93,7 +91,6 @@
             }
           }
           .abajoform {
-            width: 100%;
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
@@ -142,3 +139,25 @@
     top: 0;
   }
 }
+
+@media only screen and (min-width: 901px){
+  .arribaform{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+  }
+  .abajoform{
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 900px){
+  .arribaform{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .abajoform{
+    width: 80%;
+  }
+}
+
