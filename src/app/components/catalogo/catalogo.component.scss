@@ -222,6 +222,35 @@ $animationSpeed: 20s;
     border-bottom: 1px solid var(--azul-azur);
   }
 }
+@media only screen and (max-width: 1645px) {
+  .contenedor-principal {
+    
+    .cuerpo {
+      margin: 0;
+    }
+  }
+  .cuerpo {
+    border: 1px solid var(--azul-azur);
+  }
+  .centro {
+    border-left: 1px solid var(--azul-azur);
+    border-right: 1px solid var(--azul-azur);
+  }
+  .primera-fila {
+    border: none;
+  }
+  .segunda-fila {
+    border: none;
+    border-left: 1px solid var(--azul-azur);
+  }
+  .tercera-fila {
+    border: none;
+  }
+  .seccion-centro {
+    border-top: 1px solid var(--azul-azur);
+    border-bottom: 1px solid var(--azul-azur);
+  }
+}
 
 //este pone los bordes y cambia la alineacion a lo mas pequeño
 
