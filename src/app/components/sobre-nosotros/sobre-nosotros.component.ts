@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class SobreNosotrosComponent  {
 
-
+ngOnInit(): void {
+  $(document).ready(function(){
+    window.scroll(0,0);
+  })
+}
 }

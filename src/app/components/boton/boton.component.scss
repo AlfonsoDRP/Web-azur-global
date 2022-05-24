@@ -1,0 +1,14 @@
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--azul-azur);
+    color: white;
+    border-color: transparent;
+    &:hover{
+        background-color: var(--logoAzulOscuro-azur);
+    }
+    &:focus{
+        border-color: var(--logoAzulOscuro-azur);
+    }
+}

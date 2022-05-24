@@ -1,5 +1,6 @@
 .contenedor-principal{
-    height: 78.7vh;
+    height: 100vh;
+    overflow-y: hidden;
     background-image: url(../../../assets/empresa/Almacen3.png);
     background-size:cover;
     background-repeat: no-repeat;
@@ -8,8 +9,10 @@
     align-items: center;
     justify-content: center;
     
+    
+    
     .logo-login{
-        height: 50px;
+        width: 50%;
     }
     .login{
         color: white;
@@ -19,26 +22,27 @@
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
-        height: 40%;
-        width: 20%;
+        height: 350px;
+        width: 25%;
         background-color: var(--azul-opacity-azur);
         input {
             border: 0;
-            border-bottom: 2px solid grey;
+            width: 100%;
+            
+            border-bottom: 1px solid grey;
             color: white;
             
             background-color:rgba(255, 255, 255, 0);
             &:focus{
                 border: 0;
                 border-bottom: 2px solid grey;
-                border-color: rgba(255, 255, 255, 0);
                 background-color: rgba(255, 255, 255, 0);
                 box-shadow: 0 0 0 0;
             }
 
         }
         .boton{
-            width: 80%;
+            width: 45%;
             border-color: var(--logoAzulOscuro-azur);
             background-color: var(--logoAzulOscuro-azur);
         }

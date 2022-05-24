@@ -3,15 +3,13 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 3rem;
-  //align-items: center;
   .contenedor-triangulo {
     color: white;
     position: relative;
     top: -500px;
     width: 100%;
     animation-name: comienzo;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     .info {
       display: flex;
@@ -24,9 +22,9 @@
     .triangulo {
       width: 0;
       height: 0;
-      border-left: 49.5vw solid transparent;
-      border-right: 49.5vw solid transparent;
-      border-top: 200px solid var(--azul-azur);
+      border-left: 100vw solid var(--azul-azur);
+      border-top: 0 solid transparent;
+      border-bottom: 200px solid transparent;
     }
     .aux {
       padding-top: 3rem;
@@ -46,12 +44,13 @@
 
     align-items: center;
 
-    width: 100%;
+    
 
     .izquierda,
     .centro,
     .derecha {
       height: 510px;
+      width: 550px;
       display: flex;
       padding: 10px;
       flex-direction: column;
@@ -59,18 +58,8 @@
     }
     
 
-    .boton {
-      width: 100%;
-      text-align: center;
-      height: 38px;
-
-      button {
-        margin: 0px auto;
-
-        background-color: var(--azul-azur);
-      }
-    }
-    .izquierda-primera-fila {
+    
+    .primera-fila {
       background-color: var(--azul-azur);
       background-image: url(../../../assets/LOGO-AZURGLOBAL-WP.png);
       background-repeat: no-repeat;
@@ -146,6 +135,7 @@ $animationSpeed: 20s;
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 150px;
+  width: 80%;
   background-color: var(--azul-azur);
   margin: auto;
   overflow: hidden;
@@ -187,7 +177,7 @@ $animationSpeed: 20s;
     justify-content: center;
     width: calc(250px * 14);
     align-items: center;
-    gap: 0.5rem;
+    gap: 3rem;
   }
 
   .slide {
@@ -250,30 +240,10 @@ $animationSpeed: 20s;
 
 }
 
-
-@media only screen and (max-width: 1044px) {
-  .izquierda-primera-fila{
-    position: relative;
-    top: -500px;
-    height: 200px;
-    animation-name: comienzo;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-  }
-  .info{
-    height: 200px;
-  }
-  .triangulo{
-    display: none;
-  }
-  .slider {
-    width: 100%;
-    margin-top: 3rem;
-
-  }
+@media only screen and (max-width: 1644px) {
   .cuerpo {
-    border-top:0;
+    
+    border:0;
   }
   .seccion-centro{
     border-style: none;
@@ -291,11 +261,11 @@ $animationSpeed: 20s;
     }
   }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1645px) {
   .contenedor-principal {
     align-items: center;
-    .cuerpo {
-      max-width: 1920px;
+    .cuerpo{
+      margin:0;
     }
   }
 }

@@ -8,7 +8,7 @@
   <div class="carrusel">
     <h1>Productos</h1>
     <div class="linea"> </div>
-    <app-carrusel [listaProductos]="slides"></app-carrusel>
+    <app-carrusel [lista]="slides"></app-carrusel>
   </div>
   <div class="contenedor-ventajas">
     <div class="rotulo">
@@ -26,14 +26,7 @@
             Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
             es óptima gracias a nuestra gestión del almacen y gran personal
           </p>
-
-          <button
-            class="btn btn-primary"
-            routerLink="/sobrenosotros"
-            (click)="scroll()"
-          >
-            Ver más
-          </button>
+          <app-boton [contenido]="'Ver más'" routerLink="/sobrenosotros"></app-boton>
         </div>
         <div class="tarjeta" id="izquierda">
           <h4>Compromiso</h4>
@@ -45,13 +38,7 @@
             es óptima gracias a nuestra gestión del almacen y gran personal
           </p>
 
-          <button
-            class="btn btn-primary"
-            routerLink="/sobrenosotros"
-            (click)="scroll()"
-          >
-            Ver más
-          </button>
+          <app-boton [contenido]="'Ver más'" routerLink="/sobrenosotros"></app-boton>
         </div>
       </div>
       <div class="derecha">
@@ -65,13 +52,7 @@
             es óptima gracias a nuestra gestión del almacen y gran personal
           </p>
 
-          <button
-            class="btn btn-primary"
-            routerLink="/sobrenosotros"
-            (click)="scroll()"
-          >
-            Ver más
-          </button>
+          <app-boton [contenido]="'Ver más'" routerLink="/sobrenosotros"></app-boton>
         </div>
         <div class="tarjeta" id="derecha">
           <h4>Futuro</h4>
@@ -83,13 +64,7 @@
             es óptima gracias a nuestra gestión del almacen y gran personal
           </p>
 
-          <button
-            class="btn btn-primary"
-            routerLink="/sobrenosotros"
-            (click)="scroll()"
-          >
-            Ver más
-          </button>
+          <app-boton [contenido]="'Ver más'" routerLink="/sobrenosotros"></app-boton>
         </div>
       </div>
     </div>

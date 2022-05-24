@@ -12,7 +12,7 @@
   </div>
   <div class="cuerpo">
     <section>
-      <div class="izquierda-primera-fila">
+      <div class="primera-fila izquierda">
         
       </div>
       <div class="centro">
@@ -26,7 +26,7 @@
           </p>
           <img src="../../../assets/piezas/AMORTIGUADORES.PNG" alt="" />
           <div class="boton">
-            <button type="button" class="btn btn-primary">Ver más</button>
+            <app-boton [contenido]="'Ver más'" routerLink="/login"></app-boton>
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@
           </p>
           <img src="../../../assets/piezas/FILTROS.PNG" alt="" />
           <div class="boton">
-            <button type="button" class="btn btn-primary">Ver más</button>
+            <app-boton [contenido]="'Ver más'" routerLink="/login"></app-boton>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@
           </p>
           <img src="../../../assets/piezas/FRENOS.PNG" alt="" />
           <div class="boton">
-            <button type="button" class="btn btn-primary">Ver más</button>
+            <app-boton [contenido]="'Ver más'" routerLink="/login"></app-boton>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
           </p>
           <img src="../../../assets/piezas/QUIMICOSYADITIVOS.PNG" alt="" />
           <div class="boton">
-            <button type="button" class="btn btn-primary">Ver más</button>
+            <app-boton [contenido]="'Ver más'" routerLink="/login"></app-boton>
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@
           </p>
           <img src="../../../assets/piezas/BATERIA.PNG" alt="" />
           <div class="boton">
-            <button type="button" class="btn btn-primary">Ver más</button>
+            <app-boton [contenido]="'Ver más'" routerLink="/login"></app-boton>
           </div>
         </div>
       </div>
@@ -102,7 +102,7 @@
           </p>
           <img class="pieza" src="../../../assets/piezas/espejo.png" alt="" />
           <div class="boton">
-            <button type="button" class="btn btn-primary">Ver más</button>
+            <app-boton [contenido]="'Ver más'" routerLink="/login"></app-boton>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@
   <div class="slider">
     <div class="slide-track">
       <div class="slide" *ngFor="let foto of fotos">
-        <img src={{foto}} alt="" />
+        <img src={{foto}} alt="" style="height: 100px; width: auto;" />
       </div>
     </div>
   </div>

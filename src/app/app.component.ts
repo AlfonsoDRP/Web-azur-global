@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   ngOnInit(): void {
-    window.scrollTo(0,0);
+    $(document).ready(function(){
+      window.scroll(0,0);
+    })
   }
 }
