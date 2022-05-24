@@ -1,10 +1,10 @@
 .contenedor-principal {
   overflow: hidden;
   height: 100%;
-  display:  flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 3rem ;
+  padding-bottom: 3rem;
   .entrada {
     position: relative;
     animation-name: aparecer-sobre;
@@ -32,99 +32,78 @@
   .tarjetas_info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 10rem;
+    
     .secciones {
-      max-width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 5rem;
+      max-width: 1000px;
+      display: grid;
+      gap: 3rem;
+      
       .imagen {
+        grid-area: imagen;
         position: relative;
+        left: 0;
         width: 300px;
         height: 300px;
         background-color: var(--azul-azur);
-        display: flex;
         align-items: center;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1.5s;
         img {
           position: relative;
           width: 100%;
+          animation-timing-function: ease-in-out;
+          animation-duration: 1.8s;
         }
       }
-      .texto {
-        position: relative;
+      .info{
+        grid-area: info;
+      }
+      .rotulo {
+        grid-area: rotulo;
+        height: 100%;
+      }
+      .info , .rotulo{
+        position: relative;    
+        left: 0;
         padding: 0.5rem;
         display: flex;
-        flex-direction: row;
-        width: 60%;
         align-items: center;
-        
-        .rotulo {
-          padding: 0.5rem;
-          display: flex;
-          align-items: center;
-          height: 300px;
-          border-right: 2px solid black;
-        }
-        .info {
-          padding: 0.5rem;
-        }
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
       }
     }
-    .impar{
+    .impar {
       .imagen{
         animation-name: contenedor_izquierda;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-duration: 1s;
         img{
-          position: relative;
-          left: -500px;
-          animation-name: imagen_izquierda;
-          animation-duration: 1s;
-          animation-delay: 0.8s;
-          animation-timing-function: ease-in-out;
-          animation-fill-mode: forwards;
+          left: 10px;
+          animation-name: contenedor_izquierda;
         }
       }
-      .texto{
-        animation-name: contenedor_derecha;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-      }
-    }
-    .par{
-      .imagen{
-        animation-name: contenedor_derecha;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-duration: 1s;
-        img{
-          position: relative;
-          right: -500px;
-          animation-name: imagen_derecha;
-          animation-duration: 1s;
-          animation-delay: 0.8s;
-          animation-timing-function: ease-in-out;
-          animation-fill-mode: forwards;
-        }
-      }
-      .texto{
-        animation-name: contenedor_izquierda;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
 
+      .rotulo,.info{
+        animation-name: contenedor_derecha;
+      }
+    }
+    .par {
+      .imagen{
+        animation-name: contenedor_derecha;
+        img{
+          left: -10px;
+          animation-name: contenedor_derecha;
+        }
+      }
+
+      .rotulo,.info{
+        animation-name: contenedor_izquierda;
       }
     }
   }
 }
 @keyframes aparecer-sobre {
   from {
-    top: -500px;
+    top: -100vh;
   }
   to {
     top: 0;
@@ -132,37 +111,60 @@
 }
 @keyframes contenedor_izquierda {
   from {
-    left: -1100px;
-  }
-  to{
-    left: 0px;
+    left: -100vw;
   }
 }
-@keyframes imagen_izquierda {
-  from {
-    left: -500px;
-  }
-  to{
-    left: 20px;
-  }
-}
+
 
 @keyframes contenedor_derecha {
   from {
-    right: -1100px;
-  }
-  to{
-    right: 0px;
-  }
-}
-@keyframes imagen_derecha {
-  from {
-    right: -500px;
-  }
-  to{
-    right: 20px;
+    left: 100vw;
   }
 }
 
 
 
+@media only screen and (min-width:1045px){
+  .imagen{
+    display: flex;
+  }
+  .rotulo{
+    border-right: 2px solid black;
+  }
+  .impar{
+    grid-template-areas: "imagen rotulo info";
+  }
+  .par {
+    grid-template-areas: "rotulo info imagen";
+  }
+}
+@media only screen and (max-width:1044px){
+  .imagen{
+    display: flex;
+  }
+  .rotulo{
+    display: flex;
+    justify-content: center;
+  }
+  .impar{
+    grid-template-areas: "rotulo rotulo" "imagen  info";
+  }
+  .par {
+    grid-template-areas: "rotulo rotulo" "info imagen";
+  }
+}
+@media only screen and (max-width:700px){
+  .imagen{
+    display: none;
+  }
+  .rotulo{
+    display: flex;
+    justify-content: center;
+  }
+  .impar{
+    grid-template-areas: "rotulo " "info";
+  }
+  .par {
+    grid-template-areas: "rotulo" "info";
+  }
+}
