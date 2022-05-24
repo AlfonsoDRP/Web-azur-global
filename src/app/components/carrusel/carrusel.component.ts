@@ -1,27 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carrusel',
   templateUrl: './carrusel.component.html',
   styleUrls: ['./carrusel.component.scss']
 })
-export class CarruselComponent {
+export class CarruselComponent implements OnInit{
+  ngOnInit(): void {
+    this.elementos = this.lista.length
+  }
 
   posicion:number = 0;
   centro:number = 1;
-  lista = [
+  @Input() lista = [
     {image: '../../../assets/piezas/AMORTIGUADORES.PNG',familia:"Amortiguadores"},
     {image: '../../../assets/piezas/COMPRESOR.PNG',familia:"Compresores"},
     {image: '../../../assets/piezas/FILTROS.PNG',familia:"Filtros"},
-    {image: '../../../assets/piezas/RODAMIENTOS.PNG',familia:"Rodamientos"},
-    {image: '../../../assets/piezas/AMORTIGUADORES.PNG',familia:"Amortiguadores"},
-    {image: '../../../assets/piezas/COMPRESOR.PNG',familia:"Compresores"},
-    {image: '../../../assets/piezas/FILTROS.PNG',familia:"Filtros"},
-    {image: '../../../assets/piezas/RODAMIENTOS.PNG',familia:"Rodamientos"},
-    {image: '../../../assets/piezas/AMORTIGUADORES.PNG',familia:"Amortiguadores"},
-    {image: '../../../assets/piezas/COMPRESOR.PNG',familia:"Compresores"},
-    {image: '../../../assets/piezas/FILTROS.PNG',familia:"Filtros"},
-    {image: '../../../assets/piezas/RODAMIENTOS.PNG',familia:"Rodamientos"}, 
+    {image: '../../../assets/piezas/RODAMIENTOS.PNG',familia:"Rodamientos"}
   ];
 
   elementos = this.lista.length
@@ -38,12 +33,14 @@ export class CarruselComponent {
     if(valor){
       if(this.posicion == 0){
         this.posicion = -1*this.elementos +3;
+        this.centro = this.elementos-1;
       }else{
         this.posicion=this.posicion +1;
       }
     }else{
       if(this.posicion ==  -1*this.elementos +3){
         this.posicion = 0;
+        this.centro = this.posicion;
       }else{
         this.posicion=this.posicion -1;
       }
