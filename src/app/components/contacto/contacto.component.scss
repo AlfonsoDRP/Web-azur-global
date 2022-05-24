@@ -69,6 +69,8 @@
           display: flex;
           flex-direction: column;
           gap: 0.5rem;
+          justify-content: center;
+          align-items: center;
           .arribaform {
             width: 100%;
             display: flex;
@@ -99,9 +101,6 @@
               max-height: 200px;
               min-height: 58px;
             }
-          }
-          .btn {
-            background-color: var(--azul-azur);
           }
         }
       }
