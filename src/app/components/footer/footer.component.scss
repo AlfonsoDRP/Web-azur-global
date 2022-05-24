@@ -1,42 +1,19 @@
 .contenedor {
   height: 100%;
   width: 100%;
-  display: grid;
-  
   background-color: var(--azul-azur);
   .superior {
     height: 100%;
-    width: 100%;
-     padding-top: 20px;
-    display: flex;
-    flex-direction: row;
+    padding-top: 20px;
+    display: grid;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     color: rgba(240, 255, 255, 0.541);
-    .link:hover {
-      color: var(--niebla-azur);
-      cursor: pointer;
-    }
-    .link1 {
+    .copyR{
+      grid-area: copyR;
       display: flex;
-      align-items: center;
       justify-content: center;
-      width: 25%;
-     
-      ul {
-        list-style: none;
-      }
-    }
-    .contenedor-logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 25%;
-      .logo {
-        height: 50px;
-      }
       a {
         color: rgba(240, 255, 255, 0.541);
         text-decoration: none;
@@ -46,12 +23,32 @@
         }
       }
     }
-    .link2 {
+    .contenedor-logo {
+      grid-area: logo;
+      flex: 1;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 25%;
-      // padding-left:150px;
+      .logo {
+        height: 50px;
+      }
+    }
+    .izquierda{
+      grid-area: izquierda;
+    }
+    .derecha{
+      grid-area: derecha;
+    }
+    .contenedor-link {
+      flex: 1;
+      display: flex;
+
+      align-items: center;
+      .link:hover {
+        color: var(--niebla-azur);
+        cursor: pointer;
+      }
       ul {
         list-style: none;
         li {
@@ -63,5 +60,41 @@
       }
     }
   }
-  
+}
+
+@media only screen and (min-width: 1044px){
+  .superior{
+    grid-template-areas: "izquierda logo derecha" "izquierda copyR derecha";
+    grid-template-columns: 5fr 3fr 5fr;
+  }  
+  .derecha{
+    justify-content: center;
+  }
+
+}
+@media only screen and (max-width: 1043px){
+  .superior{
+    grid-template-areas: "logo logo" "izquierda  derecha" "copyR copyR";
+    grid-template-columns: 1fr 1fr;
+  }
+  .derecha{
+    justify-content: center;
+  }
+
+}
+@media only screen and (max-width: 760px){
+  .contenedor{
+    display: flex;
+    justify-content: center;
+  }
+  .superior{
+    width: 50%;
+    grid-template-areas: "logo " "izquierda " "derecha" " copyR";
+    grid-template-columns: 1fr;
+  }
+
+  .derecha{
+    justify-content: left;
+  }
+
 }
