@@ -24,57 +24,55 @@
       </h2>
       <div class="contenedor-formulario">
         <div class="formulario">
-          <div class="izquierda">
-            <div class="separacion">
-              <div class="form-floating nombre">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="floatingPassword"
-                  placeholder="Password"
-                />
-                <label for="floatingPassword">Nombre</label>
-              </div>
-              <div class="form-floating telefono">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="floatingPassword"
-                  placeholder="Password"
-                />
-                <label for="floatingPassword">Telefono</label>
-              </div>
-            </div>
-            <div class="form-floating">
+        <div class="arribaform">
+          <div class="separacion">
+            <div class="form-floating nombre">
               <input
                 type="text"
                 class="form-control"
                 id="floatingPassword"
                 placeholder="Password"
               />
-              <label for="floatingPassword">Correo</label>
+              <label for="floatingPassword">Nombre</label>
             </div>
-          </div>
-
-          <div class="derecha">
-            <div class="form-floating">
+            <div class="form-floating telefono">
               <input
                 type="text"
                 class="form-control"
                 id="floatingPassword"
                 placeholder="Password"
               />
-              <label for="floatingPassword">Asunto</label>
-            </div>
-            <div class="form-floating">
-              <textarea class="form-control area-text" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-              <label for="floatingTextarea">Comentarios</label>
+              <label for="floatingPassword">Telefono</label>
             </div>
           </div>
-
-          
+          <div class="form-floating correo">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+            />
+            <label for="floatingPassword">Correo</label>
+          </div>
         </div>
-        <button class="btn btn-primary">Enviar</button>
+        <div class="abajoform">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+            />
+            <label for="floatingPassword">Asunto</label>
+          </div>
+          <div class="form-floating">
+            <textarea class="form-control area-text" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Comentarios</label>
+          </div>
+        </div>
+        <app-boton [contenido]="'Enviar'"></app-boton>
+        </div>
+       
       </div>
   </div>
   <div class="contenedor-mapa">

@@ -38,13 +38,11 @@
       }
     }
   }
-  
+
   section {
     display: flex;
 
     align-items: center;
-
-    
 
     .izquierda,
     .centro,
@@ -56,28 +54,23 @@
       flex-direction: column;
       align-items: center;
     }
-    
 
-    
     .primera-fila {
       background-color: var(--azul-azur);
       background-image: url(../../../assets/LOGO-AZURGLOBAL-WP.png);
       background-repeat: no-repeat;
       background-position: center;
       padding: 0;
-      
     }
     .segunda-fila {
       background-image: url(../../../assets/empresa/almacen2.png);
       background-size: cover;
       padding: 0;
-      
     }
     .tercera-fila {
       background-image: url(../../../assets/empresa/Pistola1.png);
       background-size: cover;
       padding: 0;
-      
     }
     .contenido {
       width: 500px;
@@ -108,7 +101,6 @@
       width: 630px;
     }
   }
-  
 }
 
 @mixin white-gradient {
@@ -194,12 +186,15 @@ $animationSpeed: 20s;
     top: 0;
   }
 }
-@media only screen and (min-width:1045px){
-  .contenedor-principal{
-    gap: 3rem;
-  }
-  .info{
-    height: 300px;
+
+//Este media le pone bordes cuando esta a tamaño normal
+
+@media only screen and (min-width: 1645px) {
+  .contenedor-principal {
+    align-items: center;
+    .cuerpo {
+      margin: 0;
+    }
   }
   .cuerpo {
     border: 1px solid var(--azul-azur);
@@ -208,64 +203,70 @@ $animationSpeed: 20s;
     border-left: 1px solid var(--azul-azur);
     border-right: 1px solid var(--azul-azur);
   }
-  .izquierda-primera-fila {
+  .primera-fila {
     border: none;
   }
   .segunda-fila {
-    
     border: none;
     border-left: 1px solid var(--azul-azur);
   }
   .tercera-fila {
-    
     border: none;
   }
   .seccion-centro {
     border-top: 1px solid var(--azul-azur);
     border-bottom: 1px solid var(--azul-azur);
   }
-  section > div {
-      
-    width: 660px;
+}
+@media only screen and (max-width: 1645px) {
+  .contenedor-principal {
+    
+    .cuerpo {
+      margin: 0;
+    }
   }
-
-  .slider{
-    min-width: 1044px;
-    width: 70%;
+  .cuerpo {
+    border: 1px solid var(--azul-azur);
   }
-
-  .izquierda-primera-fila{
-    height: 510px;
+  .centro {
+    border-left: 1px solid var(--azul-azur);
+    border-right: 1px solid var(--azul-azur);
   }
-
+  .primera-fila {
+    border: none;
+  }
+  .segunda-fila {
+    border: none;
+    border-left: 1px solid var(--azul-azur);
+  }
+  .tercera-fila {
+    border: none;
+  }
+  .seccion-centro {
+    border-top: 1px solid var(--azul-azur);
+    border-bottom: 1px solid var(--azul-azur);
+  }
 }
 
-@media only screen and (max-width: 1644px) {
+//este pone los bordes y cambia la alineacion a lo mas pequeño
+
+@media only screen and (max-width: 970px) {
   .cuerpo {
-    
-    border:0;
+    border: 0;
   }
-  .seccion-centro{
+  .seccion-centro {
     border-style: none;
     border-top: 0;
     border-bottom: 0;
   }
   section {
     flex-direction: column;
-    border:0;
+    border: 0;
     & > div {
-      width: 100%;
-      border-left: 1px  solid var(--azul-azur);
-      border-right: 1px  solid var(--azul-azur);
-     border-bottom: 1px  solid var(--azul-azur);
+      border-left: 1px solid var(--azul-azur);
+      border-right: 1px solid var(--azul-azur);
+      border-bottom: 1px solid var(--azul-azur);
     }
   }
 }
-@media only screen and (min-width: 1645px) {
-  .contenedor-principal {
-    align-items: center;
-    .cuerpo{
-      margin:0;
-    }
-  }
-}
+
