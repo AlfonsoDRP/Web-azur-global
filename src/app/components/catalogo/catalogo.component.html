@@ -12,48 +12,46 @@
   </div>
   <div class="cuerpo">
     <section>
-      <div class="primera-fila izquierda">
-      </div>
+      <div class="primera-fila izquierda"></div>
       <div class="centro">
         <div class="contenido">
           <div class="complementario">
+            <div class="rotulo">
+              <h4>Amortiguadores</h4>
+              <div class="linea"> </div>
+            </div>
             <div class="texto">
               <p>
-                En nuestra seccion de amortiguadores podras encontrar amortiguciones
-                para todo tipo de configuraciones, desde las mas sencillas y
-                economicas hasta las mas deportivas para tu vehiculo.
+                En nuestra seccion de amortiguadores podras encontrar
+                amortiguciones para todo tipo de configuraciones, desde las mas
+                sencillas y economicas hasta las mas deportivas para tu
+                vehiculo.
               </p>
               <app-boton [contenido]="'Mas info'"></app-boton>
             </div>
-            
           </div>
-          <div class="rotulo">
-            <h4>Amortiguadores</h4>
-          <div class="linea"> </div>
-          </div>
-          <img src="../../../assets/piezas/AMORTIGUADORES.PNG" alt="" />
           
+          <img src="../../../assets/piezas/AMORTIGUADORES.PNG" alt="" />
         </div>
       </div>
       <div class="derecha">
         <div class="contenido">
           <div class="complementario">
+            <div class="rotulo">
+              <h4>Filtros</h4>
+              <div class="linea"> </div>
+            </div>
             <div class="texto">
               <p>
-                En el apartado de filtros encontraras los filtros necesarios para su
-                automovil, tanto filtros de aire, como filtro de habitaculo, filtro
-                de aceite y de gasolina.
+                En el apartado de filtros encontraras los filtros necesarios
+                para su automovil, tanto filtros de aire, como filtro de
+                habitaculo, filtro de aceite y de gasolina.
               </p>
               <app-boton [contenido]="'Mas info'"></app-boton>
             </div>
-            
           </div>
-          <div class="rotulo">
-            <h4>Filtros</h4>
-          <div class="linea"> </div>
-          </div>
-          <img src="../../../assets/piezas/FILTROS.PNG" alt="" />
           
+          <img src="../../../assets/piezas/FILTROS.PNG" alt="" />
         </div>
       </div>
     </section>
@@ -61,46 +59,42 @@
       <div class="izquierda">
         <div class="contenido">
           <div class="complementario">
+            <div class="rotulo">
+              <h4>Frenos</h4>
+              <div class="linea"> </div>
+            </div>
             <div class="texto">
               <p>
-                En la seccion de frenos podras elegir entre todas nuestras marcas y
-                modelos de pastillas de frenos
+                En la seccion de frenos podras elegir entre todas nuestras
+                marcas y modelos de pastillas de frenos
               </p>
               <app-boton [contenido]="'Mas info'"></app-boton>
             </div>
-            
-          </div>
-          <div class="rotulo">
-            <h4>Frenos</h4>
-          <div class="linea"> </div>
           </div>
           
-         
+
           <img src="../../../assets/piezas/FRENOS.PNG" alt="" />
-          
         </div>
       </div>
       <div class="centro segunda-fila"></div>
       <div class="derecha">
         <div class="contenido">
           <div class="complementario">
+            <div class="rotulo">
+              <h4>Liquidos</h4>
+              <div class="linea"> </div>
+            </div>
             <div class="texto">
               <p>
-                Selecciona los mejores liquidos de freno, anticongelantes, liquido
-                de direccion y limpiaparabrisas.
+                Selecciona los mejores liquidos de freno, anticongelantes,
+                liquido de direccion y limpiaparabrisas.
               </p>
               <app-boton [contenido]="'Mas info'"></app-boton>
             </div>
-            
-          </div>
-          <div class="rotulo">
-            <h4>Liquidos</h4>
-          <div class="linea"> </div>
           </div>
           
-          
+
           <img src="../../../assets/piezas/QUIMICOSYADITIVOS.PNG" alt="" />
-          
         </div>
       </div>
     </section>
@@ -108,42 +102,38 @@
       <div class="izquierda">
         <div class="contenido">
           <div class="complementario">
+            <div class="rotulo">
+              <h4>Baterias</h4>
+              <div class="linea"> </div>
+            </div>
             <div class="texto">
               <p>
-                Tenemos todos los formatos de baterias para vehiculos de multiples
-                grupos de motor.
+                Tenemos todos los formatos de baterias para vehiculos de
+                multiples grupos de motor.
               </p>
               <app-boton [contenido]="'Mas info'"></app-boton>
             </div>
-            
           </div>
-          <div class="rotulo">
-            <h4>Baterias</h4>
-          <div class="linea"> </div>
-          </div>
-          
-          
+
           <img src="../../../assets/piezas/BATERIA.PNG" alt="" />
-          
         </div>
       </div>
       <div class="centro">
         <div class="contenido">
           <div class="complementario">
+            <div class="rotulo">
+              <h4>Autorecambios</h4>
+              <div class="linea"> </div>
+            </div>
             <div class="texto">
               <p>
-                Encontraras todo tipo de piezas externas para sustitución y si no la
-                tenemos ¡Te la buscamos!
+                Encontraras todo tipo de piezas externas para sustitución y si
+                no la tenemos ¡Te la buscamos!
               </p>
               <app-boton [contenido]="'Mas info'"></app-boton>
             </div>
-            
           </div>
-          <div class="rotulo">
-            <h4>Autorecambios</h4>
-            <div class="linea"> </div>
-          </div>
-          <img class="pieza" src="../../../assets/piezas/espejo.png" alt="" />
+          <img src="../../../assets/piezas/espejo.png" alt="" />
         </div>
       </div>
       <div class="derecha tercera-fila"></div>
@@ -152,7 +142,7 @@
   <div class="slider">
     <div class="slide-track">
       <div class="slide" *ngFor="let foto of fotos">
-        <img src={{foto}} alt="" style="height: 100px; width: auto;" />
+        <img src="{{ foto }}" alt="" style="height: 100px; width: auto" />
       </div>
     </div>
   </div>

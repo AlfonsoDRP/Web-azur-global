@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { faBars, faCoffee, faCross, faLock, faUser, faUserAstronaut, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -13,11 +13,19 @@ export class NavbarComponent implements OnInit {
   faBarras = faBars;
   bandera = true;
   comienzo = true;
+  cambio = true;
   emojis = [faBars,faXmark];
-
   
+  @HostListener ('window:scroll', ['$event']) onWindowScroll() {
+    let posScroll= window.scrollY;
+    if (posScroll > 100) {
+      this.cambio = false;
+    } else {
+      this.cambio = true;
+      
+    }
+  }
 
-  
  cambioBandera(){
    this.bandera = !this.bandera;
    this.comienzo = false;
