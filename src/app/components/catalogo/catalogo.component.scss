@@ -2,6 +2,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
   margin-bottom: 3rem;
   .contenedor-triangulo {
     color: white;
@@ -46,7 +47,7 @@
 
     .izquierda,
     .centro,
-    .derecha {
+    .derecha { 
       height: 510px;
       width: 550px;
       display: flex;
@@ -73,14 +74,47 @@
       padding: 0;
     }
     .contenido {
-      width: 500px;
+      width: 100%;
+      position: relative;
+      z-index: 0;
       height: 100%;
-
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-
+      .rotulo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .complementario {
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        font-size: 20px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .texto{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+        }
+      }
+      &:hover {
+        .complementario {
+          opacity: 1;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+      }
       .linea {
         background-color: var(--azul-azur);
         height: 2px;
@@ -97,8 +131,8 @@
       }
     }
     .pieza {
-      height: 510px;
-      width: 630px;
+      height: 100%;
+      width: 100%;
     }
   }
 }
@@ -220,7 +254,6 @@ $animationSpeed: 20s;
 }
 @media only screen and (max-width: 1645px) {
   .contenedor-principal {
-    
     .cuerpo {
       margin: 0;
     }
@@ -269,4 +302,3 @@ $animationSpeed: 20s;
     }
   }
 }
-

@@ -1,9 +1,11 @@
 button{
     width: 100px;
     height: 30px;
-    border-radius: 10px;
     background-color: var(--azul-azur);
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-color: transparent;
     &:hover{
         background-color: var(--logoAzulOscuro-azur);
