@@ -7,6 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CarruselComponent implements OnInit{
   ngOnInit(): void {
+    let elemento = this.lista[this.lista.length-1];
+    this.lista.push(this.lista[0]);
+    this.lista.unshift(elemento);
     this.elementos = this.lista.length
   }
 

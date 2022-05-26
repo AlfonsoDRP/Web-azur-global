@@ -3,11 +3,12 @@
   height: 100%;
   * {
     color: white;
-
     transition: all 0.5s;
   }
 
   overflow: hidden;
+  background-color: var(--cieloClaro-azur);
+  border-radius: 5px;
   .todo {
     margin: auto;
     height: 100%;
@@ -22,19 +23,20 @@
       padding: 1.5rem;
       height: 100%;
       .contenido {
+        padding: 20px;
         height: 100%;
-        background-color: #2896c8;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        opacity: 0.5;
         p {
           position: relative;
           bottom: 0;
-          font-size: 130%;
+          font-size: 150%;
         }
         img {
-          filter: drop-shadow(0 10px 1px rgba(0, 0, 0, 0.384));
+          filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.438));
           max-width: 80%;
           max-height: 75%;
           height: auto;
@@ -43,14 +45,23 @@
           transform: scale(1.3);
         }
       }
+      .contenido:hover{
+        opacity: 1;
+      }
       .centro {
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+        border-radius: 5px;
+        opacity: 1;
         p {
           position: relative;
-          bottom: -10%;
+          bottom: -5%;
           font-size: 150%;
         }
         img {
           transform: scale(1.3);
+
         }
         img:hover {
           transform: scale(1.6);
@@ -66,7 +77,7 @@
     height: 30px;
     background-color: #2896c8;
     border: 1px solid white;
-    border-radius: 10px;
+    border-radius: 5px;
   }
   .boton-derecho {
     left: calc(100% / 6 * 5 - 150px);
