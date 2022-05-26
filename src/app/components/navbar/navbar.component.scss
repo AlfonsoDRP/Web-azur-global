@@ -20,6 +20,7 @@
         width: 150px;
       }
     }
+    
     .links {
       width: 100%;
       color: white;
@@ -39,6 +40,7 @@
         background-color: var(--cielo-azur);
       }
     }
+
     .icons {
       display: flex;
       flex-direction: row;
@@ -53,12 +55,15 @@
       }
     }
   }
+
   .icon-mini {
     display: none;
   }
+
   .links-desplegable {
     display: none;
   }
+
   .contenedorFade{
     transition: 0.5s;
     background: rgb(0, 43, 129);
@@ -70,6 +75,7 @@
     flex-direction: row;
     justify-content: space-around;
     gap: 2rem;
+
     .logo {
       width: 220px;
       display: flex;
@@ -80,6 +86,7 @@
         width: 150px;
       }
     }
+
     .links {
       width: 100%;
       color: white;
@@ -99,6 +106,7 @@
         background-color: var(--cielo-azur);
       }
     }
+
     .icons {
       display: flex;
       flex-direction: row;
@@ -114,6 +122,7 @@
     }
   }
 }
+
 @media only screen and (max-width: 1045px) {
   .contenedorFade {
     transition: 0.5s;
@@ -138,9 +147,11 @@
         width: 170px;
       }
     }
+
     .links {
       display: none;
     }
+
     .icons {
       display: flex;
       flex-direction: row;
@@ -161,6 +172,7 @@
       }
     }
   }
+
   .contenedor {
     transition: 0.5s;
     background-color: var(--azul-azur);
@@ -183,9 +195,11 @@
         width: 170px;
       }
     }
+
     .links {
       display: none;
     }
+
     .icons {
       display: flex;
       flex-direction: row;
@@ -206,10 +220,12 @@
       }
     }
   }
+
   .primero {
     position: relative;
     top: -500px;
   }
+
   .cerrado {
     animation-name: cerrado;
     animation-duration: 1.5s;
@@ -237,6 +253,7 @@
       }
     }
   }
+
   .desplegable {
     position: relative;
     top: -500px;
@@ -245,6 +262,7 @@
     animation-fill-mode: forwards;
     background-color: var(--cielo-azur);
     width: 25%;
+    min-width: 256px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -272,6 +290,7 @@
     }
   }
 }
+
 @keyframes desplegable {
   from {
     position: relative;
@@ -284,6 +303,7 @@
     z-index: -10;
   }
 }
+
 @keyframes cerrado {
   from {
     position: relative;
