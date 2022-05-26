@@ -6,10 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./sobre-nosotros.component.scss']
 })
 export class SobreNosotrosComponent  {
+  
+  numero_seccion:number = 0
 
-ngOnInit(): void {
-  $(document).ready(function(){
-    window.scroll(0,0);
-  })
-}
+  ngOnInit(): void {
+    $(document).ready(function(){
+      window.scroll(0,0);
+    })
+  }
+
+  actionMenu(numero:number){
+    this.numero_seccion = numero;
+  }
 }

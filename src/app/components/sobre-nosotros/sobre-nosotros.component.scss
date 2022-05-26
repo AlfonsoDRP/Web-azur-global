@@ -1,16 +1,17 @@
 .contenedor-principal {
   overflow: hidden;
+  min-height: 100vh;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 3rem;
+  transition: all 1s;
   .entrada {
     position: relative;
+    top: 0;
     animation-name: aparecer-sobre;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
     .sobre-triangulo {
       display: flex;
       flex-direction: column;
@@ -29,142 +30,96 @@
       border-bottom: 200px solid transparent;
     }
   }
-  .tarjetas_info {
-    display: flex;
-    flex-direction: column;
-    gap: 10rem;
-    
+  .contenedor-contenido {
+    width: 80%;
+    position: relative;
+    bottom: 50px;
+
     .secciones {
-      max-width: 1000px;
-      display: grid;
-      gap: 3rem;
-      
-      .imagen {
-        grid-area: imagen;
-        position: relative;
-        left: 0;
-        width: 300px;
-        height: 300px;
-        background-color: var(--azul-azur);
-        align-items: center;
-        animation-timing-function: ease-in-out;
-        animation-duration: 1.5s;
-        img {
-          position: relative;
-          width: 100%;
-          animation-timing-function: ease-in-out;
-          animation-duration: 1.8s;
-        }
-      }
-      .info{
-        grid-area: info;
-      }
+      padding: 3rem 0;
+      width: 100%;
+
       .rotulo {
         grid-area: rotulo;
-        height: 100%;
+        text-transform: uppercase;
+        font-weight: 750;
+        font-size: xx-large;
       }
-      .info , .rotulo{
-        position: relative;    
-        left: 0;
-        padding: 0.5rem;
+      .info {
+        grid-area: info;
+        letter-spacing: 0;
         display: flex;
-        align-items: center;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-      }
-    }
-    .impar {
-      .imagen{
-        animation-name: contenedor_izquierda;
-        img{
-          left: 10px;
-          animation-name: contenedor_izquierda;
+        flex-direction: column;
+        gap: 1rem;
+        strong {
+          font-size: large;
+        }
+        span {
+          font-weight: 300;
+          font-size: large;
+          color: red;
         }
       }
+      .imagen {
+        grid-area: imagen;
+        max-width: 500px;
+        width: 100%;
+        min-width: 200px;
+      }
+      .derecha {
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+        float: right;
+      }
+      .izquierda {
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        float: left;
+      }
 
-      .rotulo,.info{
-        animation-name: contenedor_derecha;
+      .historia {
+        display: grid;
+        grid-template-areas: "rotulo " "info ";
+      }
+      .mision {
+        display: grid;
+        grid-template-areas: "rotulo " "info ";
+      }
+      .valores {
+        display: grid;
+        grid-template-areas: "rotulo " "info ";
       }
     }
-    .par {
-      .imagen{
-        animation-name: contenedor_derecha;
-        img{
-          left: -10px;
-          animation-name: contenedor_derecha;
-        }
+    .navegacion {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--azul-azur);
+      div {
+        cursor: pointer;
+        padding: 0.5rem 0;
+        padding-left: 0.5rem;
+        color: var(--azul-azur);
+        text-transform: uppercase;
+        font-weight: 700;
+        border-bottom: 1px solid var(--azul-azur);
       }
-
-      .rotulo,.info{
-        animation-name: contenedor_izquierda;
+      .seleccionado {
+        color: white;
+        background-color: var(--azul-azur);
       }
     }
   }
 }
+
+.noMostrar {
+  display: none;
+}
+
 @keyframes aparecer-sobre {
   from {
     top: -100vh;
   }
-  to {
-    top: 0;
-  }
-}
-@keyframes contenedor_izquierda {
-  from {
-    left: -100vw;
-  }
 }
 
 
-@keyframes contenedor_derecha {
-  from {
-    left: 100vw;
-  }
-}
-
-
-
-@media only screen and (min-width:1045px){
-  .imagen{
-    display: flex;
-  }
-  .rotulo{
-    border-right: 2px solid black;
-  }
-  .impar{
-    grid-template-areas: "imagen rotulo info";
-  }
-  .par {
-    grid-template-areas: "rotulo info imagen";
-  }
-}
-@media only screen and (max-width:1044px){
-  .imagen{
-    display: flex;
-  }
-  .rotulo{
-    display: flex;
-    justify-content: center;
-  }
-  .impar{
-    grid-template-areas: "rotulo rotulo" "imagen  info";
-  }
-  .par {
-    grid-template-areas: "rotulo rotulo" "info imagen";
-  }
-}
-@media only screen and (max-width:700px){
-  .imagen{
-    display: none;
-  }
-  .rotulo{
-    display: flex;
-    justify-content: center;
-  }
-  .impar{
-    grid-template-areas: "rotulo " "info";
-  }
-  .par {
-    grid-template-areas: "rotulo" "info";
-  }
-}

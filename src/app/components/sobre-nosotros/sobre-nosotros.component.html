@@ -5,36 +5,109 @@
     </div>
     <div class="triangulo"></div>
   </div>
-  <div class="tarjetas_info">
-    <div class="secciones impar">
-      <div class="imagen">
-        <img src="../../../assets/empresa/almacen2.png" alt="Pistola1" />
-      </div>
-      <h2 class="rotulo">Historia</h2>
-      <p class="info">
-        Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
-        papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
-        gramenawer ese que llega. De la pradera tiene musho peligro a peich
-        amatomaa condemor jarl. Te voy a borrar el cerito por la gloria de mi
-        madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
-        peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
-        diodeno ese hombree ese hombree condemor.
-      </p>
+  <div class="contenedor-contenido">
+    <div class="navegacion">
+      <div (click)="actionMenu(0)" [ngClass]="{'seleccionado': numero_seccion == 0}">Historia</div>
+      <div (click)="actionMenu(1)" [ngClass]="{'seleccionado': numero_seccion == 1}">Nuestro Valores</div>
+      <div (click)="actionMenu(2)" [ngClass]="{'seleccionado': numero_seccion == 2}">Misión y visión</div>
     </div>
-    <div class="secciones par">
-      <div class="imagen">
-        <img src="../../../assets/empresa/almacen2.png" alt="Pistola1" />
+    <div class="secciones">
+      <div class="seccion" [ngClass]="numero_seccion != 0 ? 'noMostrar' : 'historia'">
+        <h2 class="rotulo">Historia</h2>
+        <div class="info">
+          <p>
+            <img class="imagen derecha" src="../../../assets/empresa/almacen2.png" alt="Pistola1" />
+            <strong>
+              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
+              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
+              gramenawer ese que llega.
+            </strong>
+            <br><br>
+            Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
+            papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
+            gramenawer ese que llega. De la pradera tiene musho peligro a peich
+            amatomaa condemor jarl. Te voy a borrar el cerito por la gloria de mi
+            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
+            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
+            diodeno ese hombree ese hombree condemor.
+            Te voy a borrar el cerito por la gloria de mi
+            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
+            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
+            diodeno ese hombree ese hombree condemor.
+            <br><br>
+            <span>
+              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
+              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
+              gramenawer ese que llega. De la pradera tiene musho peligro a peich
+              amatomaa condemor jarl.
+            </span>
+
+        </div>
       </div>
-      <h2 class="rotulo">Historia</h2>
-      <p class="info">
-        Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
-        papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
-        gramenawer ese que llega. De la pradera tiene musho peligro a peich
-        amatomaa condemor jarl. Te voy a borrar el cerito por la gloria de mi
-        madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
-        peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
-        diodeno ese hombree ese hombree condemor.
-      </p>
+      <div class="seccion" [ngClass]="numero_seccion != 1 ? 'noMostrar' : 'valores'">
+        <h2 class="rotulo">Nuestro Valores</h2>
+        <div class="info">
+          <p>
+            <img class="imagen izquierda" src="../../../assets/empresa/almacen2.png" alt="Pistola1" />
+            <strong>
+              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
+              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
+              gramenawer ese que llega.
+            </strong>
+            <br><br>
+            Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
+            papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
+            gramenawer ese que llega. De la pradera tiene musho peligro a peich
+            amatomaa condemor jarl. Te voy a borrar el cerito por la gloria de mi
+            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
+            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
+            diodeno ese hombree ese hombree condemor.
+            Te voy a borrar el cerito por la gloria de mi
+            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
+            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
+            diodeno ese hombree ese hombree condemor.
+            <br><br>
+            <span>
+              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
+              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
+              gramenawer ese que llega. De la pradera tiene musho peligro a peich
+              amatomaa condemor jarl.
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="seccion" [ngClass]="numero_seccion != 2 ? 'noMostrar' : 'mision'">
+        <h2 class="rotulo">Misión y visión</h2>
+        <div class="info">
+          <p>
+            <img class="imagen derecha" src="../../../assets/empresa/almacen2.png" alt="Pistola1" />
+            <strong>
+              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
+              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
+              gramenawer ese que llega.
+            </strong>
+            <br><br>
+            Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
+            papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
+            gramenawer ese que llega. De la pradera tiene musho peligro a peich
+            amatomaa condemor jarl. Te voy a borrar el cerito por la gloria de mi
+            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
+            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
+            diodeno ese hombree ese hombree condemor.
+            Te voy a borrar el cerito por la gloria de mi
+            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
+            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
+            diodeno ese hombree ese hombree condemor.
+            <br><br>
+            <span>
+              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
+              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
+              gramenawer ese que llega. De la pradera tiene musho peligro a peich
+              amatomaa condemor jarl.
+            </span>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

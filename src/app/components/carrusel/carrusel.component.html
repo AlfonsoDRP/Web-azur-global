@@ -1,9 +1,9 @@
 
     <div class="contenedor-principal">
       <div class="todo" id="contenedor-carrusel" [style]=anchoTodo()>
-        <div class="cajas" *ngFor="let item of lista; index as i; " [style]=anchoCaja()>
+        <div class="cajas" *ngFor="let item of lista; index as i; " [style]=anchoCaja() >
           <div class="contenido" [ngClass]="{'centro': i == centro}">
-            <img src={{item.image}} alt="" srcset="">
+            <img src={{item.image}}>
             <p>{{item.familia}} </p>
           </div>
         </div>
