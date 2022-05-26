@@ -14,8 +14,9 @@
       <h1 class="titulo">Ventajas</h1>
     </div>
     <div class="ventajas">
-      <div class="izquierda">
-        <div class="tarjeta" id="izquierda">
+      <!-- Aqui empiez las tarjetas de la izquierda -->
+      <div class="izquierda" id="izquierda">
+        <div class="tarjeta">
           <h4>Rapidez</h4>
           <div class="img-tarjeta">
             <fa-icon class="icon fa-8x" [icon]="faReloj"></fa-icon>
@@ -24,9 +25,12 @@
             Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
             es óptima gracias a nuestra gestión del almacen y gran personal
           </p>
-          <app-boton [contenido]="'Ver más'" routerLink="/sobrenosotros"></app-boton>
+          <app-boton
+            [contenido]="'Ver más'"
+            routerLink="/sobrenosotros"
+          ></app-boton>
         </div>
-        <div class="tarjeta" id="izquierda">
+        <div class="tarjeta">
           <h4>Compromiso</h4>
           <div class="img-tarjeta">
             <fa-icon class="icon fa-8x" [icon]="faCompromiso"></fa-icon>
@@ -35,11 +39,14 @@
             Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
             es óptima gracias a nuestra gestión del almacen y gran personal
           </p>
-
-          <app-boton [contenido]="'Ver más'" routerLink="/sobrenosotros"></app-boton>
+          <app-boton
+            [contenido]="'Ver más'"
+            routerLink="/sobrenosotros"
+          ></app-boton>
         </div>
       </div>
-      <div class="derecha">
+      <!-- Aqui empiezan las tarjetas de la derecha -->
+      <div class="derecha" id="derecha">
         <div class="tarjeta">
           <h4>Calidad</h4>
           <div class="img-tarjeta">
@@ -49,10 +56,12 @@
             Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
             es óptima gracias a nuestra gestión del almacen y gran personal
           </p>
-
-          <app-boton [contenido]="'Ver más'" routerLink="/sobrenosotros"></app-boton>
+          <app-boton
+            [contenido]="'Ver más'"
+            routerLink="/sobrenosotros"
+          ></app-boton>
         </div>
-        <div class="tarjeta" id="derecha">
+        <div class="tarjeta">
           <h4>Futuro</h4>
           <div class="img-tarjeta">
             <fa-icon class="icon fa-8x" [icon]="faFuturo"></fa-icon>
@@ -61,8 +70,10 @@
             Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
             es óptima gracias a nuestra gestión del almacen y gran personal
           </p>
-
-          <app-boton [contenido]="'Ver más'" routerLink="/sobrenosotros"></app-boton>
+          <app-boton
+            [contenido]="'Ver más'"
+            routerLink="/sobrenosotros"
+          ></app-boton>
         </div>
       </div>
     </div>

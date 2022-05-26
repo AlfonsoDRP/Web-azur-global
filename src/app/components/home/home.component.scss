@@ -93,24 +93,29 @@
     display: flex;
     overflow-x: hidden;
     gap: 2rem;
+    transition: 0.5s;
     .izquierda {
-      display: none;
-      opacity: 0;
+      transition: 0.5s;
+      display: flex;
+      opacity: 1;
       position: relative;
-      left: -500px;
+      left: -1500px;
       width: 100%;
       align-items: center;
       gap: 2rem;
     }
+    
     .derecha {
-      display: none;
-      opacity: 0;
+      transition: 0.5s;
+      display: flex;
+      opacity: 1;
       position: relative;
-      right: -500px;
+      right: -1500px;
       width: 100%;
       align-items: center;
       gap: 2rem;
     }
+    
     .btn {
       background-color: white;
       color: var(--logoAzulClaro-azur);
@@ -167,24 +172,30 @@
     flex-direction: row;
   }
   .izquierda {
-    display: none;
+    transition: 0.5s;
+    display: flex;
+    left: 0;
     flex-direction: row;
     justify-content: right;
   }
 
   .derecha {
-    display: none;
+    transition: 0.5s;
+    display: flex;
+    right: 0;
     flex-direction: row;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .izquierda {
+    transition: all 0.5s;
     flex-direction: column;
     justify-content: center;
   }
 
   .derecha {
+    transition: all 0.5s;
     flex-direction: column;
     justify-content: center;
   }
@@ -195,10 +206,12 @@
     justify-content: center;
   }
   .izquierda {
+    transition: 0.5s;
     justify-content: center;
   }
 
   .derecha {
+    transition: 0.5s;
     justify-content: center;
   }
 }

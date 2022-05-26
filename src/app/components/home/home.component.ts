@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import {
+  faBinoculars,
   faCircleCheck,
   faHandshake,
   faHourglass,
-  faPlaneDeparture,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -17,45 +17,30 @@ export class HomeComponent {
       window.scroll(0, 0);
     });
   }
+  @HostListener ('window:scroll') onWindowScroll() {
+    let posScroll = window.scrollY;
+    let derecha = document.getElementById("derecha");
+    let izquierda = document.getElementById("izquierda");
+
+    if (posScroll > 1000 && derecha && izquierda){
+      derecha.style.right = "0";
+      izquierda.style.left = "0";
+
+    }else if (posScroll < 1000 && derecha && izquierda){
+      derecha.style.right = "-1500px";
+      izquierda.style.left = "-1500px";
+    }
+  }
   constructor() {
-    $(function () {
-      // guardar scroll de la pagina
-      $(window).on('scroll', function () {
-        var scrollTop: any = $(window).scrollTop();
-        // trigger de animacion en scroll
-        if (scrollTop > 900 && scrollTop < 990) {
-          $('.derecha').css({ display: 'flex' }).animate(
-            {
-              right: 0,
-              opacity: '1',
-            },
-            'slow'
-          );
-          $('.izquierda').css({ display: 'flex' }).animate(
-            {
-              display: 'block',
-              left: 0,
-              opacity: '1',
-            },
-            'slow'
-          );
-        }
-      });
-    });
+    
   }
-
-  scroll() {
-    window.scroll(0, 0);
-  }
-
   itemsPerSlide = 3;
   singleSlideOffset = true;
   noWrap = true;
   faReloj = faHourglass;
   faCompromiso = faHandshake;
   faCalidad = faCircleCheck;
-  faFuturo = faPlaneDeparture;
-  slidesChangeMessage = '';
+  faFuturo = faBinoculars;
 
   slides = [
     { image: '../../../assets/piezas/AMORTIGUADORES.PNG', familia: 'Amortiguadores' },
