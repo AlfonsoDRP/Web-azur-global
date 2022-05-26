@@ -1,8 +1,7 @@
 .contenedor-principal {
-  height: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
   overflow-y: hidden;
   overflow-x: hidden;
   justify-content: space-between;
@@ -16,7 +15,6 @@
 
   .contenedor-cuerpo {
     height: 100%;
-    margin-top: 50px;
     display: flex;
     overflow-y: auto;
     overflow-x: hidden;
