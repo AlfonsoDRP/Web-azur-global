@@ -21,14 +21,19 @@ export class HomeComponent {
     let posScroll = window.scrollY;
     let derecha = document.getElementById("derecha");
     let izquierda = document.getElementById("izquierda");
-
-    if (posScroll > 1000 && derecha && izquierda){
+  console.log(posScroll)
+    if (posScroll > 500 && derecha && izquierda){
       derecha.style.right = "0";
       izquierda.style.left = "0";
+      derecha.style.opacity = "1";
+      izquierda.style.opacity = "1";
 
-    }else if (posScroll < 1000 && derecha && izquierda){
-      derecha.style.right = "-1500px";
-      izquierda.style.left = "-1500px";
+    }else if (posScroll < 500 && derecha && izquierda){
+      derecha.style.right = "-100px";
+      izquierda.style.left = "-100px";
+      derecha.style.opacity = "0";
+      izquierda.style.opacity = "0";
+      
     }
   }
   constructor() {
