@@ -2,17 +2,12 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: transparent;
   gap: 3rem;
   overflow-y: hidden;
   .contenedor-triangulo {
     color: white;
-    position: relative;
-    top: -500px;
-    animation-name: comienzo;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+
     .info {
       display: flex;
       flex-direction: column;
@@ -21,14 +16,21 @@
       text-align: center;
       height: 300px;
       width: 100%;
-      background-color: var(--azul-azur);
+      background-color: transparent;
+      position: relative;
+      top: -500px;
+      animation-name: comienzo;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
     }
     .triangulo {
       width: 0;
       height: 0;
-      border-left: 49.5vw solid transparent;
-      border-right: 49.5vw solid transparent;
-      border-top: 200px solid var(--azul-azur);
+      border-left: 50vw solid white;
+      border-right: 50vw solid white;
+      border-top: 200px solid transparent;
+      margin-bottom: -50px;
     }
     .aux {
       padding-top: 3rem;
@@ -44,16 +46,18 @@
   }
   .contenedor-cuerpo {
     display: flex;
-    position: relative;
-    animation-name: abajo-arriba;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    background-color: white;
     flex-direction: column;
     gap: 3rem;
     padding: 0.5rem;
     overflow-y: hidden;
     .contenido-cuerpo {
+      position: relative;
+      background-color: white;
+      animation-name: abajo-arriba;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
       overflow-y: hidden;
       display: flex;
       flex-direction: column;
