@@ -85,7 +85,7 @@
             .telefono {
               width: 100%;
             }
-            .correo{
+            .correo {
               width: 100%;
             }
             .separacion {
@@ -102,7 +102,7 @@
             .area-text {
               max-height: 200px;
               min-height: 200px;
-              resize:none;
+              resize: none;
             }
           }
         }
@@ -114,7 +114,7 @@
       flex-direction: column;
       align-items: center;
       iframe {
-        margin:1.5rem 0 3rem 0;
+        margin: 1.5rem 0 3rem 0;
         width: 70%;
         height: 350px;
         border: 0;
@@ -147,24 +147,23 @@
   }
 }
 
-@media only screen and (min-width: 901px){
-  .arribaform{
+@media only screen and (min-width: 901px) {
+  .arribaform {
     width: 60%;
     display: flex;
     flex-direction: row;
   }
-  .abajoform{
+  .abajoform {
     width: 60%;
   }
 }
-@media only screen and (max-width: 900px){
-  .arribaform{
+@media only screen and (max-width: 900px) {
+  .arribaform {
     width: 80%;
     display: flex;
     flex-direction: column;
   }
-  .abajoform{
+  .abajoform {
     width: 80%;
   }
 }
-
