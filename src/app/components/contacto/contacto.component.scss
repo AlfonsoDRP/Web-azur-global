@@ -23,13 +23,7 @@
       width: 100%;
       background-color: var(--azul-azur);
     }
-    .triangulo {
-      width: 0;
-      height: 0;
-      border-left: 49.5vw solid transparent;
-      border-right: 49.5vw solid transparent;
-      border-top: 200px solid var(--azul-azur);
-    }
+    
     .aux {
       padding-top: 3rem;
       display: flex;
@@ -42,6 +36,7 @@
       }
     }
   }
+  
   .contenedor-cuerpo {
     display: flex;
     position: relative;
@@ -120,6 +115,13 @@
         border: 0;
       }
     }
+  }
+  .triangulo {
+    width: 0;
+    height: 0;
+    border-left: 49.5vw solid transparent;
+    border-right: 49.5vw solid transparent;
+    border-top: 200px solid var(--azul-azur);
   }
   .linea {
     background-color: var(--azul-azur);
