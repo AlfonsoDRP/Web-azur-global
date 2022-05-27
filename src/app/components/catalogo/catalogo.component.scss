@@ -4,7 +4,7 @@
   flex-direction: column;
   // gap: 3rem;
   margin-bottom: 3rem;
-  .contenedor-triangulo {
+  .contenedor-cabecera {
     color: white;
     position: relative;
     top: -500px;
@@ -65,19 +65,19 @@
       align-items: center;
     }
 
-    .primera-fila {
+    .primera-imagen {
       background-color: var(--azul-azur);
       background-image: url(../../../assets/LOGO-AZURGLOBAL-WP.png);
       background-repeat: no-repeat;
       background-position: center;
       padding: 0;
     }
-    .segunda-fila {
+    .segunda-imagen {
       background-image: url(../../../assets/empresa/almacen2.png);
       background-size: cover;
       padding: 0;
     }
-    .tercera-fila {
+    .tercera-imagen {
       background-image: url(../../../assets/empresa/Pistola1.png);
       background-size: cover;
       padding: 0;
@@ -268,7 +268,7 @@ $animationSpeed: 20s;
         border-left: 1px solid var(--azul-azur);
         border-right: 1px solid var(--azul-azur);
       }
-      .primer-secction {
+      .primer-section {
         border-top: 1px solid var(--azul-azur);
       }
       section {
@@ -282,7 +282,7 @@ $animationSpeed: 20s;
     .cuerpo {
       margin: 0;
 
-      .primer-secction > .izquierda,.seccion-centro > .centro, .tercera-secction > .derecha{
+      .primer-section > .izquierda,.second-section > .centro, .tercera-secction > .derecha{
         display: none;
       }
     
@@ -291,12 +291,12 @@ $animationSpeed: 20s;
         border-right: 1px solid var(--azul-azur);
         border-bottom: 1px solid var(--azul-azur);
       }
-      .primer-secction {
+      .primer-section {
         border-top: 1px solid var(--azul-azur);
       }
       
-      .primer-secction > .derecha,
-      .seccion-centro > .derecha,
+      .primer-section > .derecha,
+      .second-section > .derecha,
       .tercera-secction > .centro {
         border-left: 1px solid var(--azul-azur);
       }
@@ -318,7 +318,7 @@ $animationSpeed: 20s;
       border-top: 1px solid var(--azul-azur);
       border-left: 0px;
     }
-    .tercera-fila {
+    .tercera-imagen {
       border-bottom: 1px solid var(--azul-azur);
     }
   }
