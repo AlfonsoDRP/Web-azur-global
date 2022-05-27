@@ -2,17 +2,12 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: transparent;
   gap: 3rem;
   overflow-y: hidden;
   .contenedor-triangulo {
     color: white;
-    position: relative;
-    top: -500px;
-    animation-name: comienzo;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+
     .info {
       display: flex;
       flex-direction: column;
@@ -21,9 +16,22 @@
       text-align: center;
       height: 300px;
       width: 100%;
-      background-color: var(--azul-azur);
+      background-color: transparent;
+      position: relative;
+      top: -500px;
+      animation-name: comienzo;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
     }
-    
+    .triangulo {
+      width: 0;
+      height: 0;
+      border-left: 50vw solid white;
+      border-right: 50vw solid white;
+      border-top: 200px solid transparent;
+      margin-bottom: -50px;
+    }
     .aux {
       padding-top: 3rem;
       display: flex;
@@ -39,16 +47,18 @@
   
   .contenedor-cuerpo {
     display: flex;
-    position: relative;
-    animation-name: abajo-arriba;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    background-color: white;
     flex-direction: column;
     gap: 3rem;
     padding: 0.5rem;
     overflow-y: hidden;
     .contenido-cuerpo {
+      position: relative;
+      background-color: white;
+      animation-name: abajo-arriba;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
       overflow-y: hidden;
       display: flex;
       flex-direction: column;
@@ -80,7 +90,7 @@
             .telefono {
               width: 100%;
             }
-            .correo{
+            .correo {
               width: 100%;
             }
             .separacion {
@@ -97,7 +107,7 @@
             .area-text {
               max-height: 200px;
               min-height: 200px;
-              resize:none;
+              resize: none;
             }
           }
         }
@@ -109,7 +119,7 @@
       flex-direction: column;
       align-items: center;
       iframe {
-        margin:1.5rem 0 3rem 0;
+        margin: 1.5rem 0 3rem 0;
         width: 70%;
         height: 350px;
         border: 0;
@@ -149,24 +159,23 @@
   }
 }
 
-@media only screen and (min-width: 901px){
-  .arribaform{
+@media only screen and (min-width: 901px) {
+  .arribaform {
     width: 60%;
     display: flex;
     flex-direction: row;
   }
-  .abajoform{
+  .abajoform {
     width: 60%;
   }
 }
-@media only screen and (max-width: 900px){
-  .arribaform{
+@media only screen and (max-width: 900px) {
+  .arribaform {
     width: 80%;
     display: flex;
     flex-direction: column;
   }
-  .abajoform{
+  .abajoform {
     width: 80%;
   }
 }
-
