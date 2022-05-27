@@ -2,7 +2,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  // gap: 3rem;
   margin-bottom: 3rem;
   .contenedor-triangulo {
     color: white;
@@ -12,21 +12,16 @@
     animation-name: comienzo;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    height: 250px;
     .info {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100%;
-      background-color: var(--azul-azur);
+      background-color: none;
     }
-    .triangulo {
-      width: 0;
-      height: 0;
-      border-left: 100vw solid var(--azul-azur);
-      border-top: 0 solid transparent;
-      border-bottom: 200px solid transparent;
-    }
+
     .aux {
       padding-top: 3rem;
       display: flex;
@@ -39,7 +34,22 @@
       }
     }
   }
-
+  .triangulo {
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-top: 0 solid transparent;
+    border-bottom: 200px solid white;
+  }
+  .cuerpo {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 15%;
+  }
   section {
     display: flex;
 
@@ -47,7 +57,7 @@
 
     .izquierda,
     .centro,
-    .derecha { 
+    .derecha {
       height: 510px;
       width: 550px;
       display: flex;
@@ -81,7 +91,7 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      .rotulo{
+      .rotulo {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -101,8 +111,8 @@
         justify-content: center;
         text-align: center;
         transition: 0.3s;
-        
-        .texto{
+
+        .texto {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -118,10 +128,13 @@
           opacity: 1;
           color: white;
           background-color: rgba(0, 0, 0, 0.8);
+          padding: 3rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
         }
       }
-      &
-      .linea {
+      & .linea {
         background-color: var(--azul-azur);
         height: 2px;
         width: 300px;
@@ -244,81 +257,68 @@ $animationSpeed: 20s;
 
 //Este media le pone bordes cuando esta a tamaño normal
 
-@media only screen and (min-width: 1645px) {
+@media only screen and (min-width: 1646px) {
   .contenedor-principal {
     align-items: center;
     .cuerpo {
       margin: 0;
+
+      section,
+      .centro {
+        border-left: 1px solid var(--azul-azur);
+        border-right: 1px solid var(--azul-azur);
+      }
+      .primer-secction {
+        border-top: 1px solid var(--azul-azur);
+      }
+      section {
+        border-bottom: 1px solid var(--azul-azur);
+      }
     }
   }
-  .cuerpo {
-    border: 1px solid var(--azul-azur);
-  }
-  .centro {
-    border-left: 1px solid var(--azul-azur);
-    border-right: 1px solid var(--azul-azur);
-  }
-  .primera-fila {
-    border: none;
-  }
-  .segunda-fila {
-    border: none;
-    border-left: 1px solid var(--azul-azur);
-  }
-  .tercera-fila {
-    border: none;
-  }
-  .seccion-centro {
-    border-top: 1px solid var(--azul-azur);
-    border-bottom: 1px solid var(--azul-azur);
-  }
 }
-@media only screen and (max-width: 1645px) {
+@media only screen and (max-width: 1645px) and (min-width: 1101px) {
   .contenedor-principal {
     .cuerpo {
       margin: 0;
+
+      .primer-secction > .izquierda,.seccion-centro > .centro, .tercera-secction > .derecha{
+        display: none;
+      }
+    
+      section {
+        border-left: 1px solid var(--azul-azur);
+        border-right: 1px solid var(--azul-azur);
+        border-bottom: 1px solid var(--azul-azur);
+      }
+      .primer-secction {
+        border-top: 1px solid var(--azul-azur);
+      }
+      
+      .primer-secction > .derecha,
+      .seccion-centro > .derecha,
+      .tercera-secction > .centro {
+        border-left: 1px solid var(--azul-azur);
+      }
     }
-  }
-  .cuerpo {
-    border: 1px solid var(--azul-azur);
-  }
-  .centro {
-    border-left: 1px solid var(--azul-azur);
-    border-right: 1px solid var(--azul-azur);
-  }
-  .primera-fila {
-    border: none;
-  }
-  .segunda-fila {
-    border: none;
-    border-left: 1px solid var(--azul-azur);
-  }
-  .tercera-fila {
-    border: none;
-  }
-  .seccion-centro {
-    border-top: 1px solid var(--azul-azur);
-    border-bottom: 1px solid var(--azul-azur);
   }
 }
 
 //este pone los bordes y cambia la alineacion a lo mas pequeño
 
-@media only screen and (max-width: 970px) {
-  .cuerpo {
-    border: 0;
-  }
-  .seccion-centro {
-    border-style: none;
-    border-top: 0;
-    border-bottom: 0;
-  }
+@media only screen and (max-width: 1100px) {
   section {
     flex-direction: column;
-    border: 0;
-    & > div {
-      border-left: 1px solid var(--azul-azur);
-      border-right: 1px solid var(--azul-azur);
+    border-left: 1px solid var(--azul-azur);
+    border-right: 1px solid var(--azul-azur);
+
+    .derecha,
+    .izquierda,
+    .centro {
+      border-top: 1px solid var(--azul-azur);
+      border-left: 0px;
+    }
+    .tercera-fila {
       border-bottom: 1px solid var(--azul-azur);
     }
   }
