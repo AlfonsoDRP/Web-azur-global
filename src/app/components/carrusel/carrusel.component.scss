@@ -2,14 +2,15 @@
   width: 100%;
   height: 100%;
   display: block;
+  overflow: hidden;
+  background-color: var(--cieloClaro-azur);
+  border-radius: 5px;
   * {
     color: white;
     transition: all 0.5s;
   }
 
-  overflow: hidden;
-  background-color: var(--cieloClaro-azur);
-  border-radius: 5px;
+
   .todo {
     margin: auto;
     height: 100%;
