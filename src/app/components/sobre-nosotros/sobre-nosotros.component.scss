@@ -19,21 +19,22 @@
       justify-content: center;
       height: 250px;
       width: 100%;
-      background-color: var(--azul-azur);
       color: white;
     }
-    .triangulo {
-      width: 0;
-      height: 0;
-      border-right: 100vw solid var(--azul-azur);
-      border-top: 0 solid transparent;
-      border-bottom: 200px solid transparent;
-    }
+  }
+  .triangulo {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-top: 0 solid transparent;
+    border-bottom: 200px solid white;
   }
   .contenedor-contenido {
-    width: 80%;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
     position: relative;
-    bottom: 50px;
 
     .secciones {
       padding: 3rem 0;
