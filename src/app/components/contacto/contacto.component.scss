@@ -42,7 +42,7 @@
       }
     }
   }
-  .abajo {
+  .contenedor-cuerpo {
     display: flex;
     position: relative;
     animation-name: abajo-arriba;
@@ -53,7 +53,7 @@
     gap: 3rem;
     padding: 0.5rem;
     overflow-y: hidden;
-    .contenedor {
+    .contenido-cuerpo {
       overflow-y: hidden;
       display: flex;
       flex-direction: column;
