@@ -7,9 +7,9 @@
   <div class="triangulo"></div>
   <div class="contenedor-contenido">
     <div class="navegacion">
-      <div (click)="actionMenu(0)" [ngClass]="{'seleccionado': numero_seccion == 0}">Historia</div>
-      <div (click)="actionMenu(1)" [ngClass]="{'seleccionado': numero_seccion == 1}">Nuestro Valores</div>
-      <div (click)="actionMenu(2)" [ngClass]="{'seleccionado': numero_seccion == 2}">Misión y visión</div>
+      <div (click)="actionMenu(0)" [ngClass]="{'seleccionado': numero_seccion == 0}"> <img src="../../../assets/LOGOcortado.png" style="height: 25px;width: 25px ;" alt=""> Historia</div>
+      <div (click)="actionMenu(1)" [ngClass]="{'seleccionado': numero_seccion == 1}"><img src="../../../assets/LOGOcortado.png" style="height: 25px;width: 25px ;" alt="">Nuestro Valores</div>
+      <div (click)="actionMenu(2)" [ngClass]="{'seleccionado': numero_seccion == 2}"><img src="../../../assets/LOGOcortado.png" style="height: 25px;width: 25px ;" alt="">Misión y visión</div>
     </div>
     <div class="secciones">
       <div class="seccion" [ngClass]="numero_seccion != 0 ? 'noMostrar' : 'historia'">
