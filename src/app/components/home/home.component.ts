@@ -17,12 +17,20 @@ export class HomeComponent {
       window.scroll(0, 0);
     });
   }
+<<<<<<< HEAD
   @HostListener ('scroll') onWindowScroll() {
     
     let posScroll = window.scrollY;
     let derecha = document.getElementById("derecha");
     let izquierda = document.getElementById("izquierda");
     console.log(posScroll)
+=======
+  @HostListener ('window:scroll',[]) onWindowScroll() {
+    let posScroll = window.scrollY;
+    let derecha = document.getElementById("derecha");
+    let izquierda = document.getElementById("izquierda");
+  console.log("posScroll")
+>>>>>>> main
     if (posScroll > 500 && derecha && izquierda){
       derecha.style.right = "0";
       izquierda.style.left = "0";

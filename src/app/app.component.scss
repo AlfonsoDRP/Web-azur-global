@@ -1,8 +1,9 @@
 .contenedor-principal {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  overflow-y: hidden;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
   overflow-x: hidden;
   justify-content: space-between;
 
