@@ -57,8 +57,7 @@
       top: 30px;
     }
     app-carrusel {
-      width: 1000px;
-      width: 70%;
+      width: 100%;
       height: 600px;
     }
   }
@@ -168,6 +167,9 @@
   }
 }
 @media only screen and (min-width: 1264px) {
+  .carrusel{
+    padding: 0 15%;
+  }
   .ventajas {
     flex-direction: row;
   }
@@ -201,6 +203,9 @@
   }
 }
 @media only screen and (max-width: 1263px) {
+  .carrusel{
+    padding: 0;
+  }
   .ventajas {
     flex-direction: column;
     justify-content: center;

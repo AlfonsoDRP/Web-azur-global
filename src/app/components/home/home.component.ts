@@ -12,16 +12,29 @@ import {
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+
   ngOnInit(): void {
     $(document).ready(function () {
       window.scroll(0, 0);
     });
+    this.calcularFormato()
   }
+
+  estadoMovil:boolean = false;
+  itemsPerSlide = 3;
+  singleSlideOffset = true;
+  noWrap = true;
+  faReloj = faHourglass;
+  faCompromiso = faHandshake;
+  faCalidad = faCircleCheck;
+  faFuturo = faBinoculars;
+
+
   @HostListener ('window:scroll') onWindowScroll() {
     let posScroll = window.scrollY;
     let derecha = document.getElementById("derecha");
     let izquierda = document.getElementById("izquierda");
-  console.log("posScroll")
+
     if (posScroll > 1100 && derecha && izquierda){
       derecha.style.right = "0";
       izquierda.style.left = "0";
@@ -36,16 +49,10 @@ export class HomeComponent {
       
     }
   }
-  constructor() {
-    
+
+  @HostListener('window:resize', ['$event']) onResize(event: any) {
+    this.calcularFormato();
   }
-  itemsPerSlide = 3;
-  singleSlideOffset = true;
-  noWrap = true;
-  faReloj = faHourglass;
-  faCompromiso = faHandshake;
-  faCalidad = faCircleCheck;
-  faFuturo = faBinoculars;
 
   slides = [
     { image: '../../../assets/piezas/AMORTIGUADORES.PNG', familia: 'Amortiguadores' },
@@ -55,4 +62,13 @@ export class HomeComponent {
     { image: '../../../assets/piezas/espejo.png', familia: 'Espejos' },
     { image: '../../../assets/piezas/BATERIA.PNG', familia: 'Baterias' },
   ];
+
+  calcularFormato(){
+    let principal = document.getElementById("principal");
+    let ancho = 0;
+    if (principal) {
+      ancho = principal.offsetWidth;
+      this.estadoMovil = ancho <=  950;
+    }
+  }
 }

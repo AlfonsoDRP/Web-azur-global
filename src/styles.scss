@@ -9,6 +9,7 @@ body{
     background-image: url(./assets/empresa/almacenAzul.png);
     filter: #00478e6e;
     background-repeat: no-repeat;
+    // background-size: 100%;
     background-position-x: center;
 }
 
@@ -35,3 +36,11 @@ body{
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
+
+@media screen and (min-width:1921px) {
+    body{
+
+        background-size: 100%;
+    }
+    
+}
