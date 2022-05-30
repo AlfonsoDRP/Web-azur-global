@@ -124,7 +124,7 @@
   }
 
 }
-
+// variables globales
 .rotulo {
   display: flex;
   flex-direction: column;
@@ -145,7 +145,7 @@
   margin-bottom: 20px;
 }
 
-
+//animaciones
 
 @keyframes abajo {
   from {
@@ -187,6 +187,7 @@
   }
 }
 
+//mediaquery
 @media only screen and (max-width: 600px) {
   .izquierda {
     transition: all 0.5s;

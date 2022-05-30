@@ -151,45 +151,8 @@
     }
   }
 }
-
-@mixin white-gradient {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
+//variables globales
 $animationSpeed: 20s;
-
-// Animation
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 7));
-  }
-}
-@keyframes aparece-info {
-  0% {
-    background-color: rgba(0, 0, 0, 0);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-}
-@keyframes desaparece-info {
-  0% {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  100% {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
-
 .slider {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
@@ -246,6 +209,35 @@ $animationSpeed: 20s;
     display: flex;
   }
 }
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+@keyframes aparece-info {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+@keyframes desaparece-info {
+  0% {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+
 @keyframes comienzo {
   from {
     top: -500px;
