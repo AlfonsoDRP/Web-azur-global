@@ -16,7 +16,7 @@ export class NavbarComponent {
   cambio = true;
   emojis = [faBars,faXmark];
 
-  @Output() footervisible = new EventEmitter<boolean>();
+  @Output() footervisible = new EventEmitter();
   
   
   @HostListener ('window:scroll', ['$event']) onWindowScroll() {
