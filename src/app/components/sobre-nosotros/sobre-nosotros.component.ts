@@ -16,7 +16,14 @@ export class SobreNosotrosComponent  {
   }
 
   actionMenu(numero:number){
-    
+
+    this.cambioMenu(numero);
+    setTimeout(() => {
+      this.numero_seccion = numero;
+    }, 100);
+  }
+
+  cambioMenu(numero:number){
     let historia = document.getElementById('historia');
     let valores = document.getElementById('valores');
     let mision = document.getElementById('mision');
@@ -27,10 +34,6 @@ export class SobreNosotrosComponent  {
       historia.style.left = (numero == 0)? "-30vw": "30vw";
       valores.style.left = (numero == 1)? "-30vw": "30vw";
       mision.style.left = (numero == 2)? "-30vw": "30vw";
- 
-      setTimeout(() => {
-        this.numero_seccion = numero;
-      }, 500);
       setTimeout(() => {
         this.numero_seccion = numero;
         if (valores && mision && historia) {    
@@ -42,7 +45,6 @@ export class SobreNosotrosComponent  {
           mision.style.opacity = "1"
         }
       }, 600);
-
     }
   }
 }

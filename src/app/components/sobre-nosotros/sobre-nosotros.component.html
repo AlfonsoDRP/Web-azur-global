@@ -7,9 +7,15 @@
   </div>
   <div class="contenedor-contenido">
     <div class="navegacion">
-      <div (click)="actionMenu(0)" [ngClass]="{'seleccionado': numero_seccion == 0}"> <img src="../../../assets/LOGOcortado.png" style="height: 25px;width: 25px ;" alt=""> Historia</div>
-      <div (click)="actionMenu(1)" [ngClass]="{'seleccionado': numero_seccion == 1}"><img src="../../../assets/LOGOcortado.png" style="height: 25px;width: 25px ;" alt="">Nuestro Valores</div>
-      <div (click)="actionMenu(2)" [ngClass]="{'seleccionado': numero_seccion == 2}"><img src="../../../assets/LOGOcortado.png" style="height: 25px;width: 25px ;" alt="">Misión y visión</div>
+      <div (click)="actionMenu(0)" [ngClass]="{'seleccionado': numero_seccion == 0}">
+        <img [ngClass]="{'noMostrar': numero_seccion != 0}" src="../../../assets/LOGOcortado.png"  alt="logo">Historia
+      </div>
+      <div (click)="actionMenu(1)" [ngClass]="{'seleccionado': numero_seccion == 1}">
+        <img [ngClass]="{'noMostrar': numero_seccion != 1}"  src="../../../assets/LOGOcortado.png"  alt="logo">Nuestro Valores
+      </div>
+      <div (click)="actionMenu(2)" [ngClass]="{'seleccionado': numero_seccion == 2}">
+        <img [ngClass]="{'noMostrar': numero_seccion != 2}"  src="../../../assets/LOGOcortado.png"  alt="logo">Misión y visión
+      </div>
     </div>
     <div class="secciones">
       <div id="historia" class="seccion"  [ngClass]="numero_seccion != 0 ? 'noMostrar' : 'distribucion'">

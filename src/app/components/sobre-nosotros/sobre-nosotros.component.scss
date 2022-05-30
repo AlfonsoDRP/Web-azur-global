@@ -86,7 +86,7 @@
 
     }
     .navegacion {
-      width: 200px;
+      width: 250px;
       display: flex;
       flex-direction: column;
       border-top: 1px solid var(--azul-azur);
@@ -98,10 +98,16 @@
         text-transform: uppercase;
         font-weight: 700;
         border-bottom: 1px solid var(--azul-azur);
+        display: flex;
+        gap: 0.5rem;
       }
       .seleccionado {
         color: white;
         background-color: var(--azul-azur);
+      }
+      img {
+        height: 25px;
+        width: 25px ;
       }
     }
   }
