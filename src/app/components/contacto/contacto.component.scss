@@ -27,8 +27,8 @@
     .triangulo {
       width: 0;
       height: 0;
-      border-left: 50vw solid white;
-      border-right: 50vw solid white;
+      border-left: 49.5vw solid white;
+      border-right: 49.6vw solid white;
       border-top: 200px solid transparent;
       margin-bottom: -50px;
     }
@@ -48,6 +48,7 @@
   .contenedor-cuerpo {
     display: flex;
     background-color: white;
+    width: 100%;
     flex-direction: column;
     gap: 3rem;
     padding: 0.5rem;
