@@ -33,9 +33,17 @@
     padding: 0 10%;
     position: relative;
     
+    
     .secciones {
       padding: 3rem 0;
       width: 100%;
+      position: relative;
+      background-color: white;
+      animation-name: abajo-arriba;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      overflow-y: hidden;
       .seccion{
         position: relative;
         left: 0;
@@ -90,6 +98,13 @@
       display: flex;
       flex-direction: column;
       border-top: 1px solid var(--azul-azur);
+      position: relative;
+      background-color: white;
+      animation-name: abajo-arriba;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      overflow-y: hidden;
       div {
         cursor: pointer;
         padding: 0.5rem 0;
@@ -120,5 +135,15 @@
 @keyframes aparecer-sobre {
   from {
     top: -100vh;
+  }
+}
+@keyframes abajo-arriba {
+  from {
+    opacity: 0;
+    top: 1000px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
   }
 }
