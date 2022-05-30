@@ -1,7 +1,7 @@
 <div class="contenedor-principal">
-    <app-navbar></app-navbar>
+    <app-navbar (footervisible)="Verfooter($event)"></app-navbar>
     <div class="contenedor-cuerpo">
         <router-outlet></router-outlet>
-        <app-footer></app-footer>
+        <app-footer [ngClass]="{'noMostrar': !footer}" ></app-footer>
     </div>
 </div>

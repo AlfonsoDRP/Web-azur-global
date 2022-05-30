@@ -1,5 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { faBars, faCoffee, faCross, faLock, faUser, faUserAstronaut, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
+import { faBars,  faLock, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +15,9 @@ export class NavbarComponent implements OnInit {
   comienzo = true;
   cambio = true;
   emojis = [faBars,faXmark];
+
+  @Output() footervisible = new EventEmitter<boolean>();
+  
   
   @HostListener ('window:scroll', ['$event']) onWindowScroll() {
     let posScroll= window.scrollY;
@@ -40,6 +43,7 @@ export class NavbarComponent implements OnInit {
    }
    
  }
+
   constructor() { }
 
   ngOnInit(): void {
