@@ -12,4 +12,8 @@ export class AppComponent {
     })
   }
   
+  footer:boolean=true;
+  Verfooter(valor:boolean){
+    this.footer=valor;
+  }
 }
