@@ -158,17 +158,62 @@
     }
   }
 }
-
-@mixin white-gradient {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
+//variables globales
 $animationSpeed: 20s;
+.slider {
+  background: white;
+  // box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 150px;
+  width: 99%;
+  background-color: white;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  margin-top: 0.5rem;
 
+  img {
+    width: 220px;
+    height: 75%;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 350px;
+    z-index: 2;
+  }
+
+  &::after {
+    height: 100%;
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slide-track {
+    height: 100%;
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    justify-content: center;
+    width: calc(300px * 14);
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .slide {
+    height: 100px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+}
 // Animation
 @keyframes scroll {
   0% {
@@ -207,62 +252,7 @@ $animationSpeed: 20s;
   }
 }
 
-.slider {
-  background: white;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 150px;
-  width: 80%;
-  background-color: var(--azul-azur);
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  margin-top: 3rem;
 
-  img {
-    max-width: 250px;
-    max-height: 100%;
-
-    width: auto;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-  }
-
-  &::after {
-    height: 100%;
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
-
-  &::before {
-    left: 0;
-    top: 0;
-  }
-
-  .slide-track {
-    height: 100%;
-
-    animation: scroll $animationSpeed linear infinite;
-    display: flex;
-    justify-content: center;
-    width: calc(250px * 14);
-    align-items: center;
-    gap: 3rem;
-  }
-
-  .slide {
-    height: 100px;
-    width: 250px;
-    display: flex;
-  }
-}
 @keyframes comienzo {
   from {
     top: -500px;
