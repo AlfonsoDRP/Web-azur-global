@@ -20,63 +20,28 @@ export class SobreNosotrosComponent  {
     let historia = document.getElementById('historia');
     let valores = document.getElementById('valores');
     let mision = document.getElementById('mision');
-
-    if (valores && mision && historia  && numero == 0 && this.numero_seccion != numero){
-      historia.style.left = "-30vw"
-      valores.style.left = "30vw"
-      mision.style.left = "30vw"
+    if (valores && mision && historia && this.numero_seccion != numero){
       historia.style.opacity = "0"
       valores.style.opacity = "0"
       mision.style.opacity = "0"
-      setTimeout(() => {
-        this.numero_seccion = numero;
-      }, 500);
-      setTimeout(() => {
-        if (historia) {
-          historia.style.left = "0"
-          historia.style.opacity = "1.0"
-        }
-      }, 600);
-      
-    }
-    if (valores && mision && historia  && numero == 1 && this.numero_seccion != numero){
-      historia.style.left = "30vw"
-      valores.style.left = "-30vw"
-      mision.style.left = "30vw"
-      historia.style.opacity = "0"
-      valores.style.opacity = "0"
-      mision.style.opacity = "0"
+      historia.style.left = (numero == 0)? "-30vw": "30vw";
+      valores.style.left = (numero == 1)? "-30vw": "30vw";
+      mision.style.left = (numero == 2)? "-30vw": "30vw";
  
       setTimeout(() => {
         this.numero_seccion = numero;
       }, 500);
       setTimeout(() => {
         this.numero_seccion = numero;
-        if (valores) {
-          valores.style.left = "0"
-          valores.style.opacity = "1.0"
+        if (valores && mision && historia) {    
+          historia.style.left = (numero == 0) ?  "0": historia.style.left;
+          valores.style.left = (numero == 1) ?  "0": valores.style.left;
+          mision.style.left = (numero == 2) ?  "0": mision.style.left;
+          historia.style.opacity = "1"
+          valores.style.opacity = "1"
+          mision.style.opacity = "1"
         }
       }, 600);
-
-    }
-    if (valores && mision && historia  && numero == 2 && this.numero_seccion != numero){
-      historia.style.left = "30vw"
-      valores.style.left = "30vw"
-      mision.style.left = "-30vw"
-      historia.style.opacity = "0"
-      valores.style.opacity = "0"
-      mision.style.opacity = "0"
-      setTimeout(() => {
-        this.numero_seccion = numero;
-      }, 500);
-      setTimeout(() => {
-        this.numero_seccion = numero;
-        if (mision) {
-          mision.style.left = "0"
-          mision.style.opacity = "1.0"
-        }
-      }, 600);
-
 
     }
   }
