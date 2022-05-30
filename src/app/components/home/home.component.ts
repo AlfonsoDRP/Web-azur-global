@@ -22,13 +22,13 @@ export class HomeComponent {
     let derecha = document.getElementById("derecha");
     let izquierda = document.getElementById("izquierda");
   console.log("posScroll")
-    if (posScroll > 1000 && derecha && izquierda){
+    if (posScroll > 1100 && derecha && izquierda){
       derecha.style.right = "0";
       izquierda.style.left = "0";
       derecha.style.opacity = "1";
       izquierda.style.opacity = "1";
 
-    }else if (posScroll < 1000 && derecha && izquierda){
+    }else if (posScroll < 1100 && derecha && izquierda){
       derecha.style.right = "-100px";
       izquierda.style.left = "-100px";
       derecha.style.opacity = "0";
