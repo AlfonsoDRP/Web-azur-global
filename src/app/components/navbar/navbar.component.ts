@@ -6,7 +6,7 @@ import { faBars,  faLock, faUser, faXmark } from '@fortawesome/free-solid-svg-ic
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   faUser = faUser;
   falock = faLock;
@@ -43,12 +43,5 @@ export class NavbarComponent implements OnInit {
    }
    
  }
-
-  constructor() { }
-
-  ngOnInit(): void {
-    
-  }
-
 }
 
