@@ -20,7 +20,7 @@ export class SobreNosotrosComponent  {
     this.cambioMenu(numero);
     setTimeout(() => {
       this.numero_seccion = numero;
-    }, 100);
+    }, 500);
   }
 
   cambioMenu(numero:number){
