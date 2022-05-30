@@ -12,6 +12,6 @@ ngOnInit(): void {
   })
 }
 
- fotos:any=["../../../assets/marcas/LOGO-MOMOrecortada.png","../../../assets/marcas/LOGO-AJUSA.PNG", "../../../assets/marcas/LOGO-CRC.PNG","../../../assets/marcas/LOGO-JAPANPARTS.PNG","../../../assets/marcas/LOGO-KAVOPARTS.PNG","../../../assets/marcas/LOGO-PMM(2).png","../../../assets/marcas/LOGO-TRW.PNG","../../../assets/marcas/LOGO-MOMOrecortada.png","../../../assets/marcas/LOGO-AJUSA.PNG", "../../../assets/marcas/LOGO-CRC.PNG","../../../assets/marcas/LOGO-JAPANPARTS.PNG","../../../assets/marcas/LOGO-KAVOPARTS.PNG","../../../assets/marcas/LOGO-PMM(2).png","../../../assets/marcas/LOGO-TRW.PNG","../../../assets/marcas/LOGO-MOMOrecortada.png","../../../assets/marcas/LOGO-AJUSA.PNG", "../../../assets/marcas/LOGO-CRC.PNG","../../../assets/marcas/LOGO-JAPANPARTS.PNG","../../../assets/marcas/LOGO-KAVOPARTS.PNG","../../../assets/marcas/LOGO-PMM(2).png","../../../assets/marcas/LOGO-TRW.PNG"   ]
+ fotos:any=["../../../assets/marcas/Logos/Momo.png","../../../assets/marcas/Logos/Ajusa.png", "../../../assets/marcas/Logos/Crc.png","../../../assets/marcas/Logos/JapanParts.png","../../../assets/marcas/Logos/KavoParts.png","../../../assets/marcas/Logos/Pmm.png","../../../assets/marcas/Logos/Trw.png","../../../assets/marcas/Logos/Momo.png","../../../assets/marcas/Logos/Ajusa.png", "../../../assets/marcas/Logos/Crc.png","../../../assets/marcas/Logos/JapanParts.png","../../../assets/marcas/Logos/KavoParts.png","../../../assets/marcas/Logos/Pmm.png","../../../assets/marcas/Logos/Trw.png"]
 
 }

@@ -1,5 +1,5 @@
-import { Component, HostListener } from '@angular/core';
-import { faBars, faLock, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
+import { faBars,  faLock, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +15,9 @@ export class NavbarComponent {
   comienzo = true;
   cambio = true;
   emojis = [faBars,faXmark];
+
+  @Output() footervisible = new EventEmitter<boolean>();
+  
   
   @HostListener ('window:scroll', ['$event']) onWindowScroll() {
     let posScroll= window.scrollY;
