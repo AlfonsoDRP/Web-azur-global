@@ -1,12 +1,12 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { faBars, faCoffee, faCross, faLock, faUser, faUserAstronaut, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { Component, HostListener } from '@angular/core';
+import { faBars, faLock, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   faUser = faUser;
   falock = faLock;
@@ -40,11 +40,5 @@ export class NavbarComponent implements OnInit {
    }
    
  }
-  constructor() { }
-
-  ngOnInit(): void {
-    
-  }
-
 }
 
