@@ -3,8 +3,8 @@
     <div class="sobre-triangulo">
       <h1 class="display-1">Sobre nosotros</h1>
     </div>
+    <div class="triangulo"></div>
   </div>
-  <div class="triangulo"></div>
   <div class="contenedor-contenido">
     <div class="navegacion">
       <div (click)="actionMenu(0)" [ngClass]="{'seleccionado': numero_seccion == 0}"> <img src="../../../assets/LOGOcortado.png" style="height: 25px;width: 25px ;" alt=""> Historia</div>
@@ -12,7 +12,7 @@
       <div (click)="actionMenu(2)" [ngClass]="{'seleccionado': numero_seccion == 2}"><img src="../../../assets/LOGOcortado.png" style="height: 25px;width: 25px ;" alt="">Misión y visión</div>
     </div>
     <div class="secciones">
-      <div class="seccion" [ngClass]="numero_seccion != 0 ? 'noMostrar' : 'historia'">
+      <div id="historia" class="seccion"  [ngClass]="numero_seccion != 0 ? 'noMostrar' : 'distribucion'">
         <h2 class="rotulo">Historia</h2>
         <div class="info">
           <p>
@@ -44,7 +44,7 @@
 
         </div>
       </div>
-      <div class="seccion" [ngClass]="numero_seccion != 1 ? 'noMostrar' : 'valores'">
+      <div id="valores" class="seccion"  [ngClass]="numero_seccion != 1 ? 'noMostrar' : 'distribucion'">
         <h2 class="rotulo">Nuestro Valores</h2>
         <div class="info">
           <p>
@@ -76,7 +76,7 @@
           </p>
         </div>
       </div>
-      <div class="seccion" [ngClass]="numero_seccion != 2 ? 'noMostrar' : 'mision'">
+      <div id="mision" class="seccion"  [ngClass]="numero_seccion != 2 ? 'noMostrar' : 'distribucion'">
         <h2 class="rotulo">Misión y visión</h2>
         <div class="info">
           <p>
