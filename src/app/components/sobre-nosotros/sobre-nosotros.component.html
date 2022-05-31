@@ -6,23 +6,23 @@
     <div class="triangulo"></div>
   </div>
   <div class="contenedor-contenido">
-    <div class="navegacion">
-      <div (click)="actionMenu(0)" [ngClass]="{'seleccionado': numero_seccion == 0}">
-        <img [ngClass]="{'noMostrar': numero_seccion != 0}" src="../../../assets/LOGOcortado.png"  alt="logo">Historia
-      </div>
-      <div (click)="actionMenu(1)" [ngClass]="{'seleccionado': numero_seccion == 1}">
-        <img [ngClass]="{'noMostrar': numero_seccion != 1}"  src="../../../assets/LOGOcortado.png"  alt="logo">Nuestro Valores
-      </div>
-      <div (click)="actionMenu(2)" [ngClass]="{'seleccionado': numero_seccion == 2}">
-        <img [ngClass]="{'noMostrar': numero_seccion != 2}"  src="../../../assets/LOGOcortado.png"  alt="logo">Misión y visión
-      </div>
+    <div class="titulo">
+      Azur Global
     </div>
-    <div class="secciones">
-      <div id="historia" class="seccion"  [ngClass]="numero_seccion != 0 ? 'noMostrar' : 'distribucion'">
-        <h2 class="rotulo">Historia</h2>
-        <div class="info">
-          <p>
-            <img class="imagen derecha" src="../../../assets/empresa/almacen2.png" alt="Pistola1" />
+    <div class="apartados">
+      <div class="apartado impar">
+        <div class="contenedor-imagen">
+        </div>
+        <div class="contenido">
+          <div class="subtitulo">
+            <div class=" subtitulo-arriba">
+              Nuestra
+            </div>
+            <div class="subtitulo-abajo">
+              Historia
+            </div>
+          </div>
+          <div class="descripcion">
             <strong>
               Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
               papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
@@ -47,14 +47,20 @@
               gramenawer ese que llega. De la pradera tiene musho peligro a peich
               amatomaa condemor jarl.
             </span>
-
+          </div>
         </div>
       </div>
-      <div id="valores" class="seccion"  [ngClass]="numero_seccion != 1 ? 'noMostrar' : 'distribucion'">
-        <h2 class="rotulo">Nuestro Valores</h2>
-        <div class="info">
-          <p>
-            <img class="imagen izquierda" src="../../../assets/empresa/almacen2.png" alt="Pistola1" />
+      <div class="apartado par">
+        <div class="contenido">
+          <div class="subtitulo">
+            <div class=" subtitulo-arriba">
+              Nuestros
+            </div>
+            <div class="subtitulo-abajo">
+              Valores
+            </div>
+          </div>
+          <div class="descripcion">
             <strong>
               Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
               papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
@@ -79,14 +85,24 @@
               gramenawer ese que llega. De la pradera tiene musho peligro a peich
               amatomaa condemor jarl.
             </span>
-          </p>
+          </div>
+        </div>
+        <div class="contenedor-imagen">
         </div>
       </div>
-      <div id="mision" class="seccion"  [ngClass]="numero_seccion != 2 ? 'noMostrar' : 'distribucion'">
-        <h2 class="rotulo">Misión y visión</h2>
-        <div class="info">
-          <p>
-            <img class="imagen derecha" src="../../../assets/empresa/almacen2.png" alt="Pistola1" />
+      <div class="apartado impar">
+        <div class="contenedor-imagen">
+        </div>
+        <div class="contenido">
+          <div class="subtitulo">
+            <div class=" subtitulo-arriba">
+              Misión y
+            </div>
+            <div class="subtitulo-abajo">
+              Visión
+            </div>
+          </div>
+          <div class="descripcion">
             <strong>
               Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
               papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
@@ -111,7 +127,7 @@
               gramenawer ese que llega. De la pradera tiene musho peligro a peich
               amatomaa condemor jarl.
             </span>
-          </p>
+          </div>
         </div>
       </div>
     </div>
