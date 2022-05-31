@@ -1,24 +1,26 @@
+.contenedor-principal,.texto,.carrusel,.ventajas,.izquierda,.derecha,.tarjeta,.rotulo{
+  display: flex;
+  &.contenedor-principal,.ventajas{
+    overflow-x: hidden;
+  }
+}
+
 .contenedor-principal {
-  overflow-x: hidden;
   height: 100%;
   overflow-y: hidden;
   width: 100%;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  
-  
+ 
   .contenedor-primero {
     width: 100%;
     height: 100vh;
     background-attachment: fixed;
     color: white;
-
     animation-name: aparecer;
     animation-duration: 1.3s;
 
     .texto {
-      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -48,11 +50,9 @@
   .carrusel {
     background-color: var(--cieloClaro-azur);
     width: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     h1 {
       color: white;
       position: relative;
@@ -68,43 +68,33 @@
     padding: 3rem 0;
     background-color: white;
     .ventajas {
-      overflow-x: hidden;
       padding: 1rem;
       height: 100%;
       width: 100%;
-      display: flex;
-      overflow-x: hidden;
       gap: 2rem;
       transition: 0.5s;
-      .izquierda {
-        transition: 0.5s;
-        display: flex;
+      .izquierda,.derecha{
+        transition: 0.5s;   
         opacity: 0;
         position: relative;
+        align-items: center;
+        gap: 2rem;
+      
+      &.izquierda {
         left: -100px;
         width: 100%;
-        align-items: center;
-        gap: 2rem;
       }
-      
-      .derecha {
-        transition: 0.5s;
-        display: flex;
-        opacity: 0;
-        position: relative;
+      &.derecha {
         right: -100px;
         width: 100%;
-        align-items: center;
-        gap: 2rem;
       }
-      
+      }
       .btn {
         background-color: white;
         color: var(--logoAzulClaro-azur);
         border-color: white;
       }
       .tarjeta {
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -123,11 +113,9 @@
       }
     }
   }
-
 }
 // variables globales
 .rotulo {
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -147,7 +135,6 @@
 }
 
 //animaciones
-
 @keyframes abajo {
   from {
     position: relative;
@@ -172,34 +159,24 @@
   .carrusel{
     padding: 0 15%;
   }
-  .ventajas {
+  .ventajas,.izquierda,.derecha {
     flex-direction: row;
+    &.izquierda,.derecha{
+      transition: 0.5s;
+    }
   }
   .izquierda {
-    transition: 0.5s;
-    display: flex;
     left: 0;
-    flex-direction: row;
     justify-content: right;
   }
-
   .derecha {
-    transition: 0.5s;
-    display: flex;
     right: 0;
-    flex-direction: row;
   }
 }
 
 //mediaquery
 @media only screen and (max-width: 600px) {
-  .izquierda {
-    transition: all 0.5s;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .derecha {
+  .izquierda,.derecha {
     transition: all 0.5s;
     flex-direction: column;
     justify-content: center;
@@ -213,12 +190,7 @@
     flex-direction: column;
     justify-content: center;
   }
-  .izquierda {
-    transition: 0.5s;
-    justify-content: center;
-  }
-
-  .derecha {
+  .izquierda,.derecha {
     transition: 0.5s;
     justify-content: center;
   }
