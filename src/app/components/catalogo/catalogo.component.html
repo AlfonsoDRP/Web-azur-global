@@ -1,7 +1,6 @@
 <div class="contenedor-principal">
   <div class="contenedor-cabecera">
     <div class="info">
-      <h3 class="display-6"></h3>
       <div class="aux">
         <div class="telmail">
           <h1 class="display-1">Nuestros productos</h1>
@@ -10,32 +9,29 @@
     </div>
   </div>
   <div class="triangulo"></div>
-  <div class="cuerpo">
-    <section class="primer-section">
-      <div class="primera-imagen izquierda"></div>
-      <div class="centro">
-        <div class="contenido">
-          <div class="complementario">
-            <div class="rotulo">
-              <h4>Amortiguadores</h4>
-              <div class="linea"> </div>
+  <div class="contenedor-cuerpo">
+    <div class="contenedor-cajas">
+      <div class="contenedor-izquierda">
+        <div class="caja-izquierda">
+            <div class="complementario">
+              <div class="rotulo">
+                <h4>Amortiguadores</h4>
+                <div class="linea"> </div>
+              </div>
+              <div class="texto">
+                <p>
+                  En nuestra seccion de amortiguadores podras encontrar
+                  amortiguciones para todo tipo de configuraciones, desde las mas
+                  sencillas y economicas hasta las mas deportivas para tu
+                  vehiculo.
+                </p>
+              </div>
+              <app-boton [contenido]="'Mas info'" routerLink="/login"></app-boton>
             </div>
-            <div class="texto">
-              <p>
-                En nuestra seccion de amortiguadores podras encontrar
-                amortiguciones para todo tipo de configuraciones, desde las mas
-                sencillas y economicas hasta las mas deportivas para tu
-                vehiculo.
-              </p>
-            </div>
-            <app-boton [contenido]="'Mas info'" routerLink="/login"></app-boton>
-          </div>
-
-          <img src="../../../assets/piezas/AMORTIGUADORES.PNG" alt="" />
+  
+            <img src="../../../assets/piezas/AMORTIGUADORES.PNG" alt="" />
         </div>
-      </div>
-      <div class="derecha">
-        <div class="contenido">
+        <div class="caja-izquierda">
           <div class="complementario">
             <div class="rotulo">
               <h4>Filtros</h4>
@@ -50,14 +46,9 @@
             </div>
             <app-boton [contenido]="'Mas info'" routerLink="/login"></app-boton>
           </div>
-
           <img src="../../../assets/piezas/FILTROS.PNG" alt="" />
         </div>
-      </div>
-    </section>
-    <section class="second-section">
-      <div class="izquierda">
-        <div class="contenido">
+        <div class="caja-izquierda">
           <div class="complementario">
             <div class="rotulo">
               <h4>Frenos</h4>
@@ -75,9 +66,8 @@
           <img src="../../../assets/piezas/FRENOS.PNG" alt="" />
         </div>
       </div>
-      <div class="centro segunda-imagen"></div>
-      <div class="derecha">
-        <div class="contenido">
+      <div class="contenedor-derecha">
+        <div class="caja-derecha">
           <div class="complementario">
             <div class="rotulo">
               <h4>Liquidos</h4>
@@ -94,30 +84,10 @@
 
           <img src="../../../assets/piezas/QUIMICOSYADITIVOS.PNG" alt="" />
         </div>
-      </div>
-    </section>
-    <section class="tercera-secction">
-      <div class="izquierda">
-        <div class="contenido">
-          <div class="complementario">
-            <div class="rotulo">
-              <h4>Baterias</h4>
-              <div class="linea"> </div>
-            </div>
-            <div class="texto">
-              <p>
-                Tenemos todos los formatos de baterias para vehiculos de
-                multiples grupos de motor.
-              </p>
-            </div>
-            <app-boton [contenido]="'Mas info'" routerLink="/login"></app-boton>
-          </div>
-
-          <img src="../../../assets/piezas/BATERIA.PNG" alt="" />
+        <div class="caja-derecha">
+          <img src="../../../assets/empresa/Pistola1.png" alt="" class="imagen">
         </div>
-      </div>
-      <div class="centro">
-        <div class="contenido">
+        <div class="caja-derecha">
           <div class="complementario">
             <div class="rotulo">
               <h4>Autorecambios</h4>
@@ -136,9 +106,28 @@
           </div>
           <img src="../../../assets/piezas/espejo.png" alt="" />
         </div>
+        <div class="caja-derecha">
+          <img src="../../../assets/empresa/almacen2.png" alt="" class="imagen">
+        </div>
+        <div class="caja-derecha">
+          <div class="complementario">
+            <div class="rotulo">
+              <h4>Baterias</h4>
+              <div class="linea"> </div>
+            </div>
+            <div class="texto">
+              <p>
+                Tenemos todos los formatos de baterias para vehiculos de
+                multiples grupos de motor.
+              </p>
+            </div>
+            <app-boton [contenido]="'Mas info'" routerLink="/login"></app-boton>
+          </div>
+
+          <img src="../../../assets/piezas/BATERIA.PNG" alt="" />
+        </div>
       </div>
-      <div class="derecha tercera-imagen"></div>
-    </section>
+    </div>
   </div>
   <div class="slider">
     <div class="slide-track">
