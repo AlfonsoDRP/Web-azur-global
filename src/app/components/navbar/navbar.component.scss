@@ -1,101 +1,24 @@
 @media only screen and (min-width: 1046px) {
   .contenedor {
-    transition: 0.5s;
     background-color: var(--logoAzulOscuro-azur);
-    height: 50px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 2rem;
-    
-    .links {
-      width: 100%;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: baseline;
-      .link {
-        padding: 0 1.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .link:hover {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        background-color: var(--cielo-azur);
-      }
-    }
-
-    .icons {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.25rem;
-      color: white;
-      margin-right: 1.5rem;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
   }
 
-  .icon-mini, .links-desplegable {
+  .icon-mini,
+  .links-desplegable {
     display: none;
   }
 
-  .contenedorFade{
-    transition: 0.5s;
+  .contenedorFade {
     background: rgb(0, 43, 129);
-    background: linear-gradient(90deg, var(--logoAzulOscuro-azur) 0%, rgba(0,71,142,0.9360119047619048) 48%, rgba(0,120,190,0) 100%);
-    height: 50px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 2rem;
-
-    .links {
-      width: 100%;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: baseline;
-      .link {
-        padding: 0 1.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .link:hover {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        background-color: var(--cielo-azur);
-      }
-    }
-
-    .icons {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.25rem;
-      color: white;
-      margin-right: 1.5rem;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
+    background: linear-gradient(
+      90deg,
+      var(--logoAzulOscuro-azur) 0%,
+      rgba(0, 71, 142, 0.9360119047619048) 48%,
+      rgba(0, 120, 190, 0) 100%
+    );
   }
-  .contenedor .logo, .contenedorFade .logo {
+  .contenedor .logo,
+  .contenedorFade .logo {
     width: 200px;
     padding: 0.25rem;
     display: flex;
@@ -106,13 +29,55 @@
       width: 170px;
     }
   }
+  .contenedor,
+  .contenedorFade {
+    transition: 0.5s;
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+    .icons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.25rem;
+      color: white;
+      margin-right: 1.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .links {
+      width: 100%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: baseline;
+      .link {
+        padding: 0 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .link:hover {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background-color: var(--cielo-azur);
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1045px) {
+  .contenedor,
   .contenedorFade {
     transition: 0.5s;
-    background: rgb(0, 43, 129);
-    background: linear-gradient(90deg, rgba(0,43,129,1) 0%, rgba(0,71,142,0.9360119047619048) 48%, rgba(0,120,190,0) 100%);
     height: 50px;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -142,60 +107,34 @@
       }
     }
   }
+  .contenedorFade {
+    background: rgb(0, 43, 129);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 43, 129, 1) 0%,
+      rgba(0, 71, 142, 0.9360119047619048) 48%,
+      rgba(0, 120, 190, 0) 100%
+    );
+  }
 
   .contenedor {
-    transition: 0.5s;
     background-color: var(--logoAzulOscuro-azur);
-    height: 50px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: left;
-    gap: 0.5rem;
-
-    
-    .links {
-      display: none;
-    }
-
-    .icons {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.25rem;
-      margin-left: 0.5rem;
-      color: white;
-      margin-right: 1.5rem;
-      &:hover {
-        cursor: pointer;
-      }
-      .icon {
-        display: none;
-      }
-      .icon-mini {
-        display: block;
-      }
-    }
   }
 
   .primero {
     position: relative;
     top: -500px;
   }
-
-  .cerrado {
-    animation-name: cerrado;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    background-color: var(--cielo-azur);
+  .cerrado,
+  .desplegable {
     width: 25%;
     color: white;
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    background-color: var(--cielo-azur);
     .links-desplegable {
       height: 100%;
       width: 100%;
@@ -208,8 +147,14 @@
         width: 100%;
         padding: 1.25rem;
         display: flex;
-        align-items: center;
       }
+    }
+  }
+  .cerrado {
+    animation-name: cerrado;
+
+    .link-desplegable {
+      align-items: center;
     }
   }
 
@@ -217,38 +162,20 @@
     position: relative;
     top: -500px;
     animation-name: desplegable;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    background-color: var(--cielo-azur);
-    width: 25%;
     min-width: 256px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-    .links-desplegable {
-      height: 100%;
-      width: 100%;
-      color: white;
+
+    .link-desplegable {
       align-items: left;
-      justify-content: baseline;
-      gap: 2.5rem;
-      .link-desplegable {
-        height: 100%;
-        width: 100%;
-        padding: 1.25rem;
-        display: flex;
-        align-items: left;
-      }
-      .link-desplegable:hover {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        background-color: var(--azul-azur);
-      }
+    }
+    .link-desplegable:hover {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background-color: var(--azul-azur);
     }
   }
-  .contenedor .logo, .contenedorFade .logo {
+  .contenedor .logo,
+  .contenedorFade .logo {
     width: 200px;
     padding: 0.25rem;
     display: flex;
