@@ -2,7 +2,6 @@
   height: 100%;
   display: grid;
   grid-template-rows: 250px 1fr;
-  // gap: 3rem;
   margin-bottom: 3rem;
   .contenedor-cabecera {
     color: white;
@@ -51,34 +50,30 @@
     background-color: white;
     .contenedor-cajas {
       border-top: 1px solid var(--azul-azur);
-      border-right:1px solid var(--azul-azur) ;
+      border-right: 1px solid var(--azul-azur);
       border-left: 1px solid var(--azul-azur);
       height: 100%;
       width: 70%;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      .contenedor-izquierda {
-        border-right: 1px solid var(--azul-azur);
+      .contenedor-izquierda,
+      .contenedor-derecha {
         display: grid;
-        grid-template-rows: 500px 500px;
-        // height: auto;
-        .caja-izquierda {
+        .caja-izquierda,
+        .caja-derecha {
           border-bottom: 1px solid var(--azul-azur);
-          // width: 70%;
-          // height: 70%;
           position: relative;
           z-index: 0;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
-          .circulo-izquierda{
+          .circulo-izquierda,
+          .circulo {
             background-color: var(--azul-azur);
             border-radius: 50%;
             position: absolute;
-            z-index:-1;
-            width: 350px;
-            height: 350px;
+            z-index: -1;
           }
           .rotulo {
             display: flex;
@@ -99,51 +94,36 @@
             margin: 0px auto;
           }
         }
-      }
-      .contenedor-derecha {
-        display: grid;
-        grid-template-rows: 333px 333px 333px;
-        .caja-derecha {
-          border-bottom: 1px solid var(--azul-azur);
-          width: 100%;
-          position: relative;
-          z-index: 0;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-            .circulo{
-              background-color: var(--azul-azur);
-              border-radius: 50%;
-              position: absolute;
-              z-index:-1;
+        &.contenedor-izquierda {
+          border-right: 1px solid var(--azul-azur);
+          grid-template-rows: 500px 500px;
+          .caja-izquierda {
+            .circulo-izquierda {
+              width: 350px;
+              height: 350px;
+            }
+          }
+        }
+        &.contenedor-derecha {
+          grid-template-rows: 333px 333px 333px;
+          .caja-derecha {
+            height: 100%;
+  
+            .circulo {
               width: 250px;
               height: 250px;
             }
-          .rotulo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+  
+            img {
+              max-height: 333px;
+  
+              position: relative;
+            }
           }
-          .linea {
-            background-color: var(--azul-azur);
-            height: 2px;
-            width: 300px;
-            margin-bottom: 20px;
+          .imagen {
+            width: 100%;
+            height: 100%;
           }
-          img {
-            max-width: 100%;
-            max-height: 333px;
-            display: block;
-            position: relative;
-            z-index: 0;
-            margin: 0px auto;
-          }
-        }
-        .imagen{
-          width: 100%;
-          height: 100%;
         }
       }
       .complementario {
@@ -164,7 +144,7 @@
       }
       .caja-izquierda:hover,
       .caja-derecha:hover {
-        img{
+        img {
           animation: forwards opacity 0.3s ease-in-out;
         }
         .complementario {
@@ -178,7 +158,6 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          
         }
       }
     }
@@ -254,12 +233,16 @@ $animationSpeed: 20s;
 }
 
 [transition-style="in:circle:center"] {
-  animation: 1s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
+  animation: 1s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
 }
 
-@keyframes opacity{
-  from{opacity: 1;}
-  to{opacity: 0;}
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes scroll {
@@ -270,24 +253,7 @@ $animationSpeed: 20s;
     transform: translateX(calc(-250px * 7));
   }
 }
-// @keyframes aparece-info {
-//   0% {
-//     background-color: rgba(0, 0, 0, 0);
-//   }
-//   100% {
-//     background-color: rgba(0, 0, 0, 0.8);
-//   }
-// }
-// @keyframes desaparece-info {
-//   0% {
-//     opacity: 1;
-//     background-color: rgba(0, 0, 0, 0.8);
-//   }
-//   100% {
-//     opacity: 0;
-//     background-color: rgba(0, 0, 0, 0);
-//   }
-// }
+
 @keyframes abajo-arriba {
   from {
     opacity: 0;
@@ -306,71 +272,3 @@ $animationSpeed: 20s;
     top: 0;
   }
 }
-
-// //Este media le pone bordes cuando esta a tamaño normal
-// // @media only screen and (min-width: 1646px) {
-//   .contenedor-principal {
-//     align-items: center;
-//     .cuerpo {
-//       margin: 0;
-
-//       section,
-//       .centro {
-//         border-left: 1px solid var(--azul-azur);
-//         border-right: 1px solid var(--azul-azur);
-//       }
-//       .primer-section {
-//         border-top: 1px solid var(--azul-azur);
-//       }
-//       section {
-//         border-bottom: 1px solid var(--azul-azur);
-//       }
-//     }
-//   }
-// }
-// @media only screen and (max-width: 1645px) and (min-width: 1101px) {
-//   .contenedor-principal {
-//     .cuerpo {
-//       margin: 0;
-
-//       .primer-section > .izquierda,
-//       .second-section > .centro,
-//       .tercera-secction > .derecha {
-//         display: none;
-//       }
-
-//       section {
-//         border-left: 1px solid var(--azul-azur);
-//         border-right: 1px solid var(--azul-azur);
-//         border-bottom: 1px solid var(--azul-azur);
-//       }
-//       .primer-section {
-//         border-top: 1px solid var(--azul-azur);
-//       }
-
-//       .primer-section > .derecha,
-//       .second-section > .derecha,
-//       .tercera-secction > .centro {
-//         border-left: 1px solid var(--azul-azur);
-//       }
-//     }
-//   }
-// }
-// //este pone los bordes y cambia la alineacion a lo mas pequeño
-// @media only screen and (max-width: 1100px) {
-//   section {
-//     flex-direction: column;
-//     border-left: 1px solid var(--azul-azur);
-//     border-right: 1px solid var(--azul-azur);
-
-//     .derecha,
-//     .izquierda,
-//     .centro {
-//       border-top: 1px solid var(--azul-azur);
-//       border-left: 0px;
-//     }
-//     .tercera-imagen {
-//       border-bottom: 1px solid var(--azul-azur);
-//     }
-//   }
-// }
