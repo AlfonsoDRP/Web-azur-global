@@ -30,34 +30,35 @@
     min-height: 100vh;
     width: 100%;
     height: 100%;
-    padding: 0 10%;
-    position: relative;
+    padding: 0 3rem;
 
     .titulo {
       font-size: 70px;
       font-weight: 700;
       text-align: center;
       font-family: "Roboto";
-
       color: var(--logoAzulOscuro-azur);
     }
 
     .apartados {
-      padding: 3rem 0;
+      padding: 2rem 0;
       display: flex;
       flex-direction: column;
-      gap: 4rem;
+      gap: 3rem;
+      align-items: center;
 
       .apartado {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        position: relative;
+        height: 760px;
+        max-width: 1500px;
+        width: 100%;
         .contenido {
+          position: absolute;
           z-index: 2;
-          position: relative;
+          width: 760px;
           padding: 2rem;
           background-color: var(--azul-opacity-azur);
           .subtitulo {
-            grid-area: subtitulo;
             padding-bottom: 1rem;
             * {
               color: white;
@@ -79,40 +80,34 @@
           }
           .descripcion {
             color: white;
-            grid-area: descripcion;
           }
         }
 
         .contenedor-imagen {
-          position: relative;
+          position: absolute;
+          width: 760px;
+          height: 760px;
           background-image: url("../../../assets/empresa/almacen2.png");
-          grid-area: imagen;
           background-size: auto 80%;
           background-repeat: no-repeat;
           background-position: center;
         }
       }
       .impar {
-        grid-template-areas: "imagen subtitulo" "imagen descripcion";
         .contenedor-imagen {
-          left: 10%;
-        }
-        .contenido {
-          left: -10%;
+          right: 0;
         }
       }
       .par {
-        grid-template-areas: "subtitulo imagen" "descripcion imagen";
-        .contenedor-imagen {
-          left: -10%;
-        }
         .contenido {
-          left: 10%;
+          right: 0;
         }
       }
     }
   }
 }
+
+
 
 @keyframes aparecer-sobre {
   from {
