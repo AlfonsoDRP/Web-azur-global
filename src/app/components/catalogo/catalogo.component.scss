@@ -57,8 +57,48 @@
       display: grid;
       background-color: white;
       grid-template-columns: 1fr 1fr;
-      .contenedor-izquierda,.contenedor-derecha {
+      .contenedor-izquierda,
+      .contenedor-derecha {
         display: grid;
+        &.contenedor-izquierda {
+          grid-template-rows: 415px 415px;
+        }
+        &.contenedor-derecha {
+          display: grid;
+          grid-template-rows: 276.7px 276.7px 276.7px;
+          border-left: 1px solid var(--azul-azur);
+          .caja-derecha {
+            width: 100%;
+            height: 100%;
+
+            .circulo {
+              width: 150px;
+              height: 150px;
+            }
+
+            img {
+              max-height: 200px;
+              width: 150px;
+              position: absolute;
+              right: 15px;
+              top: -10px;
+            }
+          }
+          .imagen {
+            width: 100%;
+            height: 100%;
+          }
+          img {
+            max-width: 100%;
+            max-height: 200px;
+            display: block;
+            position: absolute;
+            top: -15px;
+            right: 15px;
+            z-index: 0;
+            margin: 0px auto;
+          }
+        }
         .caja-izquierda,
         .caja-derecha {
           border-bottom: 1px solid var(--azul-azur);
@@ -68,7 +108,33 @@
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
-          .rotulo-principal{
+          &.caja-izquierda:hover,
+          &.caja-derecha:hover {
+            img {
+              animation: forwards opacity 0.4s ease-in-out;
+            }
+            .circulo,
+            .circulo-izquierda {
+              animation: forwards opacity 0.4s ease-in-out;
+            }
+            .rotulo-principal {
+              animation: forwards opacity 0.4s ease-in-out;
+            }
+            .complementario {
+              animation-name: circle-swoop;
+              animation-timing-function: ease-in-out;
+              animation-duration: 1.2s;
+              opacity: 1;
+              color: white;
+              background-color: var(--azul-azur);
+              padding: 3rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+          }
+
+          .rotulo-principal {
             display: flex;
             height: 100%;
             width: 100%;
@@ -83,7 +149,7 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            z-index:-1;
+            z-index: -1;
             width: 250px;
             height: 250px;
           }
@@ -109,62 +175,12 @@
           }
         }
       }
-      .contenedor-izquierda{
-        grid-template-rows: 415px 415px;
+
+      .imagen {
+        width: 100%;
+        height: 100%;
       }
-      .contenedor-derecha {
-        display: grid;
-        grid-template-rows: 276.7px 276.7px 276.7px;
-        border-left: 1px solid var(--azul-azur);
-        .caja-derecha {
-          border-bottom: 1px solid var(--azul-azur);
-          width: 100%;
-          position: relative;
-          z-index: 0;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-            .circulo{
-              background-color: var(--azul-azur);
-              border-radius: 50%;
-              position: absolute;
-              right: 15px;
-              top: 15px;
-              z-index:-1;
-              width: 150px;
-              height: 150px;
-            }
-  
-            img {
-              max-height: 200px;
-              width: 150px;
-              position: absolute;
-              right: 15px;
-              top: -10px;
-            }
-          }
-          .imagen {
-            width: 100%;
-            height: 100%;
-          }
-          img {
-            max-width: 100%;
-            max-height: 200px;
-            display: block;
-            position: absolute;
-            top: -15px;
-            right: 15px;
-            z-index: 0;
-            margin: 0px auto;
-          }
-        }
-        .imagen{
-          width: 100%;
-          height: 100%;
-        }
-      
+
       .complementario {
         padding: 3rem;
         position: absolute;
@@ -180,30 +196,6 @@
         justify-content: center;
         text-align: center;
         transition: 0.3s;
-      }
-      .caja-izquierda:hover,
-      .caja-derecha:hover {
-        img {
-          animation: forwards opacity 0.4s ease-in-out;
-        }
-        .circulo,.circulo-izquierda{
-          animation: forwards opacity 0.4s ease-in-out;
-        }
-        .rotulo-principal{
-          animation: forwards opacity 0.4s ease-in-out;
-        }
-        .complementario {
-          animation-name: circle-swoop;
-          animation-timing-function: ease-in-out;
-          animation-duration: 1.2s;
-          opacity: 1;
-          color: white;
-          background-color: var(--azul-azur);
-          padding: 3rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
       }
     }
   }
@@ -276,7 +268,7 @@ $animationSpeed: 20s;
 }
 
 [transition-style="in:circle:top-right"] {
-  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-top-right both;
 }
 
 @keyframes opacity {
