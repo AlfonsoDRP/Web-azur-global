@@ -5,7 +5,6 @@
   flex-direction: column;
   align-items: center;
   .entrada {
-    .sobre-triangulo {
       position: relative;
       top: 0;
       animation-name: aparecer-sobre;
@@ -18,20 +17,13 @@
       height: 250px;
       width: 100%;
       color: white;
-    }
-    .triangulo {
-      border-right: 100vw solid transparent;
-      border-top: 0 solid transparent;
-      border-bottom: 200px solid white;
-    }
+
   }
   .contenedor-contenido {
     background-color: white;
     min-height: 100vh;
     width: 100%;
     height: 100%;
-    padding: 0 3rem;
-
     .titulo {
       font-size: 70px;
       font-weight: 700;
@@ -48,14 +40,10 @@
       align-items: center;
 
       .apartado {
-        position: relative;
-        height: 760px;
         max-width: 1500px;
         width: 100%;
         .contenido {
-          position: absolute;
           z-index: 2;
-          width: 760px;
           padding: 2rem;
           background-color: var(--azul-opacity-azur);
           .subtitulo {
@@ -84,23 +72,10 @@
         }
 
         .contenedor-imagen {
-          position: absolute;
-          width: 760px;
-          height: 760px;
-          background-image: url("../../../assets/empresa/almacen2.png");
           background-size: auto 80%;
+          background-image: url("../../../assets/empresa/almacen2.png");
           background-repeat: no-repeat;
           background-position: center;
-        }
-      }
-      .impar {
-        .contenedor-imagen {
-          right: 0;
-        }
-      }
-      .par {
-        .contenido {
-          right: 0;
         }
       }
     }
@@ -122,5 +97,43 @@
   to {
     opacity: 1;
     top: 0;
+  }
+}
+
+
+@media only screen and (min-width: 901px) {
+  .apartado{  
+    position: relative;
+    height: 760px;
+    .contenido{
+      position: absolute;
+      width: 760px;
+    }
+    .contenedor-imagen{
+      position: absolute;
+      width: 760px;
+      height: 100%;
+    }
+  }
+  .impar {
+    .contenedor-imagen {
+      right: 0;
+    }
+  }
+  .par {
+    .contenido {
+      right: 0;
+    }
+  }
+
+}
+@media only screen and (max-width: 900px) {
+  .apartado{
+    .contenido{
+      background: linear-gradient( rgba(0, 71, 142, 0.8) 100%, rgba(0, 71, 142, 0.8)100%),url("../../../assets/empresa/almacen2.png");
+      grid-area: contenido;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }
