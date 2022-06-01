@@ -31,14 +31,15 @@ body{
     --amarillo-azur: #fbad34;
     --rojo-azur: #b3001b;
     --coral-azur: #f44336;
+    
 }
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
+@import "transition-style";
 
 @media screen and (min-width:1921px) {
     body{
-
         background-size: 100%;
     }
     
