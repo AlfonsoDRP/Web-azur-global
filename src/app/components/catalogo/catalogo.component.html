@@ -16,7 +16,6 @@
           <div class="complementario">
             <div class="rotulo">
               <h4>Frenos</h4>
-              <div class="linea"> </div>
             </div>
             <div class="texto">
               <p>
@@ -25,14 +24,15 @@
               </p>
             </div>
           </div>
-          <div class="circulo-izquierda"></div>
-          <img src="../../../assets/piezas/FRENOS.PNG" alt="" />
+          <div class="esquina-superior">
+            <div class="circulo-izquierda"></div>
+            <img src="../../../assets/piezas/FRENOS.PNG" alt=""/>
+          </div>
         </div>
         <div class="caja-izquierda">
           <div class="complementario">
             <div class="rotulo">
               <h4>Filtros</h4>
-              <div class="linea"> </div>
             </div>
             <div class="texto">
               <p>
@@ -42,8 +42,10 @@
               </p>
             </div>
           </div>
-          <div class="circulo-izquierda"></div>
-          <img src="../../../assets/piezas/FILTROS.PNG" alt="" />
+          <div class="esquina-superior">
+            <div class="circulo-izquierda"></div>
+            <img src="../../../assets/piezas/FILTROS.PNG" alt="" />
+          </div>
         </div>
       </div>
       <div class="contenedor-derecha">
@@ -51,7 +53,6 @@
           <div class="complementario">
             <div class="rotulo">
               <h4>Amortiguadores</h4>
-              <div class="linea"> </div>
             </div>
             <div class="texto">
               <p>
@@ -61,10 +62,11 @@
                 vehiculo.
               </p>
             </div>
-            
           </div>
-          <div class="circulo"></div>
-          <img src="../../../assets/piezas/AMORTIGUADORES.PNG" alt="" />
+          <div class="esquina-superior">
+            <div class="circulo"></div>
+            <img src="../../../assets/piezas/AMORTIGUADORES.PNG" alt="" />
+          </div>
         </div>
         <div class="caja-derecha">
           <div class="complementario">
@@ -78,8 +80,10 @@
               </p>
             </div>
           </div>
-          <div class="circulo"></div>
-          <img src="../../../assets/piezas/espejo.png" alt="" />
+          <div class="esquina-superior">
+            <div class="circulo"></div>
+            <img src="../../../assets/piezas/espejo.png" alt="" />
+          </div>
         </div>
         <div class="caja-derecha">
           <div class="complementario">
@@ -93,8 +97,10 @@
               </p>
             </div>
           </div>
+          <div class="esquina-superior">
             <div class="circulo"></div>
-          <img src="../../../assets/piezas/BATERIA.PNG" alt="" />
+            <img src="../../../assets/piezas/BATERIA.PNG" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -102,7 +108,7 @@
   <div class="slider">
     <div class="slide-track">
       <div class="slide" *ngFor="let foto of fotos">
-        <img src="{{ foto }}" alt=""/>
+        <img src="{{ foto }}" alt="" />
       </div>
     </div>
   </div>

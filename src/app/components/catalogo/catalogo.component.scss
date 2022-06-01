@@ -76,9 +76,11 @@
             background-color: var(--azul-azur);
             border-radius: 50%;
             position: absolute;
+            top: 15px;
+            right: 15px;
             z-index:-1;
-            width: 350px;
-            height: 350px;
+            width: 250px;
+            height: 250px;
           }
           .rotulo {
             display: flex;
@@ -93,9 +95,11 @@
           }
           img {
             max-width: 100%;
-            max-height: 500px;
+            max-height: 350px;
             height: auto;
-            display: block;
+            position: absolute;
+            top: -20px;
+            right: 15px;
             margin: 0px auto;
           }
         }
@@ -117,9 +121,11 @@
               background-color: var(--azul-azur);
               border-radius: 50%;
               position: absolute;
+              right: 10px;
+              top: 10px;
               z-index:-1;
-              width: 250px;
-              height: 250px;
+              width: 150px;
+              height: 150px;
             }
           .rotulo {
             display: flex;
@@ -132,11 +138,17 @@
             width: 300px;
             margin-bottom: 20px;
           }
+          .esquina-superior{
+            background-color: red;
+            height: 100%;
+          }
           img {
             max-width: 100%;
-            max-height: 333px;
+            max-height: 200px;
             display: block;
-            position: relative;
+            position: absolute;
+            top: -15px;
+            right: 15px;
             z-index: 0;
             margin: 0px auto;
           }
