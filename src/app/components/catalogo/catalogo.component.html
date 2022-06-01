@@ -8,7 +8,7 @@
       </div>
     </div>
   </div>
-  <div class="triangulo"></div>
+  <!-- <div class="triangulo"></div> -->
   <div class="contenedor-cuerpo">
     <div class="contenedor-cajas">
       <div class="contenedor-izquierda">
@@ -119,12 +119,16 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="slider">
-    <div class="slide-track">
-      <div class="slide" *ngFor="let foto of fotos">
-        <img src="{{ foto }}" alt="" />
+    <div class="contenedor-slider">
+      <div class="slider">
+        <div class="slide-track">
+          <div class="slide" *ngFor="let foto of fotos">
+            <img src="{{ foto }}" alt="" />
+          </div>
+        </div>
       </div>
     </div>
+    
   </div>
+  
 </div>
