@@ -1,6 +1,6 @@
 .contenedor-principal {
   height: 100%;
-  
+
   .contenedor-cabecera {
     color: white;
     position: relative;
@@ -101,29 +101,45 @@
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
+          img, .rotulo-principal{
+            transition: all 1s;
+          }
           &.caja-izquierda:hover,
           &.caja-derecha:hover {
             img {
-              animation: forwards opacity 0.4s ease-in-out;
+              opacity: 0;
             }
             .circulo,
             .circulo-izquierda {
               animation: forwards opacity 0.4s ease-in-out;
             }
             .rotulo-principal {
-              animation: forwards opacity 0.4s ease-in-out;
+              opacity: 0;
             }
-            .complementario {
-              animation-name: circle-swoop;
-              animation-timing-function: ease-in-out;
-              animation-duration: 1.2s;
-              opacity: 1;
-              color: white;
-              background-color: var(--azul-azur);
-              padding: 3rem;
+            .complementario,
+            .complementario-izquierda {
+              // animation-name:agrandar;
+              // animation-duration: 1s;
+              // animation-fill-mode: forwards;
+              // animation-timing-function: ease-in-out;
+              height: 100%;
+              width: 100%;
+              border-radius: 0;
+              top: 0;
+              right: 0;
               display: flex;
               flex-direction: column;
+              color: white;
+              background-color: var(--azul-azur);
+              align-items: center;
               justify-content: center;
+              .contenedor-texto {
+                animation-name: aparecer;
+                animation-duration: 0.4s;
+                animation-delay: 0.8s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
             }
           }
 
@@ -140,6 +156,7 @@
             background-color: var(--azul-azur);
             border-radius: 50%;
             position: absolute;
+
             top: 15px;
             right: 15px;
             z-index: -1;
@@ -177,18 +194,34 @@
       .complementario {
         padding: 3rem;
         position: absolute;
-        z-index: 1;
-        opacity: 0;
-        font-size: 20px;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        gap: 0.5rem;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        transition: 0.3s;
+        z-index: -1;
+        opacity: 1;
+        border-radius: 50%;
+        background-color: var(--azul-azur);
+        width: 150px;
+        height: 150px;
+        top: 15px;
+        right: 15px;
+        transition: all 1s;
+        .contenedor-texto {
+          opacity: 0;
+        }
+      }
+      .complementario-izquierda {
+        padding: 3rem;
+        position: absolute;
+        z-index: -1;
+        opacity: 1;
+        border-radius: 50%;
+        background-color: var(--azul-azur);
+        width: 250px;
+        height: 250px;
+        top: 15px;
+        right: 15px;
+        transition: all 1s;
+        .contenedor-texto {
+          opacity: 0;
+        }
       }
     }
   }
@@ -251,19 +284,14 @@ $animationSpeed: 20s;
   }
 }
 // Animation
-@keyframes circle-swoop {
+@keyframes aparecer {
   from {
-    clip-path: var(--circle-top-right-out);
+    opacity: 0;
   }
   to {
-    clip-path: var(--circle-bottom-right-in);
+    opacity: 1;
   }
 }
-
-[transition-style="in:circle:top-right"] {
-  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-top-right both;
-}
-
 @keyframes opacity {
   from {
     opacity: 1;
@@ -272,7 +300,6 @@ $animationSpeed: 20s;
     opacity: 0;
   }
 }
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -281,7 +308,6 @@ $animationSpeed: 20s;
     transform: translateX(calc(-250px * 7));
   }
 }
-
 @keyframes abajo-arriba {
   from {
     opacity: 0;
