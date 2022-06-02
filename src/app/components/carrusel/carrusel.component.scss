@@ -10,16 +10,15 @@
   }
 }
 * {
-    color: white;
-    transition: all 0.5s;
-  }
+  color: white;
+  transition: all 0.5s;
+}
 .contenedor-principal {
   width: 100%;
   display: block;
   overflow: hidden;
   background-color: var(--cieloClaro-azur);
 
-  
   .todo {
     margin: auto;
     display: flex;
