@@ -1,6 +1,6 @@
 .contenedor-principal {
   height: 100%;
-  
+
   .contenedor-cabecera {
     color: white;
     position: relative;
@@ -101,31 +101,39 @@
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
+          img, .rotulo-principal{
+            transition: all 1s;
+          }
           &.caja-izquierda:hover,
           &.caja-derecha:hover {
             img {
-              animation: forwards opacity 0.4s ease-in-out;
+              opacity: 0;
             }
             .circulo,
             .circulo-izquierda {
               animation: forwards opacity 0.4s ease-in-out;
             }
             .rotulo-principal {
-              animation: forwards opacity 0.4s ease-in-out;
+              opacity: 0;
             }
-            .complementario, .complementario-izquierda {
-              animation-name:agrandar;
-              animation-duration: 1s;
-              animation-fill-mode: forwards;
-              animation-timing-function: ease-in-out;
-              opacity: 1;
-              color: white;
-              background-color: var(--azul-azur);
-              padding: 3rem;
+            .complementario,
+            .complementario-izquierda {
+              // animation-name:agrandar;
+              // animation-duration: 1s;
+              // animation-fill-mode: forwards;
+              // animation-timing-function: ease-in-out;
+              height: 100%;
+              width: 100%;
+              border-radius: 0;
+              top: 0;
+              right: 0;
               display: flex;
               flex-direction: column;
+              color: white;
+              background-color: var(--azul-azur);
+              align-items: center;
               justify-content: center;
-              .contenedor-texto{
+              .contenedor-texto {
                 animation-name: aparecer;
                 animation-duration: 0.4s;
                 animation-delay: 0.8s;
@@ -194,9 +202,8 @@
         height: 150px;
         top: 15px;
         right: 15px;
-        transition: 0.3s;
-        
-        .contenedor-texto{
+        transition: all 1s;
+        .contenedor-texto {
           opacity: 0;
         }
       }
@@ -211,8 +218,8 @@
         height: 250px;
         top: 15px;
         right: 15px;
-        transition: 0.3s;
-        .contenedor-texto{
+        transition: all 1s;
+        .contenedor-texto {
           opacity: 0;
         }
       }
@@ -279,23 +286,10 @@ $animationSpeed: 20s;
 // Animation
 @keyframes agrandar {
   from {
-    
   }
   to {
-    height: 100%;
-    width: 100%;
-    border-radius: 0;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--azul-azur);
-    align-items: center;
-    justify-content: center;
-
   }
 }
-
 
 @keyframes aparecer {
   from {
