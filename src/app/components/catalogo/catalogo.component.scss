@@ -284,13 +284,6 @@ $animationSpeed: 20s;
   }
 }
 // Animation
-@keyframes agrandar {
-  from {
-  }
-  to {
-  }
-}
-
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -307,7 +300,6 @@ $animationSpeed: 20s;
     opacity: 0;
   }
 }
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -316,7 +308,6 @@ $animationSpeed: 20s;
     transform: translateX(calc(-250px * 7));
   }
 }
-
 @keyframes abajo-arriba {
   from {
     opacity: 0;
