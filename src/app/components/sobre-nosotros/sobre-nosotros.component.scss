@@ -1,50 +1,56 @@
+.contenedor-principal,
+.entrada,
+.contenedor-contenido,
+.titulo,
+.apartados {
+  display: flex;
+  &.contenedor-principal,
+  &.entrada,
+  &.contenedor-contenido,
+  &.apartados {
+    flex-direction: column;
+  }
+}
+* {
+  color: white;
+}
 .contenedor-principal {
   overflow: hidden;
   height: 100%;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  *{
-    color: white;
-  }
+
   .entrada {
-      position: relative;
-      top: 0;
-      animation-name: aparecer-sobre;
-      animation-duration: 1s;
-      animation-timing-function: ease-in-out;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 250px;
-      width: 100%;
+    position: relative;
+    top: 0;
+    animation-name: aparecer-sobre;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
   }
   .contenedor-contenido {
     background-color: white;
     min-height: 100vh;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
     padding: 2rem 0;
-    *{
+    * {
       font-family: "Roboto";
     }
     .titulo {
       padding: 0 25%;
-      display: flex;
+
       justify-content: center;
-      img{
+      img {
         max-width: 500px;
         min-width: 300px;
       }
     }
 
     .apartados {
-      display: flex;
-      flex-direction: column;
       gap: 3rem;
       align-items: center;
 
@@ -86,45 +92,39 @@
   }
 }
 
-
-
 @keyframes aparecer-sobre {
   from {
     top: -100vh;
   }
 }
 
-
 @media only screen and (min-width: 901px) {
-  .apartado{  
+  .apartado {
     position: relative;
     height: 760px;
-    .contenido{
+    .contenido {
       position: absolute;
       width: 760px;
     }
-    .contenedor-imagen{
+    .contenedor-imagen {
       position: absolute;
       width: 760px;
       height: 100%;
     }
   }
-  .impar {
-    .contenedor-imagen {
-      right: 0;
-    }
+  .impar > .contenedor-imagen,
+  .par > .contenido {
+    right: 0;
   }
-  .par {
-    .contenido {
-      right: 0;
-    }
-  }
-
 }
 @media only screen and (max-width: 900px) {
-  .apartado{
-    .contenido{
-      background: linear-gradient( rgba(0, 71, 142, 0.8) 100%, rgba(0, 71, 142, 0.8)100%),url("../../../assets/empresa/almacen2.png");
+  .apartado {
+    .contenido {
+      background: linear-gradient(
+          rgba(0, 71, 142, 0.8) 100%,
+          rgba(0, 71, 142, 0.8) 100%
+        ),
+        url("../../../assets/empresa/almacen2.png");
       background-repeat: no-repeat;
       background-position: center;
     }
