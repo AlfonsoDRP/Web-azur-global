@@ -113,6 +113,23 @@
       }
     }
   }
+  .prueba{
+    display: flex;
+    height: 500px;
+    .contenedor-pruebas{
+      display: flex;
+      flex-direction: row-reverse;
+      width: 50%;
+      // align-items: center;
+      justify-content: space-between;
+      .etiqueta{
+        font-size: 25px;
+      }
+      .image{
+        max-height: 500px;
+      }
+    }
+  }
 }
 // variables globales
 .rotulo {
