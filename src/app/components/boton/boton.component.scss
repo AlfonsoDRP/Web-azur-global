@@ -1,5 +1,5 @@
 button{
-    width: 100px;
+   
     height: 30px;
     background-color: var(--azul-azur);
     color: white;
@@ -15,6 +15,7 @@ button{
     }
 }
 .estiloAzulClaro{
+    
     background-color: var(--logoAzulOscuro-azur);
     &:hover{
         background-color: var(--cielo-azur);
