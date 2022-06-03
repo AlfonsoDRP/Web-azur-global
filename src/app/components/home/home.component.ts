@@ -40,47 +40,47 @@ export class HomeComponent {
     let tercero = document.getElementById("tercero");
     let cuarto = document.getElementById("cuarto");
 
-    if (posScroll > 1100 && derecha && izquierda){
-      derecha.style.right = "0";
-      izquierda.style.left = "0";
-      derecha.style.opacity = "1";
-      izquierda.style.opacity = "1";
-    }else if (posScroll < 1100 && derecha && izquierda){
-      derecha.style.right = "-100px";
-      izquierda.style.left = "-100px";
-      derecha.style.opacity = "0";
-      izquierda.style.opacity = "0";
-    }
+    // if (posScroll > 1100 && derecha && izquierda){
+    //   derecha.style.right = "0";
+    //   izquierda.style.left = "0";
+    //   derecha.style.opacity = "1";
+    //   izquierda.style.opacity = "1";
+    // }else if (posScroll < 1100 && derecha && izquierda){
+    //   derecha.style.right = "-100px";
+    //   izquierda.style.left = "-100px";
+    //   derecha.style.opacity = "0";
+    //   izquierda.style.opacity = "0";
+    // }
 
-    if (posScroll > 1800 && primero){
+    if (posScroll > 1100 && primero){
       primero.style.right = "0";
       primero.style.opacity = "1";
-    }else if(posScroll<1800 && primero){
+    }else if(posScroll<1100 && primero){
       primero.style.right = "-100px";
       primero.style.opacity = "0";
     }
 
-    if (posScroll > 2300 && segundo){
+    if (posScroll > 1600 && segundo){
       segundo.style.left = "0";
       segundo.style.opacity = "1";
-    }else if(posScroll<2300 && segundo){
-      segundo.style.left = "100px";
+    }else if(posScroll<1600 && segundo){
+      segundo.style.left = "-100px";
       segundo.style.opacity = "0";
     }
 
-    if (posScroll > 2800 && tercero){
+    if (posScroll > 2100 && tercero){
       tercero.style.right = "0";
       tercero.style.opacity = "1";
-    }else if(posScroll<2800 && tercero){
-      tercero.style.right = "100px";
+    }else if(posScroll<2100 && tercero){
+      tercero.style.right = "-100px";
       tercero.style.opacity = "0";
     }
 
-    if (posScroll > 3300 && cuarto){
+    if (posScroll > 2600 && cuarto){
       cuarto.style.left = "0";
       cuarto.style.opacity = "1";
-    }else if(posScroll<3300 && cuarto){
-      cuarto.style.left = "100px";
+    }else if(posScroll<2600 && cuarto){
+      cuarto.style.left = "-100px";
       cuarto.style.opacity = "0";
     }
   }
