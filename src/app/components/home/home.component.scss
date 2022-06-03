@@ -6,6 +6,7 @@
 }
 .contenedor-principal {
   height: 100%;
+  font-family: 'Roboto';
   overflow-y: hidden;
   width: 100%;
   flex-direction: column;
@@ -18,7 +19,7 @@
     color: white;
     animation-name: aparecer;
     animation-duration: 1.3s;
-    font-family: Montserrat;
+    font-family: "Montserrat";
 
     .texto {
       flex-direction: column;
