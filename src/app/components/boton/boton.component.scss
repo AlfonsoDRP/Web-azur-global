@@ -14,3 +14,12 @@ button{
         border-color: var(--logoAzulOscuro-azur);
     }
 }
+.estiloAzulClaro{
+    background-color: var(--logoAzulOscuro-azur);
+    &:hover{
+        background-color: var(--cielo-azur);
+    }
+    &:focus{
+        border-color: var(--cielo-azur);
+    }
+}
