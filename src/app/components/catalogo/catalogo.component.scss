@@ -62,12 +62,14 @@
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
-          img, .rotulo-principal{
+          img,
+          .rotulo-principal {
             transition: all 1s;
           }
           &.caja-izquierda:hover,
           &.caja-derecha:hover {
-            img, .rotulo-principal {
+            img,
+            .rotulo-principal {
               opacity: 0;
             }
             .complementario,
@@ -94,13 +96,18 @@
           }
 
           .rotulo-principal {
-            transition: all 1s;
             display: flex;
+            position: relative;
             height: 100%;
             width: 100%;
             padding: 1rem;
             align-items: center;
             justify-content: flex-start;
+            h3 {
+              text-decoration: underline var(--azul-azur);
+
+              text-underline-position: under;
+            }
           }
 
           .rotulo-complementario {
@@ -118,7 +125,8 @@
         }
       }
 
-      .complementario, .complementario-izquierda {
+      .complementario,
+      .complementario-izquierda {
         padding: 3rem;
         position: absolute;
         z-index: -1;
@@ -232,19 +240,22 @@ $animationSpeed: 20s;
   }
 }
 
-@media only screen and (min-width:  801px) {
-  .contenedor-cajas{
+@media only screen and (min-width: 801px) {
+  .rotulo-principal {
+    top: 0;
+  }
+  .contenedor-cajas {
     display: grid;
     grid-template-columns: 1fr 1fr;
     .contenedor-izquierda {
       grid-template-rows: 420px 420px;
-      .caja-izquierda img{
+      .caja-izquierda img {
         max-height: 350px;
         max-width: 100%;
         width: 250px;
         top: -35px;
       }
-      .complementario-izquierda{
+      .complementario-izquierda {
         width: 250px;
         height: 250px;
       }
@@ -252,13 +263,13 @@ $animationSpeed: 20s;
     .contenedor-derecha {
       grid-template-rows: 280px 280px 280px;
       border-left: 1px solid var(--azul-azur);
-      .caja-derecha img{
+      .caja-derecha img {
         max-height: 200px;
         max-width: 100%;
         width: 150px;
         top: -10px;
       }
-      .complementario{
+      .complementario {
         width: 150px;
         height: 150px;
       }
@@ -266,9 +277,8 @@ $animationSpeed: 20s;
   }
 }
 
-@media only screen and (max-width: 1200px) and  (min-width: 801px){
+@media only screen and (max-width: 1200px) and (min-width: 801px) {
   .rotulo-principal {
-    position: relative;
     top: 25%;
   }
 }
@@ -277,26 +287,30 @@ $animationSpeed: 20s;
   .contenedor-cajas {
     display: flex;
     flex-direction: column;
-    
-    .contenedor-izquierda{
-      grid-template-rows: 280px 280px;
-      .caja-izquierda img{
+
+    .contenedor-izquierda {
+      grid-template-rows:  repeat(2,200px);
+      .caja-izquierda img {
         max-height: 200px;
         max-width: 100%;
         width: 150px;
         top: -10px;
       }
+    }
+    .rotulo-principal {
+      top: 0;
     }
     .contenedor-derecha {
-      grid-template-rows: 280px 280px 280px;
-      .caja-derecha img{
+      grid-template-rows: repeat(3,200px);
+      .caja-derecha img {
         max-height: 200px;
         max-width: 100%;
         width: 150px;
         top: -10px;
       }
     }
-    .complementario, .complementario-izquierda{
+    .complementario,
+    .complementario-izquierda {
       width: 150px;
       height: 150px;
     }
