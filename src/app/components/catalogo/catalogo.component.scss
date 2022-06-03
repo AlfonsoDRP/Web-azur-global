@@ -4,12 +4,11 @@
   .contenedor-cabecera {
     color: white;
     position: relative;
-    top: -500px;
+    top: 0;
     width: 100%;
     animation-name: comienzo;
     text-align: center;
     animation-duration: 1s;
-    animation-fill-mode: forwards;
     height: 250px;
     .info {
       display: flex;
@@ -40,58 +39,20 @@
     align-items: center;
     justify-content: center;
     background-color: white;
+    padding: 0 3rem;
+
     .contenedor-cajas {
       margin-top: 3rem;
       border-top: 1px solid var(--azul-azur);
       border-right: 1px solid var(--azul-azur);
       border-left: 1px solid var(--azul-azur);
       height: 100%;
-      width: 70%;
-      display: grid;
+      width: 100%;
+      max-width: 1300px;
       background-color: white;
-      grid-template-columns: 1fr 1fr;
       .contenedor-izquierda,
       .contenedor-derecha {
         display: grid;
-        &.contenedor-izquierda {
-          grid-template-rows: 420px 420px;
-        }
-        &.contenedor-derecha {
-          display: grid;
-          grid-template-rows: 280px 280px 280px;
-          border-left: 1px solid var(--azul-azur);
-          .caja-derecha {
-            width: 100%;
-            height: 100%;
-
-            .circulo {
-              width: 150px;
-              height: 150px;
-            }
-
-            img {
-              max-height: 200px;
-              width: 150px;
-              position: absolute;
-              right: 15px;
-              top: -10px;
-            }
-          }
-          .imagen {
-            width: 100%;
-            height: 100%;
-          }
-          img {
-            max-width: 100%;
-            max-height: 200px;
-            display: block;
-            position: absolute;
-            top: -15px;
-            right: 15px;
-            z-index: 0;
-            margin: 0px auto;
-          }
-        }
         .caja-izquierda,
         .caja-derecha {
           border-bottom: 1px solid var(--azul-azur);
@@ -106,22 +67,11 @@
           }
           &.caja-izquierda:hover,
           &.caja-derecha:hover {
-            img {
-              opacity: 0;
-            }
-            .circulo,
-            .circulo-izquierda {
-              animation: forwards opacity 0.4s ease-in-out;
-            }
-            .rotulo-principal {
+            img, .rotulo-principal {
               opacity: 0;
             }
             .complementario,
             .complementario-izquierda {
-              // animation-name:agrandar;
-              // animation-duration: 1s;
-              // animation-fill-mode: forwards;
-              // animation-timing-function: ease-in-out;
               height: 100%;
               width: 100%;
               border-radius: 0;
@@ -144,6 +94,7 @@
           }
 
           .rotulo-principal {
+            transition: all 1s;
             display: flex;
             height: 100%;
             width: 100%;
@@ -151,71 +102,29 @@
             align-items: center;
             justify-content: flex-start;
           }
-          .circulo-izquierda,
-          .circulo {
-            background-color: var(--azul-azur);
-            border-radius: 50%;
-            position: absolute;
 
-            top: 15px;
-            right: 15px;
-            z-index: -1;
-            width: 250px;
-            height: 250px;
-          }
           .rotulo-complementario {
             display: flex;
             flex-direction: column;
             align-items: center;
           }
-          & .linea {
-            background-color: var(--azul-azur);
-            height: 2px;
-            width: 300px;
-            margin-bottom: 20px;
-          }
+
           img {
-            max-width: 250px;
-            max-height: 350px;
             height: auto;
             position: absolute;
-            top: -35px;
+            margin: 0 auto;
             right: 15px;
-            margin: 0px auto;
           }
         }
       }
 
-      .imagen {
-        width: 100%;
-        height: 100%;
-      }
-
-      .complementario {
+      .complementario, .complementario-izquierda {
         padding: 3rem;
         position: absolute;
         z-index: -1;
         opacity: 1;
         border-radius: 50%;
         background-color: var(--azul-azur);
-        width: 150px;
-        height: 150px;
-        top: 15px;
-        right: 15px;
-        transition: all 1s;
-        .contenedor-texto {
-          opacity: 0;
-        }
-      }
-      .complementario-izquierda {
-        padding: 3rem;
-        position: absolute;
-        z-index: -1;
-        opacity: 1;
-        border-radius: 50%;
-        background-color: var(--azul-azur);
-        width: 250px;
-        height: 250px;
         top: 15px;
         right: 15px;
         transition: all 1s;
@@ -230,7 +139,6 @@
 $animationSpeed: 20s;
 .slider {
   background: white;
-  // box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 150px;
   width: 100%;
   background-color: white;
@@ -322,7 +230,75 @@ $animationSpeed: 20s;
   from {
     top: -500px;
   }
-  to {
-    top: 0;
+}
+
+@media only screen and (min-width:  801px) {
+  .contenedor-cajas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .contenedor-izquierda {
+      grid-template-rows: 420px 420px;
+      .caja-izquierda img{
+        max-height: 350px;
+        max-width: 100%;
+        width: 250px;
+        top: -35px;
+      }
+      .complementario-izquierda{
+        width: 250px;
+        height: 250px;
+      }
+    }
+    .contenedor-derecha {
+      grid-template-rows: 280px 280px 280px;
+      border-left: 1px solid var(--azul-azur);
+      .caja-derecha img{
+        max-height: 200px;
+        max-width: 100%;
+        width: 150px;
+        top: -10px;
+      }
+      .complementario{
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) and  (min-width: 801px){
+  .rotulo-principal {
+    position: relative;
+    top: 25%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .contenedor-cajas {
+    display: flex;
+    flex-direction: column;
+    
+    .contenedor-izquierda{
+      grid-template-rows: 280px 280px;
+      .caja-izquierda img{
+        max-height: 200px;
+        max-width: 100%;
+        width: 150px;
+        top: -10px;
+      }
+    }
+    .contenedor-derecha {
+      grid-template-rows: 280px 280px 280px;
+      .caja-derecha img{
+        max-height: 200px;
+        max-width: 100%;
+        width: 150px;
+        top: -10px;
+      }
+    }
+    .complementario, .complementario-izquierda{
+      width: 150px;
+      height: 150px;
+    }
   }
 }
