@@ -32,21 +32,56 @@ export class HomeComponent {
 
   @HostListener ('window:scroll') onWindowScroll() {
     let posScroll = window.scrollY;
+    console.log(posScroll)
     let derecha = document.getElementById("derecha");
     let izquierda = document.getElementById("izquierda");
+    let primero = document.getElementById("primero");
+    let segundo = document.getElementById("segundo");
+    let tercero = document.getElementById("tercero");
+    let cuarto = document.getElementById("cuarto");
 
     if (posScroll > 1100 && derecha && izquierda){
       derecha.style.right = "0";
       izquierda.style.left = "0";
       derecha.style.opacity = "1";
       izquierda.style.opacity = "1";
-
     }else if (posScroll < 1100 && derecha && izquierda){
       derecha.style.right = "-100px";
       izquierda.style.left = "-100px";
       derecha.style.opacity = "0";
       izquierda.style.opacity = "0";
-      
+    }
+
+    if (posScroll > 1800 && primero){
+      primero.style.right = "0";
+      primero.style.opacity = "1";
+    }else if(posScroll<1800 && primero){
+      primero.style.right = "-100px";
+      primero.style.opacity = "0";
+    }
+
+    if (posScroll > 2300 && segundo){
+      segundo.style.left = "0";
+      segundo.style.opacity = "1";
+    }else if(posScroll<2300 && segundo){
+      segundo.style.left = "100px";
+      segundo.style.opacity = "0";
+    }
+
+    if (posScroll > 2800 && tercero){
+      tercero.style.right = "0";
+      tercero.style.opacity = "1";
+    }else if(posScroll<2800 && tercero){
+      tercero.style.right = "100px";
+      tercero.style.opacity = "0";
+    }
+
+    if (posScroll > 3300 && cuarto){
+      cuarto.style.left = "0";
+      cuarto.style.opacity = "1";
+    }else if(posScroll<3300 && cuarto){
+      cuarto.style.left = "100px";
+      cuarto.style.opacity = "0";
     }
   }
 

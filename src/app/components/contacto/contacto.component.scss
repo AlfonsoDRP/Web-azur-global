@@ -145,6 +145,9 @@
 //mediaquery
 
 @media only screen and (min-width: 901px) {
+  .contenedor-principal{
+    overflow-x: hidden;
+  }
   .arribaform,
   .abajoform {
     width: 60%;
@@ -156,6 +159,9 @@
   }
 }
 @media only screen and (max-width: 900px) {
+  .contenedor-principal{
+    overflow-x: hidden;
+  }
   .arribaform,
   .abajoform {
     width: 80%;
