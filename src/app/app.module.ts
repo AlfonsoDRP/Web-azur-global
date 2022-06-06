@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BotonComponent } from './components/boton/boton.component';
+import { AnimacionLetrasComponent } from './components/animacion-letras/animacion-letras.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BotonComponent } from './components/boton/boton.component';
     HomeComponent,
     LoginComponent,
     FooterComponent,
-    BotonComponent
+    BotonComponent,
+    AnimacionLetrasComponent
   ],
   imports: [
     BrowserModule,

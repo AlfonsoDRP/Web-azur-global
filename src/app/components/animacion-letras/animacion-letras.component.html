@@ -1,0 +1,9 @@
+<div>
+    <p class="mensaje" *ngIf = "activo">
+        <span *ngFor="let item of array_palabra; index as i;" 
+            [ngStyle]="{'animation-delay': ((i*30)+delay)+'ms','animation-duration': duracion+'ms','visibility': item == ' '? 'hidden':'visible'}">
+            {{letraMostrar(item)}}
+        </span> 
+    </p>
+    <span class="bloque">z</span>
+</div>

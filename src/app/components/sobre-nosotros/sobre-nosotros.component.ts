@@ -11,4 +11,15 @@ export class SobreNosotrosComponent  {
       window.scroll(0,0);
     })
   }
+  
+  primerSubtitulo:boolean = true;
+  segundoSubtitulo:boolean = false;
+  terceroSubtitulo:boolean = false;
+
+
+  @HostListener ('window:scroll') onWindowScroll() {
+    let posScroll = window.scrollY;
+    this.segundoSubtitulo = posScroll > 255;
+    this.terceroSubtitulo = posScroll > 1071;
+  }
 }
