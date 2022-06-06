@@ -73,7 +73,7 @@
             .rotulo-principal {
               opacity: 0;
             }
-            .complementario,
+            .complementario-derecha,
             .complementario-izquierda {
               height: 100%;
               width: 100%;
@@ -126,7 +126,7 @@
         }
       }
 
-      .complementario,
+      .complementario-derecha,
       .complementario-izquierda {
         padding: 3rem;
         position: absolute;
@@ -270,7 +270,7 @@ $animationSpeed: 20s;
         width: 150px;
         top: -10px;
       }
-      .complementario {
+      .complementario-derecha {
         width: 150px;
         height: 150px;
       }
@@ -310,7 +310,7 @@ $animationSpeed: 20s;
         top: -10px;
       }
     }
-    .complementario,
+    .complementario-derecha,
     .complementario-izquierda {
       width: 150px;
       height: 150px;
