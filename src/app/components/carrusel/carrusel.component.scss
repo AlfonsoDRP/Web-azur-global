@@ -10,14 +10,14 @@
   }
 }
 * {
-  color: white;
+ 
   transition: all 0.5s;
 }
 .contenedor-principal {
   width: 100%;
   display: block;
   overflow: hidden;
-  background-color: var(--cieloClaro-azur);
+  // background-color: var(--cieloClaro-azur);
 
   .todo {
     margin: auto;
@@ -74,8 +74,8 @@
     bottom: 12%;
     width: 100px;
     height: 30px;
-    background-color: #2896c8;
-    border: 1px solid white;
+    background-color: transparent;
+    border: 1px solid black;
   }
   .boton-derecho {
     left: calc(100% / 6 * 5 - 150px);

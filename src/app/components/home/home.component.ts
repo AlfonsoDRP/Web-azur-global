@@ -52,34 +52,34 @@ export class HomeComponent {
     //   izquierda.style.opacity = "0";
     // }
 
-    if (posScroll > 1100 && primero){
+    if (posScroll > 900 && primero){
       primero.style.right = "0";
       primero.style.opacity = "1";
-    }else if(posScroll<1100 && primero){
+    }else if(posScroll < 900 && primero){
       primero.style.right = "-100px";
       primero.style.opacity = "0";
     }
 
-    if (posScroll > 1600 && segundo){
+    if (posScroll > 1400 && segundo){
       segundo.style.left = "0";
       segundo.style.opacity = "1";
-    }else if(posScroll<1600 && segundo){
+    }else if(posScroll < 1400 && segundo){
       segundo.style.left = "-100px";
       segundo.style.opacity = "0";
     }
 
-    if (posScroll > 2100 && tercero){
+    if (posScroll > 1900 && tercero){
       tercero.style.right = "0";
       tercero.style.opacity = "1";
-    }else if(posScroll<2100 && tercero){
+    }else if(posScroll < 1900 && tercero){
       tercero.style.right = "-100px";
       tercero.style.opacity = "0";
     }
 
-    if (posScroll > 2600 && cuarto){
+    if (posScroll > 2400 && cuarto){
       cuarto.style.left = "0";
       cuarto.style.opacity = "1";
-    }else if(posScroll<2600 && cuarto){
+    }else if(posScroll<2400 && cuarto){
       cuarto.style.left = "-100px";
       cuarto.style.opacity = "0";
     }

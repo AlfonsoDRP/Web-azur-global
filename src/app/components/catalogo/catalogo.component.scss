@@ -63,51 +63,61 @@
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
-          img,
-          .rotulo-principal {
-            transition: all 1s;
-          }
+          overflow: hidden;
           &.caja-izquierda:hover,
           &.caja-derecha:hover {
-            img,
-            .rotulo-principal {
-              opacity: 0;
+            img{
+              transform: scale(1.5);
+              right: 50px;
             }
-            .complementario,
-            .complementario-izquierda {
-              height: 100%;
-              width: 100%;
-              border-radius: 0;
-              top: 0;
-              right: 0;
+            .rotulo-principal {
+              color: white;
               display: flex;
               flex-direction: column;
-              color: white;
-              background-color: var(--azul-azur);
-              align-items: center;
-              justify-content: center;
-              .contenedor-texto {
-                animation-name: aparecer;
-                animation-duration: 0.4s;
-                animation-delay: 0.8s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
+              justify-content: flex-end;
+
+              h3 {
+                text-decoration: underline var(--logoRosa-azur);
+                text-underline-position: under;
+                top: 0;
               }
+              .contenedor-texto{
+                top: 0px;
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+            .complementario-derecha,
+            .complementario-izquierda {
+              transform: scale(8);
             }
           }
 
           .rotulo-principal {
             display: flex;
+            flex-direction: column;
             position: relative;
             height: 100%;
             width: 100%;
             padding: 1rem;
-            align-items: center;
-            justify-content: flex-start;
+            align-items: left;
+            justify-content: flex-end;
+            
             h3 {
+              position: relative;
+              top: 50px;
               text-decoration: underline var(--azul-azur);
-
               text-underline-position: under;
+              transition: all 750ms;
+            }
+            .contenedor-texto{
+              position: relative;
+              visibility: hidden;
+              top: 50px;
+              height: 50px;
+              opacity: 1;
+              color: white;
+              transition: all 750ms;
             }
           }
 
@@ -121,12 +131,12 @@
             height: auto;
             position: absolute;
             margin: 0 auto;
-            right: 15px;
+            transition: all 750ms;
           }
         }
       }
 
-      .complementario,
+      .complementario-derecha,
       .complementario-izquierda {
         padding: 3rem;
         position: absolute;
@@ -136,7 +146,7 @@
         background-color: var(--azul-azur);
         top: 15px;
         right: 15px;
-        transition: all 1s;
+        transition: all 750ms;
         .contenedor-texto {
           opacity: 0;
         }
@@ -251,14 +261,18 @@ $animationSpeed: 20s;
     .contenedor-izquierda {
       grid-template-rows: 420px 420px;
       .caja-izquierda img {
-        max-height: 350px;
+        max-height: 275px;
         max-width: 100%;
-        width: 250px;
-        top: -35px;
+        position: relative;
+        // background-color: red;
+        right: 25px;
+        top: 0;
+        width: 150px;
+        
       }
       .complementario-izquierda {
-        width: 250px;
-        height: 250px;
+        width: 175px;
+        height: 175px;
       }
     }
     .contenedor-derecha {
@@ -268,9 +282,10 @@ $animationSpeed: 20s;
         max-height: 200px;
         max-width: 100%;
         width: 150px;
-        top: -10px;
+        top: -15px;
+        right: 15px;
       }
-      .complementario {
+      .complementario-derecha {
         width: 150px;
         height: 150px;
       }
