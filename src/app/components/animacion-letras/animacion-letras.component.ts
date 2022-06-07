@@ -11,6 +11,8 @@ export class AnimacionLetrasComponent implements OnInit {
   @Input() activo:boolean = true;
   @Input() delay:number = 500;
   @Input() duracion:number = 1000;
+  @Input() animacionOla:boolean = true;
+  @Input() animacionDireccion:string = 'arriba';
 
   array_palabra: string[] = [];
 
