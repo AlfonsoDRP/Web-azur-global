@@ -65,7 +65,7 @@
     .sub-cabecera {
       position: relative;
 
-      h4 {
+      h1 {
         opacity: 0;
         text-align: center;
         animation-name: abajo;
@@ -73,7 +73,7 @@
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
         animation-delay: 1s;
-        font-size: 80px;
+        
         z-index: 4;
       }
     }
