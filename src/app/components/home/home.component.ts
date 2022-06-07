@@ -28,17 +28,21 @@ export class HomeComponent {
   faCompromiso = faHandshake;
   faCalidad = faCircleCheck;
   faFuturo = faBinoculars;
-
-
+  bandera1 = false;
+  bandera2 = false;
+  bandera3 = false;
+  bandera4 = false;
+  
   @HostListener ('window:scroll') onWindowScroll() {
     let posScroll = window.scrollY;
     console.log(posScroll)
-    let derecha = document.getElementById("derecha");
-    let izquierda = document.getElementById("izquierda");
+    // let derecha = document.getElementById("derecha");
+    // let izquierda = document.getElementById("izquierda");
     let primero = document.getElementById("primero");
     let segundo = document.getElementById("segundo");
     let tercero = document.getElementById("tercero");
     let cuarto = document.getElementById("cuarto");
+    
 
     // if (posScroll > 1100 && derecha && izquierda){
     //   derecha.style.right = "0";
@@ -54,7 +58,9 @@ export class HomeComponent {
 
     if (posScroll > 1000 && primero){
       primero.style.right = "0";
-      primero.style.opacity = "1";}
+      primero.style.opacity = "1";
+      this.bandera1 = true;
+      }
     // }else if(posScroll < 1000 && primero){
     //   primero.style.right = "-100px";
     //   primero.style.opacity = "0";
@@ -62,7 +68,8 @@ export class HomeComponent {
 
     if (posScroll > 1500 && segundo){
       segundo.style.left = "0";
-      segundo.style.opacity = "1";}
+      segundo.style.opacity = "1";
+      this.bandera2 = true;}
     // }else if(posScroll < 1500 && segundo){
     //   segundo.style.left = "-100px";
     //   segundo.style.opacity = "0";
@@ -70,7 +77,8 @@ export class HomeComponent {
 
     if (posScroll > 2000 && tercero){
       tercero.style.right = "0";
-      tercero.style.opacity = "1";}
+      tercero.style.opacity = "1";
+      this.bandera3 = true;}
     // }else if(posScroll < 2000 && tercero){
     //   tercero.style.right = "-100px";
     //   tercero.style.opacity = "0";
@@ -78,7 +86,8 @@ export class HomeComponent {
 
     if (posScroll > 2500 && cuarto){
       cuarto.style.left = "0";
-      cuarto.style.opacity = "1";}
+      cuarto.style.opacity = "1";
+      this.bandera4 = true;}
     // }else if(posScroll<2500 && cuarto){
     //   cuarto.style.left = "-100px";
     //   cuarto.style.opacity = "0";

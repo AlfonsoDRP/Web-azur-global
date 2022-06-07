@@ -196,11 +196,13 @@
           width: 100%;
           font-size: 20px;
           line-height: 1.75rem;
-          h1{
+          
+          .animation{
             font-size: 80px;
             -webkit-text-fill-color: transparent;
             -webkit-text-stroke-color: var(--azul-azur);
             -webkit-text-stroke-width: 1.5px;
+            margin-bottom: 1.5rem;
           }
         }
       
