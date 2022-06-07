@@ -4,46 +4,33 @@
       <app-animacion-letras [palabra]="'Sobre Nosotros'" [delay]="1000" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras></h1>
   </div>
   <div class="contenedor-contenido" id="contenedor">
-    <!-- <div class="titulo">
-      <img src="../../../assets/imagen/LOGO-AZURGLOBAL.SVG" alt="" srcset="">
-    </div> -->
     <div class="apartados">
       <div class="apartado impar">
         <div class="contenedor-imagen">
         </div>
         <div class="contenido">
           <div class="subtitulo">
-            <div class=" subtitulo-arriba">
-              <app-animacion-letras [palabra]="'Nuestra'" [delay]="1560" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras>
-            </div>
-            <div class="subtitulo-abajo">
-              <app-animacion-letras [palabra]="'Historia'" [delay]="1740" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras>
-            </div>
+              <app-animacion-letras class="subtitulo-arriba" [palabra]="'Nuestra'" [delay]="560" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras>
+              <app-animacion-letras class="subtitulo-abajo" [palabra]="'Historia'" [delay]="740" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras>
           </div>
           <div class="descripcion">
             <strong>
-              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
-              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
-              gramenawer ese que llega.
+              <app-animacion-letras 
+              [palabra]="valoresPrueba.textoPruebaCorto"
+              [delay]="560" [duracion]="750"[activo]="primerSubtitulo"  [animacionOla]="false"
+              ></app-animacion-letras>
             </strong>
-            <br><br>
-            Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
-            papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
-            gramenawer ese que llega. De la pradera tiene musho peligro a peich
-            amatomaa condemor jarl. Te voy a borrar el cerito por la gloria de mi
-            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
-            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
-            diodeno ese hombree ese hombree condemor.
-            Te voy a borrar el cerito por la gloria de mi
-            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
-            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
-            diodeno ese hombree ese hombree condemor.
-            <br><br>
+            <br>
+            <app-animacion-letras 
+            [palabra]="valoresPrueba.textoPruebaLargo"
+            [delay]="400" [duracion]="1100"[activo]="primerSubtitulo"  [animacionOla]="false"
+            ></app-animacion-letras>
+            <br>
             <span>
-              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
-              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
-              gramenawer ese que llega. De la pradera tiene musho peligro a peich
-              amatomaa condemor jarl.
+              <app-animacion-letras class="prueba"
+              [palabra]="valoresPrueba.textoPruebaMedio"
+              [delay]="100" [duracion]="750"[activo]="primerSubtitulo"  [animacionOla]="false"
+              ></app-animacion-letras>
             </span>
           </div>
         </div>
@@ -51,37 +38,27 @@
       <div class="apartado par">
         <div class="contenido">
           <div class="subtitulo">
-            <div class=" subtitulo-arriba">
-              <app-animacion-letras [palabra]="'Nuestros'" [delay]="560" [duracion]="750" [activo]="segundoSubtitulo"></app-animacion-letras>
-            </div>
-            <div class="subtitulo-abajo">
-              <app-animacion-letras [palabra]="'Valores'" [delay]="740" [duracion]="750" [activo]="segundoSubtitulo"></app-animacion-letras>
-            </div>
+              <app-animacion-letras class="subtitulo-arriba" [palabra]="'Nuestros'" [delay]="560" [duracion]="750" [activo]="segundoSubtitulo"></app-animacion-letras>
+              <app-animacion-letras class="subtitulo-abajo" [palabra]="'Valores'" [delay]="740" [duracion]="750" [activo]="segundoSubtitulo"></app-animacion-letras>
           </div>
           <div class="descripcion">
             <strong>
-              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
-              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
-              gramenawer ese que llega.
+              <app-animacion-letras 
+              [palabra]="valoresPrueba.textoPruebaCorto"
+              [delay]="560" [duracion]="750"[activo]="segundoSubtitulo"  [animacionOla]="false"
+              ></app-animacion-letras>
             </strong>
-            <br><br>
-            Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
-            papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
-            gramenawer ese que llega. De la pradera tiene musho peligro a peich
-            amatomaa condemor jarl. Te voy a borrar el cerito por la gloria de mi
-            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
-            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
-            diodeno ese hombree ese hombree condemor.
-            Te voy a borrar el cerito por la gloria de mi
-            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
-            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
-            diodeno ese hombree ese hombree condemor.
-            <br><br>
+            <br>
+            <app-animacion-letras 
+            [palabra]="valoresPrueba.textoPruebaLargo"
+            [delay]="400" [duracion]="1100"[activo]="segundoSubtitulo"  [animacionOla]="false"
+            ></app-animacion-letras>
+            <br>
             <span>
-              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
-              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
-              gramenawer ese que llega. De la pradera tiene musho peligro a peich
-              amatomaa condemor jarl.
+              <app-animacion-letras class="prueba"
+              [palabra]="valoresPrueba.textoPruebaMedio"
+              [delay]="100" [duracion]="750"[activo]="segundoSubtitulo"  [animacionOla]="false"
+              ></app-animacion-letras>
             </span>
           </div>
         </div>
@@ -93,37 +70,27 @@
         </div>
         <div class="contenido">
           <div class="subtitulo">
-            <div class=" subtitulo-arriba">
-              <app-animacion-letras [palabra]="'Misión y'" [delay]="560" [duracion]="750" [activo]="terceroSubtitulo"></app-animacion-letras>
-            </div>
-            <div class="subtitulo-abajo">
-              <app-animacion-letras [palabra]="'Visión'" [delay]="740" [duracion]="750" [activo]="terceroSubtitulo"></app-animacion-letras>
-            </div>
+              <app-animacion-letras class="subtitulo-arriba" [palabra]="'Misión y'" [delay]="560" [duracion]="750" [activo]="terceroSubtitulo"></app-animacion-letras>
+              <app-animacion-letras class="subtitulo-abajo" [palabra]="'Visión'" [delay]="740" [duracion]="750" [activo]="terceroSubtitulo"></app-animacion-letras>
           </div>
           <div class="descripcion">
             <strong>
-              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
-              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
-              gramenawer ese que llega.
+              <app-animacion-letras 
+              [palabra]="valoresPrueba.textoPruebaCorto"
+              [delay]="560" [duracion]="750"[activo]="terceroSubtitulo"  [animacionOla]="false"
+              ></app-animacion-letras>
             </strong>
-            <br><br>
-            Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
-            papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
-            gramenawer ese que llega. De la pradera tiene musho peligro a peich
-            amatomaa condemor jarl. Te voy a borrar el cerito por la gloria de mi
-            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
-            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
-            diodeno ese hombree ese hombree condemor.
-            Te voy a borrar el cerito por la gloria de mi
-            madre papaar papaar amatomaa diodeno por la gloria de mi madre. A
-            peich te va a hasé pupitaa no puedor fistro. Quietooor amatomaa
-            diodeno ese hombree ese hombree condemor.
-            <br><br>
+            <br>
+            <app-animacion-letras 
+            [palabra]="valoresPrueba.textoPruebaLargo"
+            [delay]="400" [duracion]="1100"[activo]="terceroSubtitulo"  [animacionOla]="false"
+            ></app-animacion-letras>
+            <br>
             <span>
-              Lorem fistrum torpedo a peich sexuarl papaar papaar pupita jarl papaar
-              papaar mamaar diodeno sexuarl. Jarl torpedo al ataquerl diodenoo a
-              gramenawer ese que llega. De la pradera tiene musho peligro a peich
-              amatomaa condemor jarl.
+              <app-animacion-letras class="prueba"
+              [palabra]="valoresPrueba.textoPruebaMedio"
+              [delay]="100" [duracion]="750"[activo]="terceroSubtitulo"  [animacionOla]="false"
+              ></app-animacion-letras>
             </span>
           </div>
         </div>

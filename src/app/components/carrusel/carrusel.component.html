@@ -8,10 +8,6 @@
           </div>
         </div>
       </div>
-      <button class="boton boton-izquierdo" (click)="animacion(true)">
-        &#10229;
-      </button>
-      <button class="boton boton-derecho" (click)="animacion(false)">
-        &#10230;
-      </button>
+      <app-boton [contenido]="'&#10229;'" class="boton boton-izquierdo" (click)="animacion(true)"></app-boton>
+      <app-boton [contenido]="'&#10230;'" class="boton boton-derecho" (click)="animacion(false)"></app-boton>
     </div>

@@ -1,9 +1,18 @@
 <div>
-    <p class="mensaje" *ngIf = "activo">
-        <span *ngFor="let item of array_palabra; index as i;" 
-            [ngStyle]="{'animation-delay': ((i*30)+delay)+'ms','animation-duration': duracion+'ms','visibility': item == ' '? 'hidden':'visible'}">
-            {{letraMostrar(item)}}
-        </span> 
+    <p class="mensaje" *ngIf="activo">
+        <ng-container *ngIf="animacionOla">
+            <span *ngFor="let item of array_palabra; index as i;"
+                [ngStyle]="{'animation-delay': ((i*30)+delay)+'ms',
+                            'animation-duration': duracion+'ms',
+                            'visibility': item == ' '? 'hidden':'visible',
+                            'animation-name': animacionDireccion
+                }">
+                {{letraMostrar(item)}}
+            </span>
+        </ng-container>
+        <span *ngIf="!animacionOla" [ngStyle]="{'animation-delay': ((30)+delay)+'ms','animation-duration': duracion+'ms', 'animation-name': animacionDireccion}">
+            {{palabra}}
+        </span>
     </p>
     <span class="bloque">z</span>
 </div>

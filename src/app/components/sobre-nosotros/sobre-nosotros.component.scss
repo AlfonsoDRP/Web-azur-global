@@ -39,27 +39,16 @@
     min-height: 100vh;
     width: 100%;
     height: 100%;
-    gap: 2rem;
-    padding: 2rem 0;
     * {
       font-family: "Roboto";
     }
-    .titulo {
-      padding: 0 25%;
-
-      justify-content: center;
-      img {
-        max-width: 500px;
-        min-width: 300px;
-      }
-    }
-
     .apartados {
+      padding: 3rem 0;
       gap: 3rem;
       align-items: center;
 
       .apartado {
-        max-width: 1500px;
+        max-width: 1200px;
         width: 100%;
         .contenido {
           z-index: 2;

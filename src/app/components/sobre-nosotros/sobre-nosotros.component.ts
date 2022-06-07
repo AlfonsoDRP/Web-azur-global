@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import myData from '../../../environments/preubas/pruebas.json';
 
 @Component({
   selector: 'app-sobre-nosotros',
@@ -11,6 +12,7 @@ export class SobreNosotrosComponent  {
       window.scroll(0,0);
     })
   }
+  valoresPrueba = myData;
   
   primerSubtitulo:boolean = true;
   segundoSubtitulo:boolean = false;

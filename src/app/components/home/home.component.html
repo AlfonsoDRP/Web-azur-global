@@ -1,11 +1,26 @@
 <div id="principal" class="contenedor-principal">
   <div class="contenedor-primero">
     <div class="cabecera">
-      <img src="../../../assets/Logo-Azur-Vacio.png" alt="logoVacio">
+      <img src="../../../assets/Logo-Azur-Vacio.png" alt="logoVacio" />
       <div class="videos">
-        <video class="video" autoplay loop src="https://www.paradigmadigital.com/assets/img/layout/videoImpact/ice/a.mp4"></video>
-        <video class="video" autoplay loop src="https://www.paradigmadigital.com/assets/img/layout/videoImpact/fire/a.mp4"></video>
-        <video class="video3" autoplay loop src="https://www.paradigmadigital.com/assets/img/layout/videoImpact/fire/c.mp4"></video>
+        <video
+          class="video"
+          autoplay
+          loop
+          src="https://www.paradigmadigital.com/assets/img/layout/videoImpact/ice/a.mp4"
+        ></video>
+        <video
+          class="video"
+          autoplay
+          loop
+          src="https://www.paradigmadigital.com/assets/img/layout/videoImpact/fire/a.mp4"
+        ></video>
+        <video
+          class="video3"
+          autoplay
+          loop
+          src="https://www.paradigmadigital.com/assets/img/layout/videoImpact/fire/c.mp4"
+        ></video>
       </div>
     </div>
     <div class="sub-cabecera">
@@ -92,11 +107,21 @@
       <div class="etiqueta">
         <div class="image-izq">
           <div class="alineacion">
-            <img src="../../../assets/paradigma/cloud-box-detail.png" class="imagen-apoyo" alt="">
+            <img
+              src="../../../assets/paradigma/cloud-box-detail.png"
+              class="imagen-apoyo"
+              alt=""
+            />
           </div>
         </div>
         <div class="texto">
-          <h1>Rapidez</h1>
+          <app-animacion-letras
+            [palabra]="'Rapidez'"
+            [delay]="300"
+            [duracion]="750"
+            [activo]="bandera1"
+            class="animation izq"
+          ></app-animacion-letras>
           <p>
             Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
             es óptima gracias a nuestra gestión del almacen y gran personal
@@ -107,7 +132,13 @@
     <div id="segundo" class="segundo">
       <div class="etiqueta">
         <div class="texto">
-          <h1>Compromiso</h1>
+          <app-animacion-letras
+            [palabra]="'Compromiso'"
+            [delay]="300"
+            [duracion]="750"
+            [activo]="bandera2"
+            class="animation der"
+          ></app-animacion-letras>
           <p>
             Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
             es óptima gracias a nuestra gestión del almacen y gran personal
@@ -115,8 +146,11 @@
         </div>
         <div class="image-der">
           <div class="alineacion">
-            
-            <img src="../../../assets/paradigma/data-box-detail.png" class="imagen-apoyo" alt="">
+            <img
+              src="../../../assets/paradigma/data-box-detail.png"
+              class="imagen-apoyo"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -125,12 +159,21 @@
       <div class="etiqueta">
         <div class="image-izq">
           <div class="alineacion">
-            
-            <img src="../../../assets/paradigma/design-box-detail.png" class="imagen-apoyo" alt="">
+            <img
+              src="../../../assets/paradigma/design-box-detail.png"
+              class="imagen-apoyo"
+              alt=""
+            />
           </div>
         </div>
         <div class="texto">
-          <h1>Calidad</h1>
+          <app-animacion-letras
+            [palabra]="'Calidad'"
+            [delay]="300"
+            [duracion]="750"
+            [activo]="bandera3"
+            class="animation izq"
+          ></app-animacion-letras>
           <p>
             Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
             es óptima gracias a nuestra gestión del almacen y gran personal
@@ -141,7 +184,13 @@
     <div id="cuarto" class="cuarto">
       <div class="etiqueta">
         <div class="texto">
-          <h1>Futuro</h1>
+          <app-animacion-letras
+            [palabra]="'Futuro'"
+            [delay]="300"
+            [duracion]="750"
+            [activo]="bandera4"
+            class="animation der"
+          ></app-animacion-letras>
           <p>
             Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
             es óptima gracias a nuestra gestión del almacen y gran personal
@@ -149,8 +198,11 @@
         </div>
         <div class="image-der">
           <div class="alineacion">
-            
-            <img src="../../../assets/paradigma/dna-box-detail.png" class="imagen-apoyo" alt="">
+            <img
+              src="../../../assets/paradigma/dna-box-detail.png"
+              class="imagen-apoyo"
+              alt=""
+            />
           </div>
         </div>
       </div>
