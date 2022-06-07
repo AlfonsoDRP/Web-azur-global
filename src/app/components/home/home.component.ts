@@ -52,37 +52,37 @@ export class HomeComponent {
     //   izquierda.style.opacity = "0";
     // }
 
-    if (posScroll > 900 && primero){
+    if (posScroll > 1000 && primero){
       primero.style.right = "0";
-      primero.style.opacity = "1";
-    }else if(posScroll < 900 && primero){
-      primero.style.right = "-100px";
-      primero.style.opacity = "0";
-    }
+      primero.style.opacity = "1";}
+    // }else if(posScroll < 1000 && primero){
+    //   primero.style.right = "-100px";
+    //   primero.style.opacity = "0";
+    // }
 
-    if (posScroll > 1400 && segundo){
+    if (posScroll > 1500 && segundo){
       segundo.style.left = "0";
-      segundo.style.opacity = "1";
-    }else if(posScroll < 1400 && segundo){
-      segundo.style.left = "-100px";
-      segundo.style.opacity = "0";
-    }
+      segundo.style.opacity = "1";}
+    // }else if(posScroll < 1500 && segundo){
+    //   segundo.style.left = "-100px";
+    //   segundo.style.opacity = "0";
+    // }
 
-    if (posScroll > 1900 && tercero){
+    if (posScroll > 2000 && tercero){
       tercero.style.right = "0";
-      tercero.style.opacity = "1";
-    }else if(posScroll < 1900 && tercero){
-      tercero.style.right = "-100px";
-      tercero.style.opacity = "0";
-    }
+      tercero.style.opacity = "1";}
+    // }else if(posScroll < 2000 && tercero){
+    //   tercero.style.right = "-100px";
+    //   tercero.style.opacity = "0";
+    // }
 
-    if (posScroll > 2400 && cuarto){
+    if (posScroll > 2500 && cuarto){
       cuarto.style.left = "0";
-      cuarto.style.opacity = "1";
-    }else if(posScroll<2400 && cuarto){
-      cuarto.style.left = "-100px";
-      cuarto.style.opacity = "0";
-    }
+      cuarto.style.opacity = "1";}
+    // }else if(posScroll<2500 && cuarto){
+    //   cuarto.style.left = "-100px";
+    //   cuarto.style.opacity = "0";
+    // }
   }
 
   @HostListener('window:resize', ['$event']) onResize(event: any) {
