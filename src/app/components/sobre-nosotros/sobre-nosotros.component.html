@@ -1,11 +1,12 @@
 <div class="contenedor-principal">
   <div class="entrada">
-    <h1 class="display-1">Sobre nosotros</h1>
+    <h1 class="display-1">
+      <app-animacion-letras [palabra]="'Sobre Nosotros'" [delay]="1000" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras></h1>
   </div>
   <div class="contenedor-contenido" id="contenedor">
-    <div class="titulo">
+    <!-- <div class="titulo">
       <img src="../../../assets/imagen/LOGO-AZURGLOBAL.SVG" alt="" srcset="">
-    </div>
+    </div> -->
     <div class="apartados">
       <div class="apartado impar">
         <div class="contenedor-imagen">
@@ -13,10 +14,10 @@
         <div class="contenido">
           <div class="subtitulo">
             <div class=" subtitulo-arriba">
-              <app-animacion-letras [palabra]="'Nuestra'" [delay]="560" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras>
+              <app-animacion-letras [palabra]="'Nuestra'" [delay]="1560" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras>
             </div>
             <div class="subtitulo-abajo">
-              <app-animacion-letras [palabra]="'Historia'" [delay]="740" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras>
+              <app-animacion-letras [palabra]="'Historia'" [delay]="1740" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras>
             </div>
           </div>
           <div class="descripcion">
