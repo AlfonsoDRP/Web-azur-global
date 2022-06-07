@@ -1,7 +1,4 @@
 .contenedor-principal,
-.info,
-.aux,
-.telmail,
 .contenedor-cuerpo,
 .contenido-cuerpo,
 .contenedor-formulario,
@@ -79,6 +76,11 @@
     .contenedor-mapa {
       flex-direction: column;
       align-items: center;
+      position: relative;
+      animation-name: abajo-arriba;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
       iframe {
         margin: 1.5rem 0 3rem 0;
         width: 70%;
@@ -95,45 +97,21 @@
   gap: 3rem;
 
   .contenedor-triangulo {
-    color: white;
-    .info {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 300px;
-      width: 100%;
-      background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    color: var(--azul-azur);
+    h5 {
       position: relative;
-      top: -500px;
-      animation-name: comienzo;
-      animation-duration: 1s;
-      animation-timing-function: ease-in-out;
-      animation-fill-mode: forwards;
-    }
-    .triangulo {
-      width: 0;
-      height: 0;
-      border-left: 49.5vw solid white;
-      border-right: 49.6vw solid white;
-      border-top: 200px solid transparent;
-      margin-bottom: -50px;
-    }
-    .aux {
-      padding-top: 3rem;
-
-      flex-direction: column;
-      align-items: center;
-      .telmail {
-        flex-direction: column;
-        align-items: center;
-        p{
-          font-size: 25px;
-        }
-      }
+      color: var(--azul-azur);
+      opacity: 0;
+      animation: abajo-arriba 1s 530ms forwards;
     }
   }
 }
+
 //variable globales
 .linea {
   background-color: var(--azul-azur);
@@ -166,7 +144,7 @@
 //mediaquery
 
 @media only screen and (min-width: 901px) {
-  .contenedor-principal{
+  .contenedor-principal {
     overflow-x: hidden;
   }
   .arribaform,
@@ -180,7 +158,7 @@
   }
 }
 @media only screen and (max-width: 900px) {
-  .contenedor-principal{
+  .contenedor-principal {
     overflow-x: hidden;
   }
   .arribaform,
