@@ -204,6 +204,14 @@
             -webkit-text-stroke-width: 1.5px;
             margin-bottom: 1.5rem;
           }
+          .izq{
+            display: flex;
+            justify-content: flex-start;
+          }
+          .der{
+            display: flex;
+            justify-content: flex-end;
+          }
         }
       
       .image-der,
