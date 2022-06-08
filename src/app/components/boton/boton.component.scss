@@ -1,26 +1,37 @@
-button{
-   
-    height: 30px;
-    background-color: var(--azul-azur);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-color: transparent;
-    &:hover{
-        background-color: var(--logoAzulOscuro-azur);
-    }
-    &:focus{
-        border-color: var(--logoAzulOscuro-azur);
-    }
+button {
+  height: 30px;
+  background-color: var(--azul-azur);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+  &:hover {
+    animation-name: hover;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+  &:focus {
+    border-color: var(--logoAzulOscuro-azur);
+  }
 }
-.estiloAzulClaro{
-    
+.estiloAzulClaro {
+  background-color: var(--logoAzulOscuro-azur);
+  &:hover {
+    background-color: var(--cielo-azur);
+  }
+  &:focus {
+    border-color: var(--cielo-azur);
+  }
+}
+
+@keyframes hover {
+  from{
     background-color: var(--logoAzulOscuro-azur);
-    &:hover{
-        background-color: var(--cielo-azur);
-    }
-    &:focus{
-        border-color: var(--cielo-azur);
-    }
+  }
+  to{
+    background-color: var(--logoRosa-azur);
+  }
 }
