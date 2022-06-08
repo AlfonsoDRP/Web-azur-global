@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import myData from '../../../environments/preubas/pruebas.json';
+import myData from '../../../environments/pruebas/pruebas.json';
 
 @Component({
   selector: 'app-sobre-nosotros',

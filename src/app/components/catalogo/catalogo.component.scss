@@ -148,8 +148,8 @@
         opacity: 1;
         border-radius: 50%;
         background-color: var(--azul-azur);
-        top: 15px;
-        right: 15px;
+        top: 30px;
+        right: 50px;
         transition: all 750ms;
         .contenedor-texto {
           opacity: 0;
@@ -269,8 +269,8 @@ $animationSpeed: 20s;
         max-width: 100%;
         position: relative;
         // background-color: red;
-        right: 25px;
-        top: 0;
+        right: 55px;
+        top: 10px;
         width: 150px;
         
       }
@@ -286,8 +286,8 @@ $animationSpeed: 20s;
         max-height: 200px;
         max-width: 100%;
         width: 150px;
-        top: -15px;
-        right: 15px;
+        top: 10px;
+        right: 50px;
       }
       .complementario-derecha {
         width: 150px;
