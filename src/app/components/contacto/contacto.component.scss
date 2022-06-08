@@ -103,6 +103,13 @@
     align-items: center;
     height: 300px;
     color: var(--azul-azur);
+    .mini-info{
+      margin-top:3rem;
+      width: 60%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
     h5 {
       position: relative;
       color: var(--azul-azur);
