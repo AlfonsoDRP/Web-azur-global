@@ -51,6 +51,9 @@ export class HomeComponent {
     let imagen3 = document.getElementById("img-tercero");
     let imagen4 = document.getElementById("img-cuarto");
     let circulo1 = document.getElementById("circulo1");
+    let circulo2 = document.getElementById("circulo2");
+    let circulo3 = document.getElementById("circulo3");
+    let circulo4 = document.getElementById("circulo4");
     
 
     // if (posScroll > 1100 && derecha && izquierda){
@@ -78,11 +81,12 @@ export class HomeComponent {
     //   primero.style.opacity = "0";
     // }
 
-    if (posScroll > 1500 && segundo && imagen2 && cont2){
+    if (posScroll > 1500 && segundo && imagen2 && cont2 && circulo2){
       segundo.style.bottom = "0";
       segundo.style.opacity = "1";
       cont2.style.opacity = "1";
       imagen2.style.transform = "scale(1.3)";
+      circulo2.style.animationPlayState = "running";
       this.bandera2 = true;
     }
     // }else if(posScroll < 1500 && segundo){
@@ -90,11 +94,12 @@ export class HomeComponent {
     //   segundo.style.opacity = "0";
     // }
 
-    if (posScroll > 2000 && tercero && imagen3 && cont3){
+    if (posScroll > 2000 && tercero && imagen3 && cont3 && circulo3){
       tercero.style.bottom = "0";
       tercero.style.opacity = "1";
       cont3.style.opacity = "1";
       imagen3.style.transform = "scale(1.3)";
+      circulo3.style.animationPlayState = "running";
       this.bandera3 = true;
     }
     // }else if(posScroll < 2000 && tercero){
@@ -102,11 +107,12 @@ export class HomeComponent {
     //   tercero.style.opacity = "0";
     // }
 
-    if (posScroll > 2500 && cuarto && imagen4 && cont4){
+    if (posScroll > 2500 && cuarto && imagen4 && cont4 && circulo4){
       cuarto.style.bottom = "0";
       cuarto.style.opacity = "1";
       cont4.style.opacity = "1";
       imagen4.style.transform = "scale(1.3)";
+      circulo4.style.animationPlayState = "running";
       this.bandera4 = true;
     }
     // }else if(posScroll<2500 && cuarto){

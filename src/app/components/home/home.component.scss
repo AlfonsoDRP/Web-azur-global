@@ -25,7 +25,6 @@
     height: 85vh;
     background-attachment: fixed;
     color: rgb(0, 0, 0);
-    // animation-name: aparecer;
     animation-duration: 1.3s;
     font-family: "Montserrat";
     display: flex;
@@ -101,6 +100,7 @@
   .contenedor-ventajas {
     height: 100%;
     display: flex;
+    margin-top: 3rem;
     flex-direction: column;
     gap: 4rem;
     width: 60%;
@@ -109,8 +109,7 @@
     .tercero {
       transition: all 0.8s;
       position: relative;
-      text-align: left;
-      // right: -100px;
+      // text-align: left;
       opacity: 0;
       
     }
@@ -118,13 +117,11 @@
     .cuarto {
       transition: all 0.8s;
       position: relative;
-      text-align: right;
+      // text-align: right;
       opacity: 0;
       
-      // left: -100px;
     }
     .etiqueta {
-      // background-color: yellow;
 
       height: 450px;
       display: flex;
@@ -137,7 +134,6 @@
         z-index: 1;
         display: flex;
         flex-direction: column;
-        // background-color: red;
         justify-content: flex-start;
 
         gap: 1.5rem;
@@ -196,8 +192,8 @@
     position: absolute;
     overflow: hidden;
     .circulo {
-      fill: var(--logoRosa-azur);
-      animation: logoBounce-circle 35s 1 linear;
+      fill: var(--logoAzulClaro-azur);
+      animation: logoBounce-circle 35s infinite linear;
       animation-play-state: paused;
       animation-delay: 0s;
       animation-name: logoBounce-circle;
@@ -244,12 +240,9 @@
   95% {
     -webkit-transform: translate3d(15%, 25%, 0);
     transform: translate3d(80px, 25px, 0);
-    //position: absolute;
   }
   100% {
     transform: translate3d(100px, 25px, 0);
-    //transform: scale(1.2);
-    //top:20px;
   }
 }
 
@@ -264,8 +257,6 @@
 
 .titulo {
   font-size: calc(1em + 2vw);
-  //text-transform: uppercase;
-  // font-weight: 800;
   color: var(--azul-azur);
 }
 
