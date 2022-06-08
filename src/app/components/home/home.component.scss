@@ -161,19 +161,35 @@
     }
     .primero,
     .tercero {
-      transition: 0.8s;
+      transition:all 0.8s;
       position: relative;
       text-align: left;
       opacity: 0;
-      right: -100px;
+      // right: -100px;
+      p{
+        opacity: 0;
+        position: relative;
+        bottom: -100px;
+        transition: all 1s;
+        transition-delay: 500ms;
+
+      }
     }
     .segundo,
     .cuarto {
-      transition: 0.8s;
+      transition:all 0.8s;
       position: relative;
       text-align: right;
       opacity: 0;
-      left: -100px;
+      p{
+        opacity: 0;
+        position: relative;
+        bottom: -100px;
+        transition: all 1s;
+        transition-delay: 500ms;
+      }
+      // left: -100px;
+
     }
     .etiqueta {
       // background-color: yellow;
@@ -225,7 +241,8 @@
           flex-direction: column;
           align-items: center;
           .imagen-apoyo {
-            height: 450px;
+            height: 400px;
+            transition: all 1s;
           }
         }
       }
