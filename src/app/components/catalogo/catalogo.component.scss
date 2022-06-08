@@ -42,6 +42,11 @@
       width: 100%;
       max-width: 1300px;
       background-color: white;
+      position: relative;
+      animation-name: abajo-arriba;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
       .contenedor-izquierda,
       .contenedor-derecha {
         display: grid;
