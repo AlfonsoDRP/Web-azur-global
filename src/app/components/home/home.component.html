@@ -1,4 +1,5 @@
 <div id="principal" class="contenedor-principal">
+  <!-- Logo -->
   <div class="contenedor-primero">
     <div class="cabecera">
       <img src="../../../assets/Logo-Azur-Vacio.png" alt="logoVacio" />
@@ -27,80 +28,12 @@
       <h1>Tu proveedor de confianza</h1>
     </div>
   </div>
+<!-- Carrusel -->
   <div class="carrusel">
     <h1 class="rotulo">Productos</h1>
     <app-carrusel [movil]="estadoMovil" [lista]="slides"></app-carrusel>
   </div>
-  <!-- <div class="contenedor-ventajas">
-    <div class="rotulo">
-      <h1 class="titulo">Ventajas</h1>
-    </div>
-    <div class="ventajas">
-      Aqui empiezan las tarjetas de la izquierda
-      <div class="izquierda" id="izquierda">
-        <div class="tarjeta">
-          <h4>Rapidez</h4>
-          <div class="img-tarjeta">
-            <fa-icon class="icon fa-8x" [icon]="faReloj"></fa-icon>
-          </div>
-          <p>
-            Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
-            es óptima gracias a nuestra gestión del almacen y gran personal
-          </p>
-          <app-boton
-            [contenido]="'Ver más'"
-            routerLink="/sobrenosotros"
-          ></app-boton>
-        </div>
-        <div class="tarjeta">
-          <h4>Compromiso</h4>
-          <div class="img-tarjeta">
-            <fa-icon class="icon fa-8x" [icon]="faCompromiso"></fa-icon>
-          </div>
-          <p>
-            Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
-            es óptima gracias a nuestra gestión del almacen y gran personal
-          </p>
-          <app-boton
-            [contenido]="'Ver más'"
-            routerLink="/sobrenosotros"
-          ></app-boton>
-        </div>
-      </div>
-      Aqui empiezan las tarjetas de la derecha
-      <div class="derecha" id="derecha">
-        <div class="tarjeta">
-          <h4>Calidad</h4>
-          <div class="img-tarjeta">
-            <fa-icon class="icon fa-8x" [icon]="faCalidad"></fa-icon>
-          </div>
-          <p>
-            Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
-            es óptima gracias a nuestra gestión del almacen y gran personal
-          </p>
-          <app-boton
-            [contenido]="'Ver más'"
-            routerLink="/sobrenosotros"
-          ></app-boton>
-        </div>
-        <div class="tarjeta">
-          <h4>Futuro</h4>
-          <div class="img-tarjeta">
-            <fa-icon class="icon fa-8x" [icon]="faFuturo"></fa-icon>
-          </div>
-          <p>
-            Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
-            es óptima gracias a nuestra gestión del almacen y gran personal
-          </p>
-          <app-boton
-            [contenido]="'Ver más'"
-            routerLink="/sobrenosotros"
-          ></app-boton>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
+<!-- Ventajas -->
   <div class="contenedor-ventajas">
     <h2 class="rotulo">¿Por qué elegirnos?</h2>
     <div id="contuno" class="primero">
@@ -123,13 +56,13 @@
             [activo]="bandera1"
             class="animation izq"
           ></app-animacion-letras>
-          <div class="textito">
-          <p id="texto-primero">
+          <div class="textito" id="texto-primero">
+          <p>
             Nuestra rapidez a la hora de entregar un pedido a nuestros clientes
             es óptima gracias a nuestra gestión del almacen y gran personal
           </p>
           <svg viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <circle class="circulo" cx="60" cy="60" r="15px" />
+            <circle class="circulo" id="circulo1" cx="60" cy="60" r="20px" />
           </svg>
           </div>
         </div>

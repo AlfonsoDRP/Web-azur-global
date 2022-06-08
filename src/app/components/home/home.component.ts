@@ -50,6 +50,7 @@ export class HomeComponent {
     let imagen2 = document.getElementById("img-segundo");
     let imagen3 = document.getElementById("img-tercero");
     let imagen4 = document.getElementById("img-cuarto");
+    let circulo1 = document.getElementById("circulo1");
     
 
     // if (posScroll > 1100 && derecha && izquierda){
@@ -64,11 +65,12 @@ export class HomeComponent {
     //   izquierda.style.opacity = "0";
     // }
 
-    if (posScroll > 1000 && primero && imagen1 && cont1){
+    if (posScroll > 1000 && primero && imagen1 && cont1 && circulo1){
       primero.style.bottom = "0";
       primero.style.opacity = "1"
       cont1.style.opacity = "1";
       imagen1.style.transform = "scale(1.3)";
+      circulo1.style.animationPlayState = "running";
       this.bandera1 = true;
       }
     // }else if(posScroll < 1000 && primero){
@@ -93,7 +95,8 @@ export class HomeComponent {
       tercero.style.opacity = "1";
       cont3.style.opacity = "1";
       imagen3.style.transform = "scale(1.3)";
-      this.bandera3 = true;}
+      this.bandera3 = true;
+    }
     // }else if(posScroll < 2000 && tercero){
     //   tercero.style.right = "-100px";
     //   tercero.style.opacity = "0";
@@ -104,7 +107,8 @@ export class HomeComponent {
       cuarto.style.opacity = "1";
       cont4.style.opacity = "1";
       imagen4.style.transform = "scale(1.3)";
-      this.bandera4 = true;}
+      this.bandera4 = true;
+    }
     // }else if(posScroll<2500 && cuarto){
     //   cuarto.style.left = "-100px";
     //   cuarto.style.opacity = "0";
