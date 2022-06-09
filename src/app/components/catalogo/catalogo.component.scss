@@ -17,8 +17,6 @@
       background-color: none;
       color: var(--azul-azur);
     }
-
-    
   }
   .contenedor-cuerpo {
     height: 100%;
@@ -58,7 +56,6 @@
           justify-content: space-around;
           align-items: center;
           overflow: hidden;
-          
 
           .rotulo-complementario {
             display: flex;
@@ -204,14 +201,14 @@ $animationSpeed: 20s;
         right: 60px;
         top: 10px;
         width: 150px;
-        
       }
       .complementario-izquierda {
         width: 175px;
         height: 175px;
       }
     }
-    .caja-izquierda, .caja-derecha{
+    .caja-izquierda,
+    .caja-derecha {
       .rotulo-principal {
         display: flex;
         flex-direction: column;
@@ -221,60 +218,78 @@ $animationSpeed: 20s;
         padding: 1rem;
         align-items: left;
         justify-content: flex-end;
-        
+
         h3 {
+          display: inline-block;
           position: relative;
+          text-decoration: underline;
+          text-decoration-color: var(--logoRosa-azur);
           top: 50px;
-          text-decoration: underline var(--azul-azur);
-          text-underline-position: under;
           transition: all 500ms;
         }
-        .contenedor-texto{
+        
+        h3:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          text-decoration: none;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: var(--logoRosa-azur);
+          transform-origin: bottom left;
+          transition: transform 400ms ease-out;
+        }
+        .contenedor-texto {
           position: relative;
           visibility: hidden;
           top: 50px;
           height: 50px;
           opacity: 1;
           color: white;
-          transition: all 500ms;
+          transition: all 750ms;
         }
       }
       &.caja-izquierda:hover,
-          &.caja-derecha:hover {
-            img{
-              transform: scale(1.8);
-              right: 90px;
-              top: 10px;
-            }
-            .izq{
-              transform: scale(2.5);
-              right: 120px;
-              top: 50px;
-            }
-            .rotulo-principal {
-              color: white;
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-end;
+      &.caja-derecha:hover {
+        img {
+          transform: scale(1.8);
+          right: 90px;
+          top: 10px;
+        }
+        .izq {
+          transform: scale(2.5);
+          right: 120px;
+          top: 50px;
+        }
+        h3{
+          top: 0;
+          text-decoration: none;
+        }
+        h3:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+        .rotulo-principal {
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
 
-              h3 {
-                text-decoration: underline var(--logoRosa-azur);
-                text-underline-position: under;
-                top: 0;
-              }
-              .contenedor-texto{
-                top: 0px;
-                opacity: 1;
-                visibility: visible;
-              }
-            }
-            .complementario-derecha,
-            .complementario-izquierda {
-              transform: scale(12);
-              transition: all 500ms;
-              transition-timing-function: ease-in;
-            }
+          .contenedor-texto {
+            top: 0px;
+            opacity: 1;
+            visibility: visible;
           }
+        }
+        .complementario-derecha,
+        .complementario-izquierda {
+          transform: scale(12);
+          transition: all 500ms;
+          transition-timing-function: ease-in;
+        }
+      }
     }
     .contenedor-derecha {
       grid-template-rows: 280px 280px 280px;
@@ -306,7 +321,7 @@ $animationSpeed: 20s;
     flex-direction: column;
 
     .contenedor-izquierda {
-      grid-template-rows:  repeat(2,200px);
+      grid-template-rows: repeat(2, 200px);
       .caja-izquierda img {
         max-height: 200px;
         max-width: 100%;
@@ -318,7 +333,8 @@ $animationSpeed: 20s;
     .rotulo-principal {
       top: 0;
     }
-    .caja-izquierda, .caja-derecha{
+    .caja-izquierda,
+    .caja-derecha {
       .rotulo-principal {
         display: flex;
         flex-direction: column;
@@ -328,15 +344,30 @@ $animationSpeed: 20s;
         padding: 1rem;
         align-items: left;
         justify-content: flex-end;
-        
+
         h3 {
+          display: inline-block;
           position: relative;
+          text-decoration: underline;
+          text-decoration-color: var(--logoRosa-azur);
           top: 50px;
-          text-decoration: underline var(--azul-azur);
-          text-underline-position: under;
           transition: all 500ms;
         }
-        .contenedor-texto{
+        
+        h3:after {
+          content: "";
+          position: absolute;
+          width: 60%;
+          transform: scaleX(0);
+          text-decoration: none;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: var(--logoRosa-azur);
+          transform-origin: bottom left;
+          transition: transform 400ms ease-out;
+        }
+        .contenedor-texto {
           position: relative;
           visibility: hidden;
           top: 50px;
@@ -347,54 +378,55 @@ $animationSpeed: 20s;
         }
       }
       &.caja-izquierda:hover,
-          &.caja-derecha:hover {
-            .der,
-            .izq{
-              transform: scale(1.2);
-              top: -20px;
-            }
-            .rotulo-principal {
-              color: white;
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-end;
+      &.caja-derecha:hover {
+        .der,
+        .izq {
+          transform: scale(1.2);
+          top: -20px;
+        }
+        .rotulo-principal {
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
 
-              h3 {
-                text-decoration: underline var(--logoRosa-azur);
-                text-underline-position: under;
-                top: 0;
-              }
-              .contenedor-texto{
-                top: 0px;
-                opacity: 1;
-                visibility: visible;
-              }
-            }
-            .complementario-derecha,
-            .complementario-izquierda {
-              transform: scale(12);
-              transition: all 500ms;
-              transition-timing-function: ease-in;
-            }
+          h3{
+            top: 0;
+            text-decoration: none;
           }
+          h3:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+          .contenedor-texto {
+            top: 0px;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        .complementario-derecha,
+        .complementario-izquierda {
+          transform: scale(12);
+          transition: all 500ms;
+          transition-timing-function: ease-in;
+        }
+      }
     }
     .contenedor-derecha {
-      grid-template-rows: repeat(3,200px);
-      
+      grid-template-rows: repeat(3, 200px);
+
       .caja-derecha img {
         max-height: 200px;
         max-width: 100%;
         width: 150px;
         right: 50px;
         top: 0px;
-        
       }
     }
     .complementario-derecha,
     .complementario-izquierda {
       width: 150px;
-        height: 150px;
-
+      height: 150px;
     }
   }
 }
