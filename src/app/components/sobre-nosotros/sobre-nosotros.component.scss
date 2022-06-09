@@ -48,7 +48,7 @@
       align-items: center;
 
       .apartado {
-        max-width: 1200px;
+        max-width: 1000px;
         width: 100%;
         .contenido {
           z-index: 2;
@@ -75,10 +75,11 @@
         }
 
         .contenedor-imagen {
-          background-size: auto 80%;
+          background-size: auto 60%;
           background-image: url("../../../assets/empresa/almacen2.png");
           background-repeat: no-repeat;
-          background-position: center;
+          background-position-x: center;
+          background-position-y: 200px;
         }
       }
     }
@@ -101,7 +102,7 @@
     }
     .contenedor-imagen {
       position: absolute;
-      width: 760px;
+      width: 560px;
       height: 100%;
     }
   }
