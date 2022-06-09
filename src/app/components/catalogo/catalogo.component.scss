@@ -27,7 +27,6 @@
     align-items: center;
     justify-content: center;
     background-color: white;
-    padding: 0 3rem;
 
     .contenedor-cajas {
       margin-top: 3rem;
@@ -92,56 +91,60 @@
 }
 //variables globales
 $animationSpeed: 20s;
-.slider {
-  background: white;
+.contenedor-slider{
+  margin-top: 2.5rem;
   height: 150px;
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  margin-top: 0.5rem;
-
-  img {
-    width: 220px;
-    height: 75%;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 350px;
-    z-index: 2;
-  }
-
-  &::after {
+  width: 100%;
+  .slider {
+    background: white;
     height: 100%;
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
-
-  &::before {
-    left: 0;
-    top: 0;
-  }
-
-  .slide-track {
-    height: 100%;
-    animation: scroll $animationSpeed linear infinite;
-    display: flex;
-    justify-content: center;
-    width: calc(300px * 14);
-    align-items: center;
-  }
-
-  .slide {
-    height: auto;
-    width: auto;
-    display: flex;
-    flex: 1;
-    justify-content: center;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+  
+    img {
+      width: 220px;
+      height: 100%;
+    }
+  
+    &::before,
+    &::after {
+      content: "";
+      height: 100px;
+      position: absolute;
+      width: 350px;
+      z-index: 2;
+    }
+  
+    &::after {
+      height: 100%;
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+  
+    &::before {
+      left: 0;
+      top: 0;
+    }
+  
+    .slide-track {
+      height: 100%;
+      animation: scroll $animationSpeed linear infinite;
+      display: flex;
+      justify-content: center;
+      width: calc(300px * 14);
+      align-items: center;
+    }
+  
+    .slide {
+      height: auto;
+      width: auto;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+    }
   }
 }
 // Animation
