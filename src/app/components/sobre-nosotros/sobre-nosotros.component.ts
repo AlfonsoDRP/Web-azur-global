@@ -21,7 +21,7 @@ export class SobreNosotrosComponent  {
 
   @HostListener ('window:scroll') onWindowScroll() {
     let posScroll = window.scrollY;
-    this.segundoSubtitulo = posScroll > 255;
-    this.terceroSubtitulo = posScroll > 1071;
+    this.segundoSubtitulo =(this.segundoSubtitulo) ? true: posScroll > 255;
+    this.terceroSubtitulo =(this.terceroSubtitulo)? true: posScroll > 1071;
   }
 }
