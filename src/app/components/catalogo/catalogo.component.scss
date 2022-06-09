@@ -1,14 +1,11 @@
 .contenedor-principal {
   height: 100%;
-
   .contenedor-cabecera {
     color: white;
     position: relative;
     top: 0;
     width: 100%;
-    //animation-name: comienzo;
     text-align: center;
-    //animation-duration: 1s;
     height: 250px;
     .info {
       display: flex;
@@ -28,6 +25,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -60,70 +58,7 @@
           justify-content: space-around;
           align-items: center;
           overflow: hidden;
-          &.caja-izquierda:hover,
-          &.caja-derecha:hover {
-            img{
-              transform: scale(1.8);
-              right: 90px;
-              top: 10px;
-            }
-            .izq{
-              transform: scale(2.5);
-              right: 120px;
-              top: 50px;
-            }
-            .rotulo-principal {
-              color: white;
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-end;
-
-              h3 {
-                text-decoration: underline var(--logoRosa-azur);
-                text-underline-position: under;
-                top: 0;
-              }
-              .contenedor-texto{
-                top: 0px;
-                opacity: 1;
-                visibility: visible;
-              }
-            }
-            .complementario-derecha,
-            .complementario-izquierda {
-              transform: scale(8);
-              transition: all 500ms;
-              transition-timing-function: ease-in;
-            }
-          }
-
-          .rotulo-principal {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            height: 100%;
-            width: 100%;
-            padding: 1rem;
-            align-items: left;
-            justify-content: flex-end;
-            
-            h3 {
-              position: relative;
-              top: 50px;
-              text-decoration: underline var(--azul-azur);
-              text-underline-position: under;
-              transition: all 500ms;
-            }
-            .contenedor-texto{
-              position: relative;
-              visibility: hidden;
-              top: 50px;
-              height: 50px;
-              opacity: 1;
-              color: white;
-              transition: all 500ms;
-            }
-          }
+          
 
           .rotulo-complementario {
             display: flex;
@@ -163,8 +98,7 @@ $animationSpeed: 20s;
 .slider {
   background: white;
   height: 150px;
-  width: 100%;
-  background-color: white;
+  width: 80%;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -203,7 +137,6 @@ $animationSpeed: 20s;
     justify-content: center;
     width: calc(300px * 14);
     align-items: center;
-    gap: 1.5rem;
   }
 
   .slide {
@@ -268,7 +201,6 @@ $animationSpeed: 20s;
         max-height: 275px;
         max-width: 100%;
         position: relative;
-        // background-color: red;
         right: 60px;
         top: 10px;
         width: 150px;
@@ -278,6 +210,71 @@ $animationSpeed: 20s;
         width: 175px;
         height: 175px;
       }
+    }
+    .caja-izquierda, .caja-derecha{
+      .rotulo-principal {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+        align-items: left;
+        justify-content: flex-end;
+        
+        h3 {
+          position: relative;
+          top: 50px;
+          text-decoration: underline var(--azul-azur);
+          text-underline-position: under;
+          transition: all 500ms;
+        }
+        .contenedor-texto{
+          position: relative;
+          visibility: hidden;
+          top: 50px;
+          height: 50px;
+          opacity: 1;
+          color: white;
+          transition: all 500ms;
+        }
+      }
+      &.caja-izquierda:hover,
+          &.caja-derecha:hover {
+            img{
+              transform: scale(1.8);
+              right: 90px;
+              top: 10px;
+            }
+            .izq{
+              transform: scale(2.5);
+              right: 120px;
+              top: 50px;
+            }
+            .rotulo-principal {
+              color: white;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+
+              h3 {
+                text-decoration: underline var(--logoRosa-azur);
+                text-underline-position: under;
+                top: 0;
+              }
+              .contenedor-texto{
+                top: 0px;
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+            .complementario-derecha,
+            .complementario-izquierda {
+              transform: scale(12);
+              transition: all 500ms;
+              transition-timing-function: ease-in;
+            }
+          }
     }
     .contenedor-derecha {
       grid-template-rows: 280px 280px 280px;
@@ -299,7 +296,7 @@ $animationSpeed: 20s;
 
 @media only screen and (max-width: 1200px) and (min-width: 801px) {
   .rotulo-principal {
-    top: 25%;
+    top: 0;
   }
 }
 
@@ -314,25 +311,90 @@ $animationSpeed: 20s;
         max-height: 200px;
         max-width: 100%;
         width: 150px;
-        top: -10px;
+        right: 50px;
+        top: 0px;
       }
     }
     .rotulo-principal {
       top: 0;
     }
+    .caja-izquierda, .caja-derecha{
+      .rotulo-principal {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+        align-items: left;
+        justify-content: flex-end;
+        
+        h3 {
+          position: relative;
+          top: 50px;
+          text-decoration: underline var(--azul-azur);
+          text-underline-position: under;
+          transition: all 500ms;
+        }
+        .contenedor-texto{
+          position: relative;
+          visibility: hidden;
+          top: 50px;
+          height: 50px;
+          opacity: 1;
+          color: white;
+          transition: all 500ms;
+        }
+      }
+      &.caja-izquierda:hover,
+          &.caja-derecha:hover {
+            .der,
+            .izq{
+              transform: scale(1.2);
+              top: -20px;
+            }
+            .rotulo-principal {
+              color: white;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+
+              h3 {
+                text-decoration: underline var(--logoRosa-azur);
+                text-underline-position: under;
+                top: 0;
+              }
+              .contenedor-texto{
+                top: 0px;
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+            .complementario-derecha,
+            .complementario-izquierda {
+              transform: scale(12);
+              transition: all 500ms;
+              transition-timing-function: ease-in;
+            }
+          }
+    }
     .contenedor-derecha {
       grid-template-rows: repeat(3,200px);
+      
       .caja-derecha img {
         max-height: 200px;
         max-width: 100%;
         width: 150px;
-        top: -10px;
+        right: 50px;
+        top: 0px;
+        
       }
     }
-    .complementario,
+    .complementario-derecha,
     .complementario-izquierda {
       width: 150px;
-      height: 150px;
+        height: 150px;
+
     }
   }
 }

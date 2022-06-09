@@ -109,7 +109,6 @@
     .tercero {
       transition: all 0.8s;
       position: relative;
-      // text-align: left;
       opacity: 0;
       
     }
@@ -117,7 +116,6 @@
     .cuarto {
       transition: all 0.8s;
       position: relative;
-      // text-align: right;
       opacity: 0;
       
     }
@@ -197,7 +195,6 @@
       animation-play-state: paused;
       animation-delay: 0s;
       animation-name: logoBounce-circle;
-      animation-fill-mode: forwards;
     }
   }
 }

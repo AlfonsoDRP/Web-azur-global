@@ -8,7 +8,7 @@ button {
   border-color: transparent;
   &:hover {
     animation-name: hover;
-    animation-duration: 1s;
+    animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-play-state: running;
     animation-fill-mode: forwards;
@@ -16,6 +16,26 @@ button {
   &:focus {
     border-color: var(--logoAzulOscuro-azur);
   }
+}
+.carrusel{
+  height: 30px;
+  border: 1px solid var(--azul-azur);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+  &:hover {
+    animation-name: hover;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+  &:focus {
+    border-color: var(--logoAzulOscuro-azur);
+  }
+
 }
 .estiloAzulClaro {
   background-color: var(--logoAzulOscuro-azur);
@@ -29,9 +49,9 @@ button {
 
 @keyframes hover {
   from{
-    background-color: var(--logoAzulOscuro-azur);
+    background-color: var(--azul-azur);
   }
   to{
-    background-color: var(--logoRosa-azur);
+    background-color: var(--cielo-azur);
   }
 }
