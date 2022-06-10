@@ -225,8 +225,7 @@ $animationSpeed: 20s;
         h3 {
           display: inline-block;
           position: relative;
-          text-decoration: underline;
-          text-decoration-color: var(--logoRosa-azur);
+          padding: 0.5rem;
           top: 50px;
           transition: all 500ms;
         }
@@ -235,9 +234,9 @@ $animationSpeed: 20s;
           content: "";
           position: absolute;
           width: 100%;
-          transform: scaleX(0);
+          transform: scaleX(0.35);
           text-decoration: none;
-          height: 2px;
+          height: 1.5px;
           bottom: 0;
           left: 0;
           background-color: var(--logoRosa-azur);
@@ -324,7 +323,7 @@ $animationSpeed: 20s;
     flex-direction: column;
 
     .contenedor-izquierda {
-      grid-template-rows: repeat(2, 200px);
+      height: 400px;
       .caja-izquierda img {
         max-height: 200px;
         max-width: 100%;
@@ -353,6 +352,7 @@ $animationSpeed: 20s;
           position: relative;
           text-decoration: underline;
           text-decoration-color: var(--logoRosa-azur);
+          padding: 0.5rem;
           top: 50px;
           transition: all 500ms;
         }
