@@ -51,6 +51,7 @@ export class HomeComponent {
     let circulo2 = document.getElementById('circulo2');
     let circulo3 = document.getElementById('circulo3');
     let circulo4 = document.getElementById('circulo4');
+    let circulo5 = document.getElementsByClassName('circulo');
 
     if (posScroll > 1000 && primero && imagen1 && cont1 && circulo1) {
       primero.style.bottom = '0';
@@ -62,12 +63,13 @@ export class HomeComponent {
     }
 
 
-    if (posScroll > 1500 && segundo && imagen2 && cont2 && circulo2) {
+    if (posScroll > 1500 && segundo && imagen2 && cont2 && circulo2 && circulo5) {
       segundo.style.bottom = '0';
       segundo.style.opacity = '1';
       cont2.style.opacity = '1';
       imagen2.style.transform = 'scale(1.3)';
       circulo2.style.animationPlayState = 'running';
+
       this.bandera2 = true;
     }
 
