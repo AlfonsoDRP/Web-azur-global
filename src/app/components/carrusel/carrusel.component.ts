@@ -1,4 +1,5 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
+import {faCaretLeft, faCaretRight} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-carrusel',
@@ -23,6 +24,8 @@ export class CarruselComponent implements OnInit {
     { image: '../../../assets/piezas/RODAMIENTOS.PNG', familia: 'Rodamientos' },
   ];
   @Input() movil: boolean = false;
+  iconoLeft = faCaretLeft;
+  iconoRight = faCaretRight;
   posicion: number = 0;
   centro: number = this.movil ? 0 : 1;
 

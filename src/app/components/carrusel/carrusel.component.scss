@@ -71,17 +71,20 @@
 
   .boton {
     position: absolute;
-    bottom: 8%;
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
     height: 30px;
-    border-radius: 5px;
-    background-color: transparent;
-    color:  var(--azul-azur);
+    bottom: 50%;
+    background-color: var(--azul-azur);
+    border-radius: 50%;
+    color: white;
   }
-  .boton-derecho {
+  .boton-derecha {
     right: 20px;
   }
-  .boton-izquierdo {
+  .boton-izquierda {
     left: 20px;
   }
 }
