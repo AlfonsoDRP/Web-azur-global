@@ -350,8 +350,6 @@ $animationSpeed: 20s;
         h3 {
           display: inline-block;
           position: relative;
-          text-decoration: underline;
-          text-decoration-color: var(--logoRosa-azur);
           padding: 0.5rem;
           top: 50px;
           transition: all 500ms;
@@ -360,10 +358,10 @@ $animationSpeed: 20s;
         h3:after {
           content: "";
           position: absolute;
-          width: 60%;
-          transform: scaleX(0);
+          width: 80%;
+          transform: scaleX(0.35);
           text-decoration: none;
-          height: 2px;
+          height: 1.5px;
           bottom: 0;
           left: 0;
           background-color: var(--logoRosa-azur);
@@ -398,7 +396,7 @@ $animationSpeed: 20s;
             text-decoration: none;
           }
           h3:after {
-            transform: scaleX(1);
+            transform: scaleX(0.7);
             transform-origin: bottom left;
           }
           .contenedor-texto {
