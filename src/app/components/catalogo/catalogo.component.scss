@@ -92,7 +92,7 @@
 //variables globales
 $animationSpeed: 20s;
 .contenedor-slider{
-  margin-top: 2.5rem;
+  margin-top: 4rem;
   height: 150px;
   width: 100%;
   .slider {
@@ -131,10 +131,10 @@ $animationSpeed: 20s;
   
     .slide-track {
       height: 100%;
-      animation: scroll $animationSpeed linear infinite;
+      animation: scrollLeft $animationSpeed linear infinite;
       display: flex;
       justify-content: center;
-      width: calc(300px * 14);
+      width: calc(340px * 14);
       align-items: center;
     }
   
@@ -148,6 +148,11 @@ $animationSpeed: 20s;
   }
 }
 // Animation
+@keyframes scrollLeft {
+  to {
+    transform: translateX(-50%)
+  }
+}
 @keyframes aparecer {
   from {
     opacity: 0;
