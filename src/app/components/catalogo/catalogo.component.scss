@@ -92,7 +92,7 @@
 //variables globales
 $animationSpeed: 20s;
 .contenedor-slider{
-  margin-top: 2.5rem;
+  margin-top: 4rem;
   height: 150px;
   width: 100%;
   .slider {
@@ -131,10 +131,10 @@ $animationSpeed: 20s;
   
     .slide-track {
       height: 100%;
-      animation: scroll $animationSpeed linear infinite;
+      animation: scrollLeft $animationSpeed linear infinite;
       display: flex;
       justify-content: center;
-      width: calc(300px * 14);
+      width: calc(340px * 14);
       align-items: center;
     }
   
@@ -148,6 +148,11 @@ $animationSpeed: 20s;
   }
 }
 // Animation
+@keyframes scrollLeft {
+  to {
+    transform: translateX(-50%)
+  }
+}
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -225,8 +230,7 @@ $animationSpeed: 20s;
         h3 {
           display: inline-block;
           position: relative;
-          text-decoration: underline;
-          text-decoration-color: var(--logoRosa-azur);
+          padding: 0.5rem;
           top: 50px;
           transition: all 500ms;
         }
@@ -235,9 +239,9 @@ $animationSpeed: 20s;
           content: "";
           position: absolute;
           width: 100%;
-          transform: scaleX(0);
+          transform: scaleX(0.35);
           text-decoration: none;
-          height: 2px;
+          height: 1.5px;
           bottom: 0;
           left: 0;
           background-color: var(--logoRosa-azur);
@@ -324,7 +328,7 @@ $animationSpeed: 20s;
     flex-direction: column;
 
     .contenedor-izquierda {
-      grid-template-rows: repeat(2, 200px);
+      height: 400px;
       .caja-izquierda img {
         max-height: 200px;
         max-width: 100%;
@@ -351,8 +355,7 @@ $animationSpeed: 20s;
         h3 {
           display: inline-block;
           position: relative;
-          text-decoration: underline;
-          text-decoration-color: var(--logoRosa-azur);
+          padding: 0.5rem;
           top: 50px;
           transition: all 500ms;
         }
@@ -360,10 +363,10 @@ $animationSpeed: 20s;
         h3:after {
           content: "";
           position: absolute;
-          width: 60%;
-          transform: scaleX(0);
+          width: 80%;
+          transform: scaleX(0.35);
           text-decoration: none;
-          height: 2px;
+          height: 1px;
           bottom: 0;
           left: 0;
           background-color: var(--logoRosa-azur);
@@ -398,7 +401,7 @@ $animationSpeed: 20s;
             text-decoration: none;
           }
           h3:after {
-            transform: scaleX(1);
+            transform: scaleX(0.7);
             transform-origin: bottom left;
           }
           .contenedor-texto {

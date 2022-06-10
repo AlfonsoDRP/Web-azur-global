@@ -1,15 +1,14 @@
 <div class="contenedor-principal">
   <div class="entrada">
-    <h1 class="display-1">
-      <app-animacion-letras [palabra]="'Sobre Nosotros'" [delay]="1000" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras></h1>
+    <h1 class="display-1">Sobre Nosotros</h1>
   </div>
   <div class="contenedor-contenido" id="contenedor">
     <div class="apartados">
       <div class="apartado impar">
-        <div class="contenedor-imagen">
-        </div>
+        <div class="contenedor-imagen"></div>
         <div class="contenido">
           <div class="subtitulo">
+<<<<<<< HEAD
               <app-animacion-letras class="subtitulo-arriba" [palabra]="'Nuestra'" [delay]="560" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras>
               <app-animacion-letras class="subtitulo-abajo" [palabra]="'Historia'" [delay]="740" [duracion]="750" [activo]="primerSubtitulo"></app-animacion-letras>
           </div>
@@ -24,12 +23,59 @@
             <app-animacion-letras 
             [palabra]="valoresPrueba.textoPruebaLargo"
             [delay]="400" [duracion]="1100"[activo]="primerSubtitulo"  [animacionOla]="false" [animacionDireccion]="'abajo'"
+=======
+            <app-animacion-letras
+              class="subtitulo-arriba"
+              [palabra]="'Nuestra'"
+              [delay]="1560"
+              [duracion]="750"
+              [activo]="primerSubtitulo"
             ></app-animacion-letras>
-            <br>
+            <app-animacion-letras
+              class="subtitulo-abajo"
+              [palabra]="'Historia'"
+              [delay]="1740"
+              [duracion]="750"
+              [activo]="primerSubtitulo"
+            ></app-animacion-letras>
+          </div>
+          <div class="descripcion">
+            <strong>
+              <app-animacion-letras
+                [palabra]="valoresPrueba.textoPruebaCorto"
+                [delay]="1560"
+                [duracion]="750"
+                [activo]="primerSubtitulo"
+                [animacionOla]="false"
+                [animacionDireccion]="'abajo'"
+              ></app-animacion-letras>
+            </strong>
+            <br />
+            <app-animacion-letras
+              [palabra]="valoresPrueba.textoPruebaLargo"
+              [delay]="1400"
+              [duracion]="1100"
+              [activo]="primerSubtitulo"
+              [animacionOla]="false"
+              [animacionDireccion]="'abajo'"
+>>>>>>> b5e84fb751148ccdcc7af13483f197a8cc680b35
+            ></app-animacion-letras>
+            <br />
             <span>
+<<<<<<< HEAD
               <app-animacion-letras class="prueba"
               [palabra]="valoresPrueba.textoPruebaMedio"
               [delay]="800" [duracion]="750"[activo]="primerSubtitulo"  [animacionOla]="false" [animacionDireccion]="'abajo'"
+=======
+              <app-animacion-letras
+                class="prueba"
+                [palabra]="valoresPrueba.textoPruebaMedio"
+                [delay]="1800"
+                [duracion]="750"
+                [activo]="primerSubtitulo"
+                [animacionOla]="false"
+                [animacionDireccion]="'abajo'"
+>>>>>>> b5e84fb751148ccdcc7af13483f197a8cc680b35
               ></app-animacion-letras>
             </span>
           </div>
@@ -38,58 +84,106 @@
       <div class="apartado par">
         <div class="contenido">
           <div class="subtitulo">
-              <app-animacion-letras class="subtitulo-arriba" [palabra]="'Nuestros'" [delay]="560" [duracion]="750" [activo]="segundoSubtitulo"></app-animacion-letras>
-              <app-animacion-letras class="subtitulo-abajo" [palabra]="'Valores'" [delay]="740" [duracion]="750" [activo]="segundoSubtitulo"></app-animacion-letras>
+            <app-animacion-letras
+              class="subtitulo-arriba"
+              [palabra]="'Nuestros'"
+              [delay]="560"
+              [duracion]="750"
+              [activo]="segundoSubtitulo"
+            ></app-animacion-letras>
+            <app-animacion-letras
+              class="subtitulo-abajo"
+              [palabra]="'Valores'"
+              [delay]="740"
+              [duracion]="750"
+              [activo]="segundoSubtitulo"
+            ></app-animacion-letras>
           </div>
           <div class="descripcion">
             <strong>
-              <app-animacion-letras 
-              [palabra]="valoresPrueba.textoPruebaCorto"
-              [delay]="560" [duracion]="750"[activo]="segundoSubtitulo"  [animacionOla]="false" [animacionDireccion]="'abajo'"
+              <app-animacion-letras
+                [palabra]="valoresPrueba.textoPruebaCorto"
+                [delay]="560"
+                [duracion]="750"
+                [activo]="segundoSubtitulo"
+                [animacionOla]="false"
+                [animacionDireccion]="'abajo'"
               ></app-animacion-letras>
             </strong>
-            <br>
-            <app-animacion-letras 
-            [palabra]="valoresPrueba.textoPruebaLargo"
-            [delay]="400" [duracion]="1100"[activo]="segundoSubtitulo"  [animacionOla]="false" [animacionDireccion]="'abajo'"
+            <br />
+            <app-animacion-letras
+              [palabra]="valoresPrueba.textoPruebaLargo"
+              [delay]="400"
+              [duracion]="1100"
+              [activo]="segundoSubtitulo"
+              [animacionOla]="false"
+              [animacionDireccion]="'abajo'"
             ></app-animacion-letras>
-            <br>
+            <br />
             <span>
-              <app-animacion-letras class="prueba"
-              [palabra]="valoresPrueba.textoPruebaMedio"
-              [delay]="800" [duracion]="750"[activo]="segundoSubtitulo"  [animacionOla]="false" [animacionDireccion]="'abajo'"
+              <app-animacion-letras
+                class="prueba"
+                [palabra]="valoresPrueba.textoPruebaMedio"
+                [delay]="800"
+                [duracion]="750"
+                [activo]="segundoSubtitulo"
+                [animacionOla]="false"
+                [animacionDireccion]="'abajo'"
               ></app-animacion-letras>
             </span>
           </div>
         </div>
-        <div class="contenedor-imagen">
-        </div>
+        <div class="contenedor-imagen"></div>
       </div>
       <div class="apartado impar">
-        <div class="contenedor-imagen">
-        </div>
+        <div class="contenedor-imagen"></div>
         <div class="contenido">
           <div class="subtitulo">
-              <app-animacion-letras class="subtitulo-arriba" [palabra]="'Misión y'" [delay]="560" [duracion]="750" [activo]="terceroSubtitulo"></app-animacion-letras>
-              <app-animacion-letras class="subtitulo-abajo" [palabra]="'Visión'" [delay]="740" [duracion]="750" [activo]="terceroSubtitulo"></app-animacion-letras>
+            <app-animacion-letras
+              class="subtitulo-arriba"
+              [palabra]="'Misión y'"
+              [delay]="560"
+              [duracion]="750"
+              [activo]="terceroSubtitulo"
+            ></app-animacion-letras>
+            <app-animacion-letras
+              class="subtitulo-abajo"
+              [palabra]="'Visión'"
+              [delay]="740"
+              [duracion]="750"
+              [activo]="terceroSubtitulo"
+            ></app-animacion-letras>
           </div>
           <div class="descripcion">
             <strong>
-              <app-animacion-letras 
-              [palabra]="valoresPrueba.textoPruebaCorto"
-              [delay]="560" [duracion]="750"[activo]="terceroSubtitulo"  [animacionOla]="false" [animacionDireccion]="'abajo'"
+              <app-animacion-letras
+                [palabra]="valoresPrueba.textoPruebaCorto"
+                [delay]="560"
+                [duracion]="750"
+                [activo]="terceroSubtitulo"
+                [animacionOla]="false"
+                [animacionDireccion]="'abajo'"
               ></app-animacion-letras>
             </strong>
-            <br>
-            <app-animacion-letras 
-            [palabra]="valoresPrueba.textoPruebaLargo"
-            [delay]="400" [duracion]="1100"[activo]="terceroSubtitulo"  [animacionOla]="false" [animacionDireccion]="'abajo'"
+            <br />
+            <app-animacion-letras
+              [palabra]="valoresPrueba.textoPruebaLargo"
+              [delay]="400"
+              [duracion]="1100"
+              [activo]="terceroSubtitulo"
+              [animacionOla]="false"
+              [animacionDireccion]="'abajo'"
             ></app-animacion-letras>
-            <br>
+            <br />
             <span>
-              <app-animacion-letras class="prueba"
-              [palabra]="valoresPrueba.textoPruebaMedio"
-              [delay]="800" [duracion]="750"[activo]="terceroSubtitulo"  [animacionOla]="false" [animacionDireccion]="'abajo'"
+              <app-animacion-letras
+                class="prueba"
+                [palabra]="valoresPrueba.textoPruebaMedio"
+                [delay]="800"
+                [duracion]="750"
+                [activo]="terceroSubtitulo"
+                [animacionOla]="false"
+                [animacionDireccion]="'abajo'"
               ></app-animacion-letras>
             </span>
           </div>
