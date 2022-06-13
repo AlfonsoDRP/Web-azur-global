@@ -65,7 +65,6 @@ export class HomeComponent {
       logoSup1.style.left= '0';
       logoInf1.style.right= '101px';
       logoInf1.style.top= '37px';
-    
       logoIzq1.style.left= '-215px';
       
       

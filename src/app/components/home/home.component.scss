@@ -142,18 +142,19 @@
           position: relative;
         }
         .logo1 {
-         top:-250px;
-         left: 450px;
+          transition: all 1s;
+          top: -250px;
+          left: 450px;
         }
         .logo2 {
+          transition: all 1s;
           right: -350px;
           top: 150px;
-          
         }
         .logo3 {
-          left:-400px;
+          transition: all 1s;
+          left: -400px;
           top: 17px;
-         
         }
 
         .animation {
@@ -214,10 +215,7 @@
   bottom: -100px;
   opacity: 0;
   transition: all 1s;
- 
 }
-
-
 
 @keyframes logoBounce-circle {
   10% {
