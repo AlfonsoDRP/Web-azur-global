@@ -47,13 +47,6 @@ export class HomeComponent {
     let imagen2 = document.getElementById('img-segundo');
     let imagen3 = document.getElementById('img-tercero');
     let imagen4 = document.getElementById('img-cuarto');
-<<<<<<< HEAD
-    let circulo1 = document.getElementById('circulo1');
-    let circulo2 = document.getElementById('circulo2');
-    let circulo3 = document.getElementById('circulo3');
-    let circulo4 = document.getElementById('circulo4');
-    let circulo5 = document.getElementsByClassName('circulo');
-=======
     let circulo1 = document.getElementById('logoanimado1');
     let circulo2 = document.getElementById('logoanimado2');
     let circulo3 = document.getElementById('logoanimado3');
@@ -70,7 +63,6 @@ export class HomeComponent {
     let logoSup4= document.getElementById('logoSup4');
     let logoInf4= document.getElementById('logoInf4');
     let logoIzq4= document.getElementById('logoIzq4');
->>>>>>> joaquin
 
     if (posScroll > 1000 && primero && imagen1 && cont1 && circulo1 && logoSup1 && logoInf1 && logoIzq1) {
       primero.style.bottom = '0';
@@ -89,11 +81,7 @@ export class HomeComponent {
     }
 
 
-<<<<<<< HEAD
-    if (posScroll > 1500 && segundo && imagen2 && cont2 && circulo2 && circulo5) {
-=======
     if (posScroll > 1500 && segundo && imagen2 && cont2 &&circulo2  &&logoSup2 && logoInf2 && logoIzq2) {
->>>>>>> joaquin
       segundo.style.bottom = '0';
       segundo.style.opacity = '1';
       cont2.style.opacity = '1';
