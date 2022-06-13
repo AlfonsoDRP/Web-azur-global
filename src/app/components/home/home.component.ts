@@ -51,13 +51,24 @@ export class HomeComponent {
     let circulo2 = document.getElementById('circulo2');
     let circulo3 = document.getElementById('circulo3');
     let circulo4 = document.getElementById('circulo4');
+    let logoSup1 = document.getElementById('logoSup1');
+    let logoInf1 = document.getElementById('logoInf1');
+    let logoIzq1 = document.getElementById('logoIzq1');
 
-    if (posScroll > 1000 && primero && imagen1 && cont1 && circulo1) {
+    if (posScroll > 1000 && primero && imagen1 && cont1 && circulo1 && logoSup1 && logoInf1 && logoIzq1) {
       primero.style.bottom = '0';
       primero.style.opacity = '1';
       cont1.style.opacity = '1';
       imagen1.style.transform = 'scale(1.3)';
       circulo1.style.animationPlayState = 'running';
+      logoSup1.style.top = '0';
+      logoSup1.style.left= '0';
+      logoInf1.style.right= '101px';
+      logoInf1.style.top= '37px';
+    
+      logoIzq1.style.left= '-215px';
+      
+      
       this.bandera1 = true;
     }
 

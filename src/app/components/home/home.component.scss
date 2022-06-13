@@ -109,17 +109,14 @@
       transition: all 0.8s;
       position: relative;
       opacity: 0;
-      
     }
     .segundo,
     .cuarto {
       transition: all 0.8s;
       position: relative;
       opacity: 0;
-      
     }
     .etiqueta {
-
       height: 450px;
       display: flex;
       flex-direction: row;
@@ -139,6 +136,25 @@
         width: 100%;
         font-size: 20px;
         line-height: 1.75rem;
+        img {
+          // background-color: red;
+          z-index: -1;
+          position: relative;
+        }
+        .logo1 {
+         top:-250px;
+         left: 450px;
+        }
+        .logo2 {
+          right: -350px;
+          top: 150px;
+          
+        }
+        .logo3 {
+          left:-400px;
+          top: 17px;
+         
+        }
 
         .animation {
           width: 550px;
@@ -187,7 +203,6 @@
           .imagen-apoyo {
             height: 400px;
             transition: all 1s;
-            
           }
         }
       }
@@ -199,8 +214,10 @@
   bottom: -100px;
   opacity: 0;
   transition: all 1s;
-  
+ 
 }
+
+
 
 @keyframes logoBounce-circle {
   10% {
@@ -289,7 +306,6 @@
   }
 }
 @media only screen and (min-width: 1264px) {
-
   .carrusel {
     padding: 0 15%;
   }
@@ -310,9 +326,8 @@
     right: 0;
   }
 }
-@media only screen and (min-width: 600px)  {
-  .contenedor-primero{
-
+@media only screen and (min-width: 600px) {
+  .contenedor-primero {
     height: 85vh;
   }
 }
