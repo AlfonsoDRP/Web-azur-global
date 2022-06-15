@@ -10,26 +10,29 @@
   }
 }
 * {
- 
-  transition: all 0.5s;
+  transition: all 0.5s, visibility 0s;
 }
 .contenedor-principal {
+  height: 600px;
   width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 
   .todo {
+    // background-color: blue;
     margin: auto;
     display: flex;
-    flex-direction: row;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
+    width: 166%;
+    justify-content: center;
     align-items: center;
     position: relative;
-    left: 0;
+    left: -33%;
     .cajas {
       padding: 1.5rem;
+      position: absolute;
+      visibility: hidden;
+      left: 0;
       .contenido {
         padding: 20px;
         display: flex;
@@ -77,8 +80,8 @@
     width: 30px;
     height: 30px;
     bottom: 50%;
-    background-color: var(--azul-azur);
     border-radius: 50%;
+    cursor: pointer;
     color: white;
   }
   .boton-derecha {
@@ -86,5 +89,9 @@
   }
   .boton-izquierda {
     left: 20px;
+  }
+  .prueba{
+    bottom: 0;
+    left: 50%;
   }
 }
